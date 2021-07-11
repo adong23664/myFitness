@@ -11,7 +11,8 @@ class DiaryDetailHeaderView: UIView {
     
     @IBOutlet var headerImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var heartImageView: UIImageView! 
+    @IBOutlet var heartImageView: UIImageView!
+    @IBOutlet var moodImageView: UIImageView!
 
     /*
     // Only override draw() if you perform custom drawing.

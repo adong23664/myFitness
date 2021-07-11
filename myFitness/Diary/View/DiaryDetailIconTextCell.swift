@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DiaryDetailIconTextCellTableViewCell: UITableViewCell {
+class DiaryDetailIconTextCell: UITableViewCell {
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var shortTextLabel: UILabel! {
         didSet {

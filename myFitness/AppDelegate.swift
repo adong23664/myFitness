@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let backButtonImage = UIImage(systemName: "arrow.left", withConfiguration: UIImage.SymbolConfiguration(weight: .bold))
         UINavigationBar.appearance().backIndicatorImage = backButtonImage
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = backButtonImage
-        // Override point for customization after application launch.
         return true
     }
 

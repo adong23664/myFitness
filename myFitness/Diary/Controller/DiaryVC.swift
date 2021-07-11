@@ -12,18 +12,26 @@ class DiaryVC: UITableViewController {
 
     
     var diarys:[Diary] = [
-        Diary(name: "cat0", image: "cat0", date: "2021/07/01", isLike: false, description: ""),
-        Diary(name: "cat1", image: "cat1", date: "2021/07/02", isLike: false, description: ""),
-        Diary(name: "cat2", image: "cat2", date: "2021/07/03", isLike: false, description: ""),
-        Diary(name: "cat3", image: "cat3", date: "2021/07/04", isLike: false, description: ""),
-        Diary(name: "cat4", image: "cat4", date: "2021/07/05", isLike: false, description: ""),
-        Diary(name: "cat9", image: "cat9", date: "2021/07/06", isLike: false, description: "")
+        Diary(name: "cat0", image: "cat0", date: "2021/07/01", isLike: false, description: "臣亮言：先帝創業未半，而中道崩殂。今天下三分，益州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。"),
+        Diary(name: "cat1", image: "cat1", date: "2021/07/02", isLike: false, description: "臣亮言：先帝創業未半，而中道崩殂。今天下三分，益州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。"),
+        Diary(name: "cat2", image: "cat2", date: "2021/07/03", isLike: false, description: "臣亮言：先帝創業未半，而中道崩殂。今天下三分，益州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。"),
+        Diary(name: "cat3", image: "cat3", date: "2021/07/04", isLike: false, description: "臣亮言：先帝創業未半，而中道崩殂。今天下三分，益州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。"),
+        Diary(name: "cat4", image: "cat4", date: "2021/07/05", isLike: false, description: "臣亮言：先帝創業未半，而中道崩殂。今天下三分，益州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。"),
+        Diary(name: "cat9", image: "cat9", date: "2021/07/06", isLike: false, description: "臣亮言：先帝創業未半，而中道崩殂。今天下三分，益州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。")
     ]
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
+            navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont]
+        }
+        
+        navigationController?.hidesBarsOnSwipe = true
 
     }
 
@@ -110,6 +118,10 @@ class DiaryVC: UITableViewController {
                 
             }
         }
+    }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
     }
 
 
