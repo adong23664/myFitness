@@ -1,16 +1,15 @@
 //
-//  GYMDetailIconTextCellTableViewCell.swift
+//  TricepsTableViewCell.swift
 //  myFitness
 //
-//  Created by 楊振東 on 2021/7/9.
+//  Created by 楊振東 on 2021/7/7.
 //
 
 import UIKit
 
-class GymDetailIconTextCell: UITableViewCell {
-    
-    @IBOutlet var iconImageView: UIImageView!
-    @IBOutlet var shortTextLabel: UILabel!
+class TricepsTableViewCell: UITableViewCell {
+    @IBOutlet var tricepsNameLabel: UILabel!
+    @IBOutlet var tricepsImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C2DCD1926949F5700D55229 /* BackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD1826949F5700D55229 /* BackTableViewCell.swift */; };
+		2C2DCD1B26949FCE00D55229 /* BackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD1A26949FCE00D55229 /* BackVC.swift */; };
+		2C2DCD1E2695458400D55229 /* LegVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD1D2695458400D55229 /* LegVC.swift */; };
+		2C2DCD20269546BB00D55229 /* LegTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD1F269546BB00D55229 /* LegTableViewCell.swift */; };
+		2C2DCD222695498000D55229 /* BicepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD212695498000D55229 /* BicepsTableViewCell.swift */; };
+		2C2DCD24269549C800D55229 /* BicepsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD23269549C800D55229 /* BicepsVC.swift */; };
+		2C2DCD2626954FEB00D55229 /* TricepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD2526954FEB00D55229 /* TricepsTableViewCell.swift */; };
+		2C2DCD282695501B00D55229 /* TricepsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD272695501B00D55229 /* TricepsVC.swift */; };
+		2C2DCD2A2695530400D55229 /* ShoulderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD292695530400D55229 /* ShoulderTableViewCell.swift */; };
+		2C2DCD2C2695531700D55229 /* ShoulderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD2B2695531700D55229 /* ShoulderVC.swift */; };
+		2C2DCD2E26955C6F00D55229 /* ChestDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD2D26955C6F00D55229 /* ChestDetailVC.swift */; };
+		2C2DCD302695783500D55229 /* ChestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD2F2695783500D55229 /* ChestVC.swift */; };
+		2C2DCD322695998800D55229 /* BackDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD312695998800D55229 /* BackDetailVC.swift */; };
+		2C2DCD342695A21800D55229 /* LegDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD332695A21800D55229 /* LegDetailVC.swift */; };
+		2C2DCD362695D4DC00D55229 /* BicepsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD352695D4DC00D55229 /* BicepsDetailVC.swift */; };
+		2C2DCD382695DF4000D55229 /* TricepsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD372695DF4000D55229 /* TricepsDetailVC.swift */; };
+		2C2DCD3A2695EF2100D55229 /* ShoulderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD392695EF2100D55229 /* ShoulderDetailVC.swift */; };
+		2C3C1459267AF3CD008A97F8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C1458267AF3CD008A97F8 /* ListViewController.swift */; };
+		2C3C145B267AF3F4008A97F8 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C145A267AF3F4008A97F8 /* Note.swift */; };
+		2C3C145D267B03F3008A97F8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C145C267B03F3008A97F8 /* NoteViewController.swift */; };
+		2C43FC292697F60A009C9438 /* GYMDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC282697F60A009C9438 /* GYMDetailVC.swift */; };
+		2C43FC2B2697FB0E009C9438 /* GYM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC2A2697FB0E009C9438 /* GYM.swift */; };
+		2C43FC4326981DDE009C9438 /* GYMDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC4226981DDE009C9438 /* GYMDetailHeaderView.swift */; };
+		2C43FC46269828C2009C9438 /* GymDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC45269828C2009C9438 /* GymDetailIconTextCell.swift */; };
+		2C43FC48269829FD009C9438 /* GymDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC47269829FD009C9438 /* GymDetailTextCell.swift */; };
+		2C43FC4B26984C43009C9438 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C43FC4A26984C43009C9438 /* MapKit.framework */; };
+		2C43FC4D26984F40009C9438 /* GymDetailSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC4C26984F40009C9438 /* GymDetailSeparatorCell.swift */; };
+		2C43FC4F2698501A009C9438 /* GymDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC4E2698501A009C9438 /* GymDetailMapCell.swift */; };
+		2C43FC51269856E4009C9438 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC50269856E4009C9438 /* MapVC.swift */; };
+		2C43FC76269973E0009C9438 /* DiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC75269973E0009C9438 /* DiaryVC.swift */; };
+		2C43FC782699A66D009C9438 /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC772699A66D009C9438 /* DiaryTableViewCell.swift */; };
+		2C43FC7A2699E88F009C9438 /* DiaryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC792699E88F009C9438 /* DiaryDetailVC.swift */; };
+		2C43FC7C2699EB9A009C9438 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC7B2699EB9A009C9438 /* Diary.swift */; };
+		2C43FC812699F187009C9438 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC2F269819D0009C9438 /* Rubik-Black.ttf */; };
+		2C43FC822699F187009C9438 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC33269819D0009C9438 /* Rubik-Regular.ttf */; };
+		2C43FC832699F187009C9438 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC31269819D0009C9438 /* Rubik-Italic.ttf */; };
+		2C43FC842699F187009C9438 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC34269819D1009C9438 /* Rubik-BoldItalic.ttf */; };
+		2C43FC852699F187009C9438 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC30269819D0009C9438 /* Rubik-Bold.ttf */; };
+		2C43FC862699F187009C9438 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC37269819D1009C9438 /* Rubik-Light.ttf */; };
+		2C43FC872699F187009C9438 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC2E269819CF009C9438 /* Rubik-BlackItalic.ttf */; };
+		2C43FC882699F187009C9438 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC36269819D1009C9438 /* Rubik-LightItalic.ttf */; };
+		2C43FC892699F187009C9438 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC35269819D1009C9438 /* Rubik-Medium.ttf */; };
+		2C43FC8A2699F187009C9438 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FC32269819D0009C9438 /* Rubik-MediumItalic.ttf */; };
+		2C43FC8C2699F508009C9438 /* DiaryDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC8B2699F508009C9438 /* DiaryDetailHeaderView.swift */; };
+		2C43FC8E2699FBA1009C9438 /* DiaryDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC8D2699FBA1009C9438 /* DiaryDetailIconTextCell.swift */; };
+		2C43FC94269AD08F009C9438 /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC93269AD08F009C9438 /* MoodVC.swift */; };
+		2C43FC96269AFE5A009C9438 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC95269AFE5A009C9438 /* RoundedTextField.swift */; };
+		2C43FC98269B01F8009C9438 /* NewDiaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC97269B01F8009C9438 /* NewDiaryController.swift */; };
+		2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61016D267F85F4004657DD /* TimerViewController.swift */; };
+		2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */; };
+		2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */; };
+		2C69C97E264EDDFD00EF7D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C69C97C264EDDFD00EF7D1A /* Main.storyboard */; };
+		2C69C980264EDE0100EF7D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C69C97F264EDE0100EF7D1A /* Assets.xcassets */; };
+		2C69C983264EDE0100EF7D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C69C981264EDE0100EF7D1A /* LaunchScreen.storyboard */; };
+		2C7F990E266780EC00999581 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F990D266780EC00999581 /* BMIViewController.swift */; };
+		2C7F99352667CA1100999581 /* ChestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F99342667CA1100999581 /* ChestTableViewCell.swift */; };
+		2C816F29268B407800AA1EEB /* NotesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F27268B407800AA1EEB /* NotesDataModel.xcdatamodeld */; };
+		2C816F2B268B40FE00AA1EEB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F2A268B40FE00AA1EEB /* CoreDataHelper.swift */; };
+		2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */; };
+		2CA527EC26974BA4002E76D4 /* GYMTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */; };
+		2CA527EE269753CB002E76D4 /* GYMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C2DCD1826949F5700D55229 /* BackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTableViewCell.swift; sourceTree = "<group>"; };
+		2C2DCD1A26949FCE00D55229 /* BackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackVC.swift; sourceTree = "<group>"; };
+		2C2DCD1D2695458400D55229 /* LegVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegVC.swift; sourceTree = "<group>"; };
+		2C2DCD1F269546BB00D55229 /* LegTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegTableViewCell.swift; sourceTree = "<group>"; };
+		2C2DCD212695498000D55229 /* BicepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsTableViewCell.swift; sourceTree = "<group>"; };
+		2C2DCD23269549C800D55229 /* BicepsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsVC.swift; sourceTree = "<group>"; };
+		2C2DCD2526954FEB00D55229 /* TricepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepsTableViewCell.swift; sourceTree = "<group>"; };
+		2C2DCD272695501B00D55229 /* TricepsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepsVC.swift; sourceTree = "<group>"; };
+		2C2DCD292695530400D55229 /* ShoulderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoulderTableViewCell.swift; sourceTree = "<group>"; };
+		2C2DCD2B2695531700D55229 /* ShoulderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoulderVC.swift; sourceTree = "<group>"; };
+		2C2DCD2D26955C6F00D55229 /* ChestDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestDetailVC.swift; sourceTree = "<group>"; };
+		2C2DCD2F2695783500D55229 /* ChestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestVC.swift; sourceTree = "<group>"; };
+		2C2DCD312695998800D55229 /* BackDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackDetailVC.swift; sourceTree = "<group>"; };
+		2C2DCD332695A21800D55229 /* LegDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegDetailVC.swift; sourceTree = "<group>"; };
+		2C2DCD352695D4DC00D55229 /* BicepsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsDetailVC.swift; sourceTree = "<group>"; };
+		2C2DCD372695DF4000D55229 /* TricepsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepsDetailVC.swift; sourceTree = "<group>"; };
+		2C2DCD392695EF2100D55229 /* ShoulderDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoulderDetailVC.swift; sourceTree = "<group>"; };
+		2C3C1458267AF3CD008A97F8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		2C3C145A267AF3F4008A97F8 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		2C3C145C267B03F3008A97F8 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		2C43FC282697F60A009C9438 /* GYMDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMDetailVC.swift; sourceTree = "<group>"; };
+		2C43FC2A2697FB0E009C9438 /* GYM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYM.swift; sourceTree = "<group>"; };
+		2C43FC2E269819CF009C9438 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2C43FC2F269819D0009C9438 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		2C43FC30269819D0009C9438 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		2C43FC31269819D0009C9438 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		2C43FC32269819D0009C9438 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2C43FC33269819D0009C9438 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		2C43FC34269819D1009C9438 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2C43FC35269819D1009C9438 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		2C43FC36269819D1009C9438 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		2C43FC37269819D1009C9438 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		2C43FC4226981DDE009C9438 /* GYMDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMDetailHeaderView.swift; sourceTree = "<group>"; };
+		2C43FC45269828C2009C9438 /* GymDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailIconTextCell.swift; sourceTree = "<group>"; };
+		2C43FC47269829FD009C9438 /* GymDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailTextCell.swift; sourceTree = "<group>"; };
+		2C43FC4A26984C43009C9438 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2C43FC4C26984F40009C9438 /* GymDetailSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailSeparatorCell.swift; sourceTree = "<group>"; };
+		2C43FC4E2698501A009C9438 /* GymDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailMapCell.swift; sourceTree = "<group>"; };
+		2C43FC50269856E4009C9438 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		2C43FC75269973E0009C9438 /* DiaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryVC.swift; sourceTree = "<group>"; };
+		2C43FC772699A66D009C9438 /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
+		2C43FC792699E88F009C9438 /* DiaryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailVC.swift; sourceTree = "<group>"; };
+		2C43FC7B2699EB9A009C9438 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		2C43FC8B2699F508009C9438 /* DiaryDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailHeaderView.swift; sourceTree = "<group>"; };
+		2C43FC8D2699FBA1009C9438 /* DiaryDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailIconTextCell.swift; sourceTree = "<group>"; };
+		2C43FC93269AD08F009C9438 /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
+		2C43FC95269AFE5A009C9438 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		2C43FC97269B01F8009C9438 /* NewDiaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiaryController.swift; sourceTree = "<group>"; };
+		2C61016D267F85F4004657DD /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		2C69C973264EDDFD00EF7D1A /* myFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2C69C97D264EDDFD00EF7D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C69C97F264EDE0100EF7D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C69C982264EDE0100EF7D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C69C984264EDE0100EF7D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C7F990D266780EC00999581 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
+		2C7F99342667CA1100999581 /* ChestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestTableViewCell.swift; sourceTree = "<group>"; };
+		2C816F28268B407800AA1EEB /* NotesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesDataModel.xcdatamodel; sourceTree = "<group>"; };
+		2C816F2A268B40FE00AA1EEB /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculatorViewController.swift; sourceTree = "<group>"; };
+		2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableVC.swift; sourceTree = "<group>"; };
+		2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C69C970264EDDFD00EF7D1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C43FC4B26984C43009C9438 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C2DCD1C2694A22E00D55229 /* Muscle */ = {
+			isa = PBXGroup;
+			children = (
+				2C2DCD392695EF2100D55229 /* ShoulderDetailVC.swift */,
+				2C2DCD372695DF4000D55229 /* TricepsDetailVC.swift */,
+				2C2DCD352695D4DC00D55229 /* BicepsDetailVC.swift */,
+				2C2DCD332695A21800D55229 /* LegDetailVC.swift */,
+				2C2DCD312695998800D55229 /* BackDetailVC.swift */,
+				2C2DCD2D26955C6F00D55229 /* ChestDetailVC.swift */,
+				2C2DCD2B2695531700D55229 /* ShoulderVC.swift */,
+				2C2DCD272695501B00D55229 /* TricepsVC.swift */,
+				2C2DCD23269549C800D55229 /* BicepsVC.swift */,
+				2C2DCD1D2695458400D55229 /* LegVC.swift */,
+				2C2DCD1A26949FCE00D55229 /* BackVC.swift */,
+				2C2DCD2F2695783500D55229 /* ChestVC.swift */,
+				2C2DCD292695530400D55229 /* ShoulderTableViewCell.swift */,
+				2C2DCD2526954FEB00D55229 /* TricepsTableViewCell.swift */,
+				2C2DCD212695498000D55229 /* BicepsTableViewCell.swift */,
+				2C2DCD1F269546BB00D55229 /* LegTableViewCell.swift */,
+				2C2DCD1826949F5700D55229 /* BackTableViewCell.swift */,
+				2C7F99342667CA1100999581 /* ChestTableViewCell.swift */,
+			);
+			name = Muscle;
+			sourceTree = "<group>";
+		};
+		2C43FC2C2698190B009C9438 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC2D2698192F009C9438 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2C43FC2D2698192F009C9438 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC2E269819CF009C9438 /* Rubik-BlackItalic.ttf */,
+				2C43FC2F269819D0009C9438 /* Rubik-Black.ttf */,
+				2C43FC30269819D0009C9438 /* Rubik-Bold.ttf */,
+				2C43FC34269819D1009C9438 /* Rubik-BoldItalic.ttf */,
+				2C43FC31269819D0009C9438 /* Rubik-Italic.ttf */,
+				2C43FC37269819D1009C9438 /* Rubik-Light.ttf */,
+				2C43FC36269819D1009C9438 /* Rubik-LightItalic.ttf */,
+				2C43FC35269819D1009C9438 /* Rubik-Medium.ttf */,
+				2C43FC32269819D0009C9438 /* Rubik-MediumItalic.ttf */,
+				2C43FC33269819D0009C9438 /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2C43FC4926984C43009C9438 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC4A26984C43009C9438 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C43FC74269970FE009C9438 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC802699EF17009C9438 /* View */,
+				2C43FC7F2699EF04009C9438 /* Model */,
+				2C43FC7D2699EED5009C9438 /* Controller */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		2C43FC7D2699EED5009C9438 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC75269973E0009C9438 /* DiaryVC.swift */,
+				2C43FC792699E88F009C9438 /* DiaryDetailVC.swift */,
+				2C43FC93269AD08F009C9438 /* MoodVC.swift */,
+				2C43FC97269B01F8009C9438 /* NewDiaryController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C43FC7F2699EF04009C9438 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC7B2699EB9A009C9438 /* Diary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C43FC802699EF17009C9438 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC772699A66D009C9438 /* DiaryTableViewCell.swift */,
+				2C43FC8B2699F508009C9438 /* DiaryDetailHeaderView.swift */,
+				2C43FC8D2699FBA1009C9438 /* DiaryDetailIconTextCell.swift */,
+				2C43FC95269AFE5A009C9438 /* RoundedTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C69C96A264EDDFD00EF7D1A = {
+			isa = PBXGroup;
+			children = (
+				2C69C975264EDDFD00EF7D1A /* myFitness */,
+				2C69C974264EDDFD00EF7D1A /* Products */,
+				2C43FC4926984C43009C9438 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C69C974264EDDFD00EF7D1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C69C973264EDDFD00EF7D1A /* myFitness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C69C975264EDDFD00EF7D1A /* myFitness */ = {
+			isa = PBXGroup;
+			children = (
+				2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */,
+				2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */,
+				2C816F2C268B5E8E00AA1EEB /* Caculate */,
+				2C69C97F264EDE0100EF7D1A /* Assets.xcassets */,
+				2C69C97C264EDDFD00EF7D1A /* Main.storyboard */,
+				2C69C981264EDE0100EF7D1A /* LaunchScreen.storyboard */,
+				2C69C984264EDE0100EF7D1A /* Info.plist */,
+				2C61016D267F85F4004657DD /* TimerViewController.swift */,
+				2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */,
+				2C43FC74269970FE009C9438 /* Diary */,
+				2CA527EF2697588E002E76D4 /* GYM */,
+				2C2DCD1C2694A22E00D55229 /* Muscle */,
+				2C43FC2C2698190B009C9438 /* Resources */,
+				2C816F26268B403400AA1EEB /* Note */,
+			);
+			path = myFitness;
+			sourceTree = "<group>";
+		};
+		2C816F26268B403400AA1EEB /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C145A267AF3F4008A97F8 /* Note.swift */,
+				2C816F2A268B40FE00AA1EEB /* CoreDataHelper.swift */,
+				2C3C145C267B03F3008A97F8 /* NoteViewController.swift */,
+				2C3C1458267AF3CD008A97F8 /* ListViewController.swift */,
+				2C816F27268B407800AA1EEB /* NotesDataModel.xcdatamodeld */,
+			);
+			name = Note;
+			sourceTree = "<group>";
+		};
+		2C816F2C268B5E8E00AA1EEB /* Caculate */ = {
+			isa = PBXGroup;
+			children = (
+				2C7F990D266780EC00999581 /* BMIViewController.swift */,
+			);
+			name = Caculate;
+			sourceTree = "<group>";
+		};
+		2CA527EF2697588E002E76D4 /* GYM */ = {
+			isa = PBXGroup;
+			children = (
+				2C43FC2A2697FB0E009C9438 /* GYM.swift */,
+				2C43FC50269856E4009C9438 /* MapVC.swift */,
+				2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */,
+				2C43FC282697F60A009C9438 /* GYMDetailVC.swift */,
+				2C43FC4226981DDE009C9438 /* GYMDetailHeaderView.swift */,
+				2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */,
+				2C43FC45269828C2009C9438 /* GymDetailIconTextCell.swift */,
+				2C43FC47269829FD009C9438 /* GymDetailTextCell.swift */,
+				2C43FC4C26984F40009C9438 /* GymDetailSeparatorCell.swift */,
+				2C43FC4E2698501A009C9438 /* GymDetailMapCell.swift */,
+			);
+			name = GYM;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C69C972264EDDFD00EF7D1A /* myFitness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C69C987264EDE0100EF7D1A /* Build configuration list for PBXNativeTarget "myFitness" */;
+			buildPhases = (
+				2C69C96F264EDDFD00EF7D1A /* Sources */,
+				2C69C970264EDDFD00EF7D1A /* Frameworks */,
+				2C69C971264EDDFD00EF7D1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = myFitness;
+			productName = myFitness;
+			productReference = 2C69C973264EDDFD00EF7D1A /* myFitness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C69C96B264EDDFD00EF7D1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					2C69C972264EDDFD00EF7D1A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 2C69C96E264EDDFD00EF7D1A /* Build configuration list for PBXProject "myFitness" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C69C96A264EDDFD00EF7D1A;
+			productRefGroup = 2C69C974264EDDFD00EF7D1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C69C972264EDDFD00EF7D1A /* myFitness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C69C971264EDDFD00EF7D1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C43FC872699F187009C9438 /* Rubik-BlackItalic.ttf in Resources */,
+				2C69C983264EDE0100EF7D1A /* LaunchScreen.storyboard in Resources */,
+				2C69C980264EDE0100EF7D1A /* Assets.xcassets in Resources */,
+				2C43FC892699F187009C9438 /* Rubik-Medium.ttf in Resources */,
+				2C43FC882699F187009C9438 /* Rubik-LightItalic.ttf in Resources */,
+				2C43FC832699F187009C9438 /* Rubik-Italic.ttf in Resources */,
+				2C43FC812699F187009C9438 /* Rubik-Black.ttf in Resources */,
+				2C43FC862699F187009C9438 /* Rubik-Light.ttf in Resources */,
+				2C43FC822699F187009C9438 /* Rubik-Regular.ttf in Resources */,
+				2C43FC8A2699F187009C9438 /* Rubik-MediumItalic.ttf in Resources */,
+				2C43FC852699F187009C9438 /* Rubik-Bold.ttf in Resources */,
+				2C43FC842699F187009C9438 /* Rubik-BoldItalic.ttf in Resources */,
+				2C69C97E264EDDFD00EF7D1A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C69C96F264EDDFD00EF7D1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2DCD24269549C800D55229 /* BicepsVC.swift in Sources */,
+				2C43FC76269973E0009C9438 /* DiaryVC.swift in Sources */,
+				2CA527EE269753CB002E76D4 /* GYMTableViewCell.swift in Sources */,
+				2C43FC4326981DDE009C9438 /* GYMDetailHeaderView.swift in Sources */,
+				2C43FC292697F60A009C9438 /* GYMDetailVC.swift in Sources */,
+				2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */,
+				2C43FC8E2699FBA1009C9438 /* DiaryDetailIconTextCell.swift in Sources */,
+				2C2DCD322695998800D55229 /* BackDetailVC.swift in Sources */,
+				2C7F990E266780EC00999581 /* BMIViewController.swift in Sources */,
+				2C2DCD2A2695530400D55229 /* ShoulderTableViewCell.swift in Sources */,
+				2C43FC8C2699F508009C9438 /* DiaryDetailHeaderView.swift in Sources */,
+				2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */,
+				2C2DCD1926949F5700D55229 /* BackTableViewCell.swift in Sources */,
+				2C3C145B267AF3F4008A97F8 /* Note.swift in Sources */,
+				2C43FC51269856E4009C9438 /* MapVC.swift in Sources */,
+				2C3C145D267B03F3008A97F8 /* NoteViewController.swift in Sources */,
+				2C43FC4D26984F40009C9438 /* GymDetailSeparatorCell.swift in Sources */,
+				2C816F2B268B40FE00AA1EEB /* CoreDataHelper.swift in Sources */,
+				2C2DCD282695501B00D55229 /* TricepsVC.swift in Sources */,
+				2C2DCD3A2695EF2100D55229 /* ShoulderDetailVC.swift in Sources */,
+				2C2DCD2E26955C6F00D55229 /* ChestDetailVC.swift in Sources */,
+				2C2DCD342695A21800D55229 /* LegDetailVC.swift in Sources */,
+				2C816F29268B407800AA1EEB /* NotesDataModel.xcdatamodeld in Sources */,
+				2C43FC2B2697FB0E009C9438 /* GYM.swift in Sources */,
+				2C43FC48269829FD009C9438 /* GymDetailTextCell.swift in Sources */,
+				2C2DCD2626954FEB00D55229 /* TricepsTableViewCell.swift in Sources */,
+				2C43FC46269828C2009C9438 /* GymDetailIconTextCell.swift in Sources */,
+				2C2DCD222695498000D55229 /* BicepsTableViewCell.swift in Sources */,
+				2C43FC4F2698501A009C9438 /* GymDetailMapCell.swift in Sources */,
+				2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */,
+				2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */,
+				2C2DCD382695DF4000D55229 /* TricepsDetailVC.swift in Sources */,
+				2C2DCD2C2695531700D55229 /* ShoulderVC.swift in Sources */,
+				2C43FC96269AFE5A009C9438 /* RoundedTextField.swift in Sources */,
+				2C43FC782699A66D009C9438 /* DiaryTableViewCell.swift in Sources */,
+				2CA527EC26974BA4002E76D4 /* GYMTableVC.swift in Sources */,
+				2C43FC94269AD08F009C9438 /* MoodVC.swift in Sources */,
+				2C2DCD362695D4DC00D55229 /* BicepsDetailVC.swift in Sources */,
+				2C43FC7A2699E88F009C9438 /* DiaryDetailVC.swift in Sources */,
+				2C43FC7C2699EB9A009C9438 /* Diary.swift in Sources */,
+				2C2DCD302695783500D55229 /* ChestVC.swift in Sources */,
+				2C2DCD1E2695458400D55229 /* LegVC.swift in Sources */,
+				2C2DCD20269546BB00D55229 /* LegTableViewCell.swift in Sources */,
+				2C43FC98269B01F8009C9438 /* NewDiaryController.swift in Sources */,
+				2C2DCD1B26949FCE00D55229 /* BackVC.swift in Sources */,
+				2C7F99352667CA1100999581 /* ChestTableViewCell.swift in Sources */,
+				2C3C1459267AF3CD008A97F8 /* ListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C69C97C264EDDFD00EF7D1A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C69C97D264EDDFD00EF7D1A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C69C981264EDE0100EF7D1A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C69C982264EDE0100EF7D1A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C69C985264EDE0100EF7D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2C69C986264EDE0100EF7D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C69C988264EDE0100EF7D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6A46M22U77;
+				INFOPLIST_FILE = myFitness/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.com.adong23664.myFitness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C69C989264EDE0100EF7D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6A46M22U77;
+				INFOPLIST_FILE = myFitness/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.com.adong23664.myFitness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C69C96E264EDDFD00EF7D1A /* Build configuration list for PBXProject "myFitness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C69C985264EDE0100EF7D1A /* Debug */,
+				2C69C986264EDE0100EF7D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C69C987264EDE0100EF7D1A /* Build configuration list for PBXNativeTarget "myFitness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C69C988264EDE0100EF7D1A /* Debug */,
+				2C69C989264EDE0100EF7D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C816F27268B407800AA1EEB /* NotesDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C816F28268B407800AA1EEB /* NotesDataModel.xcdatamodel */,
+			);
+			currentVersion = 2C816F28268B407800AA1EEB /* NotesDataModel.xcdatamodel */;
+			path = NotesDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2C69C96B264EDDFD00EF7D1A /* Project object */;
+}

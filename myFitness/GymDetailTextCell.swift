@@ -7,7 +7,8 @@
 
 import UIKit
 
-class GYMDetailTextCell: UITableViewCell {
+class GymDetailTextCell: UITableViewCell {
+    @IBOutlet var descriptionLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

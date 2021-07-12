@@ -1,16 +1,16 @@
 //
-//  GYMDetailIconTextCellTableViewCell.swift
+//  BodyTableViewCell.swift
 //  myFitness
 //
-//  Created by 楊振東 on 2021/7/9.
+//  Created by 楊振東 on 2021/6/2.
 //
 
 import UIKit
 
-class GymDetailIconTextCell: UITableViewCell {
+class ChestTableViewCell: UITableViewCell {
     
-    @IBOutlet var iconImageView: UIImageView!
-    @IBOutlet var shortTextLabel: UILabel!
+    @IBOutlet var chestNameLabel: UILabel!
+    @IBOutlet var chestImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

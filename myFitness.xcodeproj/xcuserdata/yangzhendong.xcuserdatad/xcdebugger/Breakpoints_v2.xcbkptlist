@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6C38002D-50EA-4B43-AF17-CCC8E45A7816"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "801BB01C-2D3D-4F71-A8BE-B66531E56E61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "myFitness/TricepsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "TricepsVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "801BB01C-2D3D-4F71-A8BE-B66531E56E61 - c0a539eed22bb3fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myFitness.TricepsVC.tricepsSteps.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "myFitness"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangzhendong/Desktop/myFitness/myFitness/TricepsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "801BB01C-2D3D-4F71-A8BE-B66531E56E61 - 38efb1ec85b0cdc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myFitness.TricepsVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; myFitness.TricepsVC"
+                  moduleName = "myFitness"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangzhendong/Desktop/myFitness/myFitness/TricepsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "1237">
+               </Location>
+               <Location
+                  uuid = "801BB01C-2D3D-4F71-A8BE-B66531E56E61 - abf9e48466f72dce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myFitness.TricepsVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;myFitness.TricepsVC&gt;"
+                  moduleName = "myFitness"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangzhendong/Desktop/myFitness/myFitness/TricepsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "1178">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

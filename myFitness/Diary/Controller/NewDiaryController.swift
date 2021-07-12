@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewDiaryController: UITableViewController, UITextFieldDelegate {
+class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet var nameTextField: RoundedTextField!{
         didSet{
             nameTextField.tag = 1
@@ -30,10 +30,16 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate {
         descriptionTextView.layer.masksToBounds = true
         }
     }
+    @IBOutlet var photoImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
- 
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.shadowImage = UIImage()
+        if let customFont = UIFont(name: "Rubik-Medium", size: 35.0) {
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont]
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -43,6 +49,78 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate {
         }
         return true
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.allowsEditing = false
+                    imagePicker.sourceType = .camera
+                    imagePicker.delegate = self
+                    self.present(imagePicker, animated: true, completion: nil)
+                }
+            })
+            
+            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
+                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.allowsEditing = false
+                    imagePicker.sourceType = .photoLibrary
+                    imagePicker.delegate = self
+                    self.present(imagePicker, animated: true, completion: nil)
+                }
+            })
+            photoSourceRequestController.addAction(cancelAction)
+            photoSourceRequestController.addAction(cameraAction)
+            photoSourceRequestController.addAction(photoLibraryAction)
+            present(photoSourceRequestController, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = selectedImage
+            photoImageView.contentMode = .scaleToFill
+            photoImageView.clipsToBounds = true
+        }
+        
+        let leadingConstraint = NSLayoutConstraint(item: photoImageView as Any, attribute: .leading, relatedBy: .equal, toItem: photoImageView.superview, attribute: .leading, multiplier: 1, constant: 0)
+        leadingConstraint.isActive = true
+
+        let trailingConstraint = NSLayoutConstraint(item: photoImageView as Any, attribute: .trailing, relatedBy: .equal, toItem: photoImageView.superview, attribute: .trailing, multiplier: 1, constant: 0)
+        trailingConstraint.isActive = true
+
+        let topConstraint = NSLayoutConstraint(item: photoImageView as Any, attribute: .top, relatedBy: .equal, toItem: photoImageView.superview, attribute: .top, multiplier: 1, constant: 0)
+        topConstraint.isActive = true
+
+        let bottomConstraint = NSLayoutConstraint(item: photoImageView as Any, attribute: .bottom, relatedBy: .equal, toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
+        bottomConstraint.isActive = true
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        
+        if nameTextField.text == "" || dateTextField.text == "" || descriptionTextView.text == ""  {
+            let alertController = UIAlertController(title: "注意!", message: "填寫資料有空白", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        print("Name: \(nameTextField.text ?? "")")
+        print("Type: \(dateTextField.text ?? "")")
+        print("Description: \(descriptionTextView.text ?? "")")
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 
 
