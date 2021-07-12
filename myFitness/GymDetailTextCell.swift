@@ -1,18 +1,13 @@
 //
-//  DiaryDetailTextCell.swift
+//  GYMDetailTextCell.swift
 //  myFitness
 //
-//  Created by 楊振東 on 2021/7/11.
+//  Created by 楊振東 on 2021/7/9.
 //
 
 import UIKit
 
-class DiaryDetailTextCell: UITableViewCell {
-    @IBOutlet var descriptionLabel: UILabel! {
-        didSet{
-            descriptionLabel.numberOfLines = 0
-        }
-    }
+class GYMDetailTextCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
