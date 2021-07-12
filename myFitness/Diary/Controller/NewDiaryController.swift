@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet var nameTextField: RoundedTextField!{
@@ -20,6 +21,7 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
             dateTextField.tag = 2
             dateTextField.becomeFirstResponder()
             dateTextField.delegate = self
+            dateTextField.text = "\(DateFormatter.localizedString(from: Date(), dateStyle: .long, timeStyle: .short))"
         }
     }
     
@@ -31,6 +33,7 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
         }
     }
     @IBOutlet var photoImageView: UIImageView!
+    var diary: DiaryMO!
     
     
     override func viewDidLoad() {
@@ -105,19 +108,30 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
         
     }
     @IBAction func saveButtonTapped(sender: AnyObject) {
-        
         if nameTextField.text == "" || dateTextField.text == "" || descriptionTextView.text == ""  {
             let alertController = UIAlertController(title: "注意!", message: "填寫資料有空白", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(alertAction)
             present(alertController, animated: true, completion: nil)
-            
             return
         }
-        
         print("Name: \(nameTextField.text ?? "")")
         print("Type: \(dateTextField.text ?? "")")
         print("Description: \(descriptionTextView.text ?? "")")
+        
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            diary = DiaryMO(context: appDelegate.persistentContainer.viewContext)
+            diary.name = nameTextField.text
+            diary.date = dateTextField.text
+            diary.summary = descriptionTextView.text
+            diary.isLike = false
+            
+            if let diaryImage = photoImageView.image {
+                diary.image = diaryImage.pngData()
+            }
+            print("Saving data to context ...")
+            appDelegate.saveContext()
+        }
         dismiss(animated: true, completion: nil)
     }
     

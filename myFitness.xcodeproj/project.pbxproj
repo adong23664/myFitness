@@ -55,6 +55,7 @@
 		2C43FC94269AD08F009C9438 /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC93269AD08F009C9438 /* MoodVC.swift */; };
 		2C43FC96269AFE5A009C9438 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC95269AFE5A009C9438 /* RoundedTextField.swift */; };
 		2C43FC98269B01F8009C9438 /* NewDiaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC97269B01F8009C9438 /* NewDiaryController.swift */; };
+		2C43FCAB269C7157009C9438 /* myFitness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCA9269C7157009C9438 /* myFitness.xcdatamodeld */; };
 		2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61016D267F85F4004657DD /* TimerViewController.swift */; };
 		2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */; };
 		2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */; };
@@ -119,6 +120,7 @@
 		2C43FC93269AD08F009C9438 /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		2C43FC95269AFE5A009C9438 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		2C43FC97269B01F8009C9438 /* NewDiaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiaryController.swift; sourceTree = "<group>"; };
+		2C43FCAA269C7157009C9438 /* myFitness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myFitness.xcdatamodel; sourceTree = "<group>"; };
 		2C61016D267F85F4004657DD /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		2C69C973264EDDFD00EF7D1A /* myFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				2C43FC802699EF17009C9438 /* View */,
 				2C43FC7F2699EF04009C9438 /* Model */,
 				2C43FC7D2699EED5009C9438 /* Controller */,
+				2C43FCA9269C7157009C9438 /* myFitness.xcdatamodeld */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */,
 				2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */,
 				2C2DCD382695DF4000D55229 /* TricepsDetailVC.swift in Sources */,
+				2C43FCAB269C7157009C9438 /* myFitness.xcdatamodeld in Sources */,
 				2C2DCD2C2695531700D55229 /* ShoulderVC.swift in Sources */,
 				2C43FC96269AFE5A009C9438 /* RoundedTextField.swift in Sources */,
 				2C43FC782699A66D009C9438 /* DiaryTableViewCell.swift in Sources */,
@@ -651,6 +655,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		2C43FCA9269C7157009C9438 /* myFitness.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C43FCAA269C7157009C9438 /* myFitness.xcdatamodel */,
+			);
+			currentVersion = 2C43FCAA269C7157009C9438 /* myFitness.xcdatamodel */;
+			path = myFitness.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		2C816F27268B407800AA1EEB /* NotesDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

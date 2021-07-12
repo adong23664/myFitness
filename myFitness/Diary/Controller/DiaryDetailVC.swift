@@ -13,7 +13,7 @@ class DiaryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: DiaryDetailHeaderView!
 
-    var diary = Diary()
+    var diary : DiaryMO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,9 @@ class DiaryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.separatorStyle = .none
         navigationItem.largeTitleDisplayMode = .never
         headerView.nameLabel.text = diary.name
-        headerView.headerImageView.image = UIImage(named: diary.image)
+        if let diaryImage = diary.image {
+            headerView.headerImageView.image = UIImage(data: diaryImage as Data)
+        }
         headerView.heartImageView.isHidden = (diary.isLike) ? false : true
         //
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -30,7 +32,10 @@ class DiaryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         navigationController?.navigationBar.tintColor = .white
         
         tableView.contentInsetAdjustmentBehavior = .never
-    
+        
+        if let mood = diary.mood {
+            headerView.moodImageView.image = UIImage(named: mood)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +63,7 @@ class DiaryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:DiaryDetailIconTextCell.self), for: indexPath) as! DiaryDetailIconTextCell
             cell.iconImageView.image = UIImage(systemName: "note")?.withTintColor(.black,renderingMode: .alwaysOriginal)
-            cell.shortTextLabel.text = diary.description
+            cell.shortTextLabel.text = diary.summary
             cell.selectionStyle = .none
             
             return cell
@@ -83,6 +88,10 @@ class DiaryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             if let mood = segue.identifier {
                 self.diary.mood = mood
                 self.headerView.moodImageView.image = UIImage(named: mood)
+                
+                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                    appDelegate.saveContext()
+                }
                 
                 let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
                 self.headerView.moodImageView.transform = scaleTransform

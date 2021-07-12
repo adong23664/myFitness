@@ -11,12 +11,14 @@ class MoodVC: UIViewController {
     @IBOutlet var moodButtons: [UIButton]!
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var closeBtn: UIButton!
-    var diary = Diary()
+    var diary : DiaryMO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        backgroundImageView.image = UIImage(named: diary.image)
+        if let diaryImage = diary.image {
+            backgroundImageView.image = UIImage(data: diaryImage as Data)
+        }
         
         //模糊
         let blurEffect = UIBlurEffect(style: .dark)

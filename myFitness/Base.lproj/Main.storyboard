@@ -621,7 +621,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqz-zs-W5I" userLabel="Name Label">
-                                            <rect key="frame" x="8" y="301" width="86" height="41"/>
+                                            <rect key="frame" x="8" y="300.5" width="91.5" height="41.5"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -664,7 +664,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXE-A0-b9B">
-                                                            <rect key="frame" x="30" y="2" width="308" height="16.5"/>
+                                                            <rect key="frame" x="30" y="2" width="308" height="17"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -685,14 +685,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GymDetailTextCell" id="1Ec-VZ-f6G" customClass="GymDetailTextCell" customModule="myFitness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="420" width="375" height="43"/>
+                                        <rect key="frame" x="0.0" y="420" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Ec-VZ-f6G" id="yWr-wy-qfs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8b-U7-Zq2">
-                                                    <rect key="frame" x="19" y="11" width="336" height="18"/>
+                                                    <rect key="frame" x="19" y="11" width="336" height="18.5"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -710,7 +710,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GymDetailSeparatorCell" id="uof-xA-eiU" customClass="GymDetailSeparatorCell" customModule="myFitness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="463" width="375" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="463.5" width="375" height="46.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uof-xA-eiU" id="vM9-u9-wV8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="46.5"/>
@@ -747,7 +747,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GymDetailMapCell" rowHeight="215" id="HSl-E6-qbK" customClass="GymDetailMapCell" customModule="myFitness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="509.5" width="375" height="215"/>
+                                        <rect key="frame" x="0.0" y="510" width="375" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HSl-E6-qbK" id="lwI-oK-3U1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
@@ -1598,7 +1598,7 @@
             <objects>
                 <tableViewController id="Euk-82-qek" customClass="NewDiaryController" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="18V-vb-VMr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -1755,7 +1755,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgO-WO-6HP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0n3-qa-8Lx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2904.8000000000002" y="-4189.6551724137935"/>
+            <point key="canvasLocation" x="-1673" y="-3857"/>
         </scene>
         <!--Training Diary-->
         <scene sceneID="Qk5-ce-wme">
@@ -1841,12 +1841,34 @@
                         <barButtonItem key="rightBarButtonItem" title=" " image="plus" catalog="system" id="gBO-0w-kYl">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="Euk-82-qek" kind="show" identifier="addDiary" id="TOs-59-H72"/>
+                                <segue destination="hzG-9O-Yev" kind="presentation" identifier="addDiary" id="pFf-cR-K57"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyDiaryView" destination="f8N-JX-wbg" id="ksh-wb-mOX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tyo-qx-t3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="kfM-Ba-VuI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="f8N-JX-wbg" userLabel="empty">
+                            <rect key="frame" x="28" y="100" width="358" height="398.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="f8N-JX-wbg" secondAttribute="height" multiplier="80:89" id="4XU-ff-bcs"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="aRo-Zq-0UP"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="f8N-JX-wbg" firstAttribute="leading" secondItem="aRo-Zq-0UP" secondAttribute="leading" constant="28" id="Q9C-gY-Zj6"/>
+                        <constraint firstItem="aRo-Zq-0UP" firstAttribute="trailing" secondItem="f8N-JX-wbg" secondAttribute="trailing" constant="28" id="Zpq-fG-LgF"/>
+                        <constraint firstItem="f8N-JX-wbg" firstAttribute="top" secondItem="aRo-Zq-0UP" secondAttribute="top" constant="100" id="mBy-eF-7bU"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="-3840.8000000000002" y="-3510.4947526236883"/>
         </scene>
@@ -1970,7 +1992,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66Z-xz-Jwy">
-                                                    <rect key="frame" x="30" y="0.0" width="308" height="16.5"/>
+                                                    <rect key="frame" x="30" y="0.0" width="308" height="17"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2001,7 +2023,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfy-g9-man" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2104.8000000000002" y="-3510.9445277361324"/>
+            <point key="canvasLocation" x="-2855" y="-2934"/>
         </scene>
         <!--MoodVC-->
         <scene sceneID="Ex5-wk-O04">
@@ -2027,10 +2049,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V9q-bz-6yn">
-                                <rect key="frame" x="74.5" y="83" width="226" height="481"/>
+                                <rect key="frame" x="74" y="83" width="227" height="481"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-cT-hmI">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -2038,7 +2060,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-fq-ilF">
-                                        <rect key="frame" x="0.0" y="92" width="183" height="83"/>
+                                        <rect key="frame" x="0.0" y="92" width="181" height="83"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -2046,7 +2068,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiD-lj-4se">
-                                        <rect key="frame" x="0.0" y="185" width="226" height="86"/>
+                                        <rect key="frame" x="0.0" y="185" width="227" height="86"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -2062,7 +2084,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-Dd-kC9">
-                                        <rect key="frame" x="0.0" y="378" width="209" height="103"/>
+                                        <rect key="frame" x="0.0" y="378" width="218" height="103"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -2099,7 +2121,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxk-ge-mKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="W3D-XE-hfk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1084" y="-3510"/>
+            <point key="canvasLocation" x="-1866" y="-2934"/>
         </scene>
         <!--Chest DetailVC-->
         <scene sceneID="HfT-yk-k3m">
@@ -2557,7 +2579,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzG-9O-Yev" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zbk-RO-mnF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2567,16 +2589,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6r-v2-Xef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3844" y="-4189.6551724137935"/>
+            <point key="canvasLocation" x="-2855" y="-3856"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="TOs-59-H72"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="angry" width="78" height="103"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="cool" width="78" height="83"/>
+        <image name="empty" width="310" height="372"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="flame" catalog="system" width="108" height="128"/>
         <image name="happy" width="78" height="86"/>
