@@ -8,12 +8,13 @@
 import UIKit
 import CoreData
 
-class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate {
+class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     
     var fetchResultController : NSFetchedResultsController<DiaryMO>!
     @IBOutlet var emptyDiaryView: UIView!
     var diarys:[DiaryMO] = []
-    
+    var searchResults: [DiaryMO] = []
+    var searchController: UISearchController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,19 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate {
             } catch {
                 print(error)
             }
+            
         }
+        
+        //search
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search diary..."
+        searchController.searchBar.barTintColor = .white
+        searchController.searchBar.backgroundImage = UIImage()
+        searchController.searchBar.tintColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0,alpha: 1.0)
+//        tableView.tableHeaderView = searchController.searchBar
+        self.navigationItem.searchController = searchController
         
     }
 
@@ -66,18 +79,23 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return diarys.count
+        if searchController.isActive {
+            return searchResults.count
+        } else {
+            return diarys.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "diarycell", for: indexPath) as! DiaryTableViewCell
-        cell.nameLabel.text = diarys[indexPath.row].name
-        cell.dateLabel.text = diarys[indexPath.row].date
-        if let diaryImage = diarys[indexPath.row].image {
+        let diary = (searchController.isActive) ? searchResults[indexPath.row] : diarys[indexPath.row]
+        
+        cell.nameLabel.text = diary.name
+        cell.dateLabel.text = diary.date
+        if let diaryImage = diary.image {
             cell.thumbnailImageVew.image = UIImage(data: diaryImage as Data)
         }
-        cell.heartImageView.isHidden = !self.diarys[indexPath.row].isLike
+        cell.heartImageView.isHidden = diary.isLike ? false: true
         
         return cell
     }
@@ -147,13 +165,19 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate {
         return swipeConfiguration
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if searchController.isActive {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDiaryDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! DiaryDetailVC
-                destinationController.diary = diarys[indexPath.row]
-                
-                
+                destinationController.diary = (searchController.isActive) ? searchResults[indexPath.row] : diarys[indexPath.row]
             }
         }
     }
@@ -194,12 +218,23 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
-
-
-
     
+    func filterContent(for searchText: String) {
+        searchResults = diarys.filter({ (diary)-> Bool in
+            if let name = diary.name, let date = diary.date {
+                let isMatch = name.localizedCaseInsensitiveContains(searchText) || date.localizedCaseInsensitiveContains(searchText)
+                return isMatch
+            }
+            return false
+        })
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContent(for: searchText)
+            tableView.reloadData()
+        }
+    }
 
-
- 
 
 }
