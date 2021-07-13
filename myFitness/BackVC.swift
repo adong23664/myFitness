@@ -12,7 +12,7 @@ class BackVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     let backNames = ["引體向上","高拉力","坐式划船","單臂啞鈴划船","槓鈴聳肩","啞鈴聳肩"]
-    let backImages = ["cat0","cat1","cat2","cat3","cat4","cat9"]
+    let backImages = ["引體向上","高拉力","坐式划船","單臂啞鈴划船","槓鈴聳肩","啞鈴聳肩"]
     
     let backVideos = ["KPy_MXU2xC4","FoCBWMB11dM","moX5RMa8l64","mwyC_CLTHwE","Dz6D4j4RYho","6OL0Qi0pioA"]
     let backMainImages = ["引體向上","高拉力","坐式划船","單臂啞鈴划船","槓鈴聳肩","啞鈴聳肩"]
@@ -37,6 +37,10 @@ class BackVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.backNameLabel.text = backNames[indexPath.row]
         cell.backImageView.image = UIImage(named: backImages[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false) //閃一下
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

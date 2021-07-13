@@ -46,6 +46,10 @@ class CaculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         pickerViewAge.tag = 2
         pickerViewHeight.tag = 3
         pickerViewWeight.tag = 4
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     func createToolbar()-> UIToolbar{

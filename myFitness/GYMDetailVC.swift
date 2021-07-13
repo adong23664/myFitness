@@ -88,6 +88,10 @@ class GYMDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
     }
     
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false) //閃一下
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMap" {
             let destinationController = segue.destination as! MapVC

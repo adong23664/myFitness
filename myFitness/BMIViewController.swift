@@ -23,6 +23,10 @@ class BMIViewController: UIViewController, UITextFieldDelegate {
         
         weightField.tag = 2; weightField.delegate = self
         weightField.returnKeyType = .done
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = .white
+        
     }
     var bmi : Double?
     @IBAction func calBMI(_ sender: Any) {
