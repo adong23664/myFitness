@@ -24,9 +24,6 @@
 		2C2DCD362695D4DC00D55229 /* BicepsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD352695D4DC00D55229 /* BicepsDetailVC.swift */; };
 		2C2DCD382695DF4000D55229 /* TricepsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD372695DF4000D55229 /* TricepsDetailVC.swift */; };
 		2C2DCD3A2695EF2100D55229 /* ShoulderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCD392695EF2100D55229 /* ShoulderDetailVC.swift */; };
-		2C3C1459267AF3CD008A97F8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C1458267AF3CD008A97F8 /* ListViewController.swift */; };
-		2C3C145B267AF3F4008A97F8 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C145A267AF3F4008A97F8 /* Note.swift */; };
-		2C3C145D267B03F3008A97F8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C145C267B03F3008A97F8 /* NoteViewController.swift */; };
 		2C43FC292697F60A009C9438 /* GYMDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC282697F60A009C9438 /* GYMDetailVC.swift */; };
 		2C43FC2B2697FB0E009C9438 /* GYM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC2A2697FB0E009C9438 /* GYM.swift */; };
 		2C43FC4326981DDE009C9438 /* GYMDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC4226981DDE009C9438 /* GYMDetailHeaderView.swift */; };
@@ -60,6 +57,7 @@
 		2C43FCB0269D8B5C009C9438 /* WalkthroughContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCAF269D8B5B009C9438 /* WalkthroughContentVC.swift */; };
 		2C43FCB2269D8F0C009C9438 /* WalkthroughPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCB1269D8F0C009C9438 /* WalkthroughPageVC.swift */; };
 		2C43FCB4269D9303009C9438 /* WalkthroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCB3269D9303009C9438 /* WalkthroughVC.swift */; };
+		2C43FCB7269DCFCE009C9438 /* Ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FCB6269DCFCE009C9438 /* Ding.mp3 */; };
 		2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61016D267F85F4004657DD /* TimerViewController.swift */; };
 		2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */; };
 		2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */; };
@@ -68,8 +66,6 @@
 		2C69C983264EDE0100EF7D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C69C981264EDE0100EF7D1A /* LaunchScreen.storyboard */; };
 		2C7F990E266780EC00999581 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F990D266780EC00999581 /* BMIViewController.swift */; };
 		2C7F99352667CA1100999581 /* ChestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F99342667CA1100999581 /* ChestTableViewCell.swift */; };
-		2C816F29268B407800AA1EEB /* NotesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F27268B407800AA1EEB /* NotesDataModel.xcdatamodeld */; };
-		2C816F2B268B40FE00AA1EEB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F2A268B40FE00AA1EEB /* CoreDataHelper.swift */; };
 		2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */; };
 		2CA527EC26974BA4002E76D4 /* GYMTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */; };
 		2CA527EE269753CB002E76D4 /* GYMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */; };
@@ -93,9 +89,6 @@
 		2C2DCD352695D4DC00D55229 /* BicepsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsDetailVC.swift; sourceTree = "<group>"; };
 		2C2DCD372695DF4000D55229 /* TricepsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepsDetailVC.swift; sourceTree = "<group>"; };
 		2C2DCD392695EF2100D55229 /* ShoulderDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoulderDetailVC.swift; sourceTree = "<group>"; };
-		2C3C1458267AF3CD008A97F8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		2C3C145A267AF3F4008A97F8 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		2C3C145C267B03F3008A97F8 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		2C43FC282697F60A009C9438 /* GYMDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMDetailVC.swift; sourceTree = "<group>"; };
 		2C43FC2A2697FB0E009C9438 /* GYM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYM.swift; sourceTree = "<group>"; };
 		2C43FC2E269819CF009C9438 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -129,6 +122,7 @@
 		2C43FCAF269D8B5B009C9438 /* WalkthroughContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentVC.swift; sourceTree = "<group>"; };
 		2C43FCB1269D8F0C009C9438 /* WalkthroughPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageVC.swift; sourceTree = "<group>"; };
 		2C43FCB3269D9303009C9438 /* WalkthroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughVC.swift; sourceTree = "<group>"; };
+		2C43FCB6269DCFCE009C9438 /* Ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ding.mp3; path = ../Ding.mp3; sourceTree = "<group>"; };
 		2C61016D267F85F4004657DD /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		2C69C973264EDDFD00EF7D1A /* myFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,8 +133,6 @@
 		2C69C984264EDE0100EF7D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C7F990D266780EC00999581 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
 		2C7F99342667CA1100999581 /* ChestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestTableViewCell.swift; sourceTree = "<group>"; };
-		2C816F28268B407800AA1EEB /* NotesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesDataModel.xcdatamodel; sourceTree = "<group>"; };
-		2C816F2A268B40FE00AA1EEB /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculatorViewController.swift; sourceTree = "<group>"; };
 		2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableVC.swift; sourceTree = "<group>"; };
 		2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableViewCell.swift; sourceTree = "<group>"; };
@@ -270,6 +262,15 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		2C43FCB5269DC14E009C9438 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				2C61016D267F85F4004657DD /* TimerViewController.swift */,
+				2C43FCB6269DCFCE009C9438 /* Ding.mp3 */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
 		2C69C96A264EDDFD00EF7D1A = {
 			isa = PBXGroup;
 			children = (
@@ -296,33 +297,20 @@
 				2C816F2C268B5E8E00AA1EEB /* Caculate */,
 				2C69C97F264EDE0100EF7D1A /* Assets.xcassets */,
 				2C69C984264EDE0100EF7D1A /* Info.plist */,
-				2C61016D267F85F4004657DD /* TimerViewController.swift */,
-				2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */,
+				2C43FCB5269DC14E009C9438 /* Timer */,
 				2C43FC74269970FE009C9438 /* Diary */,
 				2CA527EF2697588E002E76D4 /* GYM */,
 				2C2DCD1C2694A22E00D55229 /* Muscle */,
 				2C43FC2C2698190B009C9438 /* Resources */,
-				2C816F26268B403400AA1EEB /* Note */,
 			);
 			path = myFitness;
-			sourceTree = "<group>";
-		};
-		2C816F26268B403400AA1EEB /* Note */ = {
-			isa = PBXGroup;
-			children = (
-				2C3C145A267AF3F4008A97F8 /* Note.swift */,
-				2C816F2A268B40FE00AA1EEB /* CoreDataHelper.swift */,
-				2C3C145C267B03F3008A97F8 /* NoteViewController.swift */,
-				2C3C1458267AF3CD008A97F8 /* ListViewController.swift */,
-				2C816F27268B407800AA1EEB /* NotesDataModel.xcdatamodeld */,
-			);
-			name = Note;
 			sourceTree = "<group>";
 		};
 		2C816F2C268B5E8E00AA1EEB /* Caculate */ = {
 			isa = PBXGroup;
 			children = (
 				2C7F990D266780EC00999581 /* BMIViewController.swift */,
+				2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */,
 			);
 			name = Caculate;
 			sourceTree = "<group>";
@@ -413,6 +401,7 @@
 				2C43FC8A2699F187009C9438 /* Rubik-MediumItalic.ttf in Resources */,
 				2C43FC852699F187009C9438 /* Rubik-Bold.ttf in Resources */,
 				2C43FCAE269D7ECA009C9438 /* Onboarding.storyboard in Resources */,
+				2C43FCB7269DCFCE009C9438 /* Ding.mp3 in Resources */,
 				2C43FC842699F187009C9438 /* Rubik-BoldItalic.ttf in Resources */,
 				2C69C97E264EDDFD00EF7D1A /* Main.storyboard in Resources */,
 			);
@@ -439,16 +428,12 @@
 				2C43FC8C2699F508009C9438 /* DiaryDetailHeaderView.swift in Sources */,
 				2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */,
 				2C2DCD1926949F5700D55229 /* BackTableViewCell.swift in Sources */,
-				2C3C145B267AF3F4008A97F8 /* Note.swift in Sources */,
 				2C43FC51269856E4009C9438 /* MapVC.swift in Sources */,
-				2C3C145D267B03F3008A97F8 /* NoteViewController.swift in Sources */,
 				2C43FC4D26984F40009C9438 /* GymDetailSeparatorCell.swift in Sources */,
-				2C816F2B268B40FE00AA1EEB /* CoreDataHelper.swift in Sources */,
 				2C2DCD282695501B00D55229 /* TricepsVC.swift in Sources */,
 				2C2DCD3A2695EF2100D55229 /* ShoulderDetailVC.swift in Sources */,
 				2C2DCD2E26955C6F00D55229 /* ChestDetailVC.swift in Sources */,
 				2C2DCD342695A21800D55229 /* LegDetailVC.swift in Sources */,
-				2C816F29268B407800AA1EEB /* NotesDataModel.xcdatamodeld in Sources */,
 				2C43FC2B2697FB0E009C9438 /* GYM.swift in Sources */,
 				2C43FC48269829FD009C9438 /* GymDetailTextCell.swift in Sources */,
 				2C2DCD2626954FEB00D55229 /* TricepsTableViewCell.swift in Sources */,
@@ -475,7 +460,6 @@
 				2C43FC98269B01F8009C9438 /* NewDiaryController.swift in Sources */,
 				2C2DCD1B26949FCE00D55229 /* BackVC.swift in Sources */,
 				2C7F99352667CA1100999581 /* ChestTableViewCell.swift in Sources */,
-				2C3C1459267AF3CD008A97F8 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,16 +670,6 @@
 			);
 			currentVersion = 2C43FCAA269C7157009C9438 /* myFitness.xcdatamodel */;
 			path = myFitness.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		2C816F27268B407800AA1EEB /* NotesDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2C816F28268B407800AA1EEB /* NotesDataModel.xcdatamodel */,
-			);
-			currentVersion = 2C816F28268B407800AA1EEB /* NotesDataModel.xcdatamodel */;
-			path = NotesDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

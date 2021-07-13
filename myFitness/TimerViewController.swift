@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Timers {
     var mins: String
@@ -17,6 +18,8 @@ class Timers {
 }
 
 class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var player: AVAudioPlayer?
 
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
@@ -35,6 +38,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        pickerView.setValue(UIColor.white, forKey: "textColor")
         timers.append(Timers(mins: "00", seconds: ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59" ]))
         timers.append(Timers(mins: "01", seconds: ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59" ]))
         timers.append(Timers(mins: "02", seconds: ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]))
@@ -42,14 +46,14 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         timers.append(Timers(mins: "04", seconds: ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]))
         timers.append(Timers(mins: "05", seconds: ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]))
         
-        startStopButton.setTitleColor(UIColor.green, for: .normal)
+        startStopButton.setTitleColor(UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0), for: .normal)
         startStopButton.layer.borderWidth = 3
-        startStopButton.layer.borderColor = UIColor.green.cgColor
+        startStopButton.layer.borderColor = UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0).cgColor
         resetButton.layer.borderWidth = 3
         resetButton.layer.borderColor = UIColor.systemBlue.cgColor
         
         setNumber.layer.borderWidth = 3
-        setNumber.layer.borderColor = UIColor.brown.cgColor
+        setNumber.layer.borderColor = UIColor.white.cgColor
         setNumber.layer.shadowOffset = CGSize(width: 10, height: 10)
         setNumber.layer.shadowColor = UIColor.darkGray.cgColor
         setNumber.layer.shadowOpacity = 0.5
@@ -96,16 +100,16 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 if (timerCounting) {
                     timerCounting = false
                     timer.invalidate()
-                    startStopButton.setTitle("Start", for: .normal)
-                    startStopButton.setTitleColor(UIColor.green, for: .normal)
+                    startStopButton.setTitle("開始", for: .normal)
+                    startStopButton.setTitleColor(UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0), for: .normal)
                     startStopButton.layer.borderWidth = 3
-                    startStopButton.layer.borderColor = UIColor.green.cgColor
+                    startStopButton.layer.borderColor = UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0).cgColor
                     self.done.isEnabled = true
                     self.pickerView.isHidden = false
                     
                 } else {
                     timerCounting = true
-                    startStopButton.setTitle("Stop", for: .normal)
+                    startStopButton.setTitle("暫停", for: .normal)
                     startStopButton.layer.borderWidth = 3
                     startStopButton.layer.borderColor = UIColor.red.cgColor
                     startStopButton.setTitleColor(UIColor.red, for: .normal)
@@ -117,33 +121,26 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     @IBAction func restetTapped(_ sender: Any) {
-        if (count == 0){
-            timer.invalidate()
-        }  else {
-                let alert = UIAlertController(title: "Reset Timer? ", message: "Are you sure you would like to reset Timer?", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: { (_) in
-                    // do nothing
-                }))
-                alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
-                    self.setNB = 0
-                    self.setNumber.text = "第\(self.setNB)組"
-                    self.count = 0
-                    self.rememberCount = 0
-                    self.timer.invalidate()
-                    self.timerLabel.text = self.makeTimerString(minutes: 0, sconds: 0)
-                    self.timerCounting = false
-
-                    self.startStopButton.setTitle("Start", for: .normal)
-                    self.startStopButton.setTitleColor(UIColor.green, for: .normal)
-                    self.startStopButton.layer.borderWidth = 3
-                    self.startStopButton.layer.borderColor = UIColor.green.cgColor
-                    
-                    self.done.isEnabled = true
-                    self.pickerView.isHidden = false
-                }))
-                
-                self.present(alert, animated: true, completion: nil)
-        }
+    let alert = UIAlertController(title: "重置? ", message: "記錄將會消失!!", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (_) in
+    // do nothing
+    }))
+    alert.addAction(UIAlertAction(title: "確定", style: .destructive, handler: { (_) in
+        self.setNB = 0
+        self.setNumber.text = "第\(self.setNB)組"
+        self.count = 0
+        self.rememberCount = 0
+        self.timer.invalidate()
+        self.timerLabel.text = self.makeTimerString(minutes: 0, sconds: 0)
+        self.timerCounting = false
+        self.startStopButton.setTitle("開始", for: .normal)
+        self.startStopButton.setTitleColor(UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0), for: .normal)
+        self.startStopButton.layer.borderWidth = 3
+        self.startStopButton.layer.borderColor = UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0).cgColor
+        self.done.isEnabled = true
+        self.pickerView.isHidden = false
+    }))
+        self.present(alert, animated: true, completion: nil)
     }
 
     @objc
@@ -153,6 +150,28 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let timeString = makeTimerString(minutes: time.0, sconds: time.1)
         timerLabel.text = timeString
         if (count == 0){
+            if let player = player, player.isPlaying{
+                //stop playback
+                player.stop()
+            } else {
+                //setup player and play
+                let urlString = Bundle.main.path(forResource: "Ding", ofType: "mp3")
+                do {
+                    try AVAudioSession.sharedInstance().setMode(.default)
+                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                    
+                    guard let urlString = urlString else {
+                        return
+                    }
+                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                    guard let player = player else {
+                        return
+                    }
+                    player.play()
+                } catch  {
+                    print("something went wrong")
+                }
+            }
             count = rememberCount
             let time = secondsToHoursMinutesSeconds(seconds: count)
             let timeString = makeTimerString(minutes: time.0, sconds: time.1)
@@ -192,10 +211,10 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             let timeString = makeTimerString(minutes: time.0, sconds: time.1)
             timerLabel.text = timeString
             self.timerCounting = false
-            self.startStopButton.setTitle("Start", for: .normal)
-            self.startStopButton.setTitleColor(UIColor.green, for: .normal)
+            self.startStopButton.setTitle("開始", for: .normal)
+            self.startStopButton.setTitleColor(UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0), for: .normal)
             self.startStopButton.layer.borderWidth = 3
-            self.startStopButton.layer.borderColor = UIColor.green.cgColor
+            self.startStopButton.layer.borderColor = UIColor(red: 0.0/255.0, green: 179.0/255.0, blue: 115.0/255.0, alpha: 1.0).cgColor
             done.isEnabled = false
             pickerView.isHidden = true
         }
