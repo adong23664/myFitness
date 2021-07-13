@@ -62,7 +62,7 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
             let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
-                    imagePicker.allowsEditing = false
+                    imagePicker.allowsEditing = true
                     imagePicker.sourceType = .camera
                     imagePicker.delegate = self
                     self.present(imagePicker, animated: true, completion: nil)
@@ -72,7 +72,7 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
             let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
-                    imagePicker.allowsEditing = false
+                    imagePicker.allowsEditing = true
                     imagePicker.sourceType = .photoLibrary
                     imagePicker.delegate = self
                     self.present(imagePicker, animated: true, completion: nil)
@@ -86,7 +86,7 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             photoImageView.image = selectedImage
             photoImageView.contentMode = .scaleToFill
             photoImageView.clipsToBounds = true
