@@ -22,6 +22,10 @@ class ShoulderDetailVC: UIViewController {
         getVideo(videoCode:"\(shoulderVideoCode)" )
         shoulderstepLabel.text = shoulderstep
         shoulderMainImage.image = UIImage(named:shoulderMainImageName )
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
 
     }
     func getVideo(videoCode: String) {

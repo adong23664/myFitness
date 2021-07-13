@@ -55,14 +55,14 @@ class DiaryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:DiaryDetailIconTextCell.self), for: indexPath) as! DiaryDetailIconTextCell
-            cell.iconImageView.image = UIImage(systemName: "pencil")?.withTintColor(.black,renderingMode: .alwaysOriginal)
+            cell.iconImageView.image = UIImage(systemName: "pencil")?.withTintColor(.white,renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = diary.date
             cell.selectionStyle = .none
             
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:DiaryDetailIconTextCell.self), for: indexPath) as! DiaryDetailIconTextCell
-            cell.iconImageView.image = UIImage(systemName: "note")?.withTintColor(.black,renderingMode: .alwaysOriginal)
+            cell.iconImageView.image = UIImage(systemName: "note")?.withTintColor(.white,renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = diary.summary
             cell.selectionStyle = .none
             

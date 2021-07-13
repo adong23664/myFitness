@@ -18,6 +18,9 @@ class ChestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let chestMainImages = ["仰臥推舉","上斜臥推","仰臥飛鳥","雙槓臂屈臂身","拉力器夾胸","俯臥撐"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
 
     }
     

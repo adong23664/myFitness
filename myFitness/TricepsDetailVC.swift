@@ -22,6 +22,10 @@ class TricepsDetailVC: UIViewController {
         getVideo(videoCode:"\(tricepsVideoCode)" )
         tricepsstepLabel.text = tricepsstep
         tricepsMainImage.image = UIImage(named:tricepsMainImageName )
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
 
         
     }

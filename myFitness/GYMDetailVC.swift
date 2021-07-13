@@ -15,8 +15,6 @@ class GYMDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var gym = Gym()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.largeTitleDisplayMode = .never
         navigationController?.hidesBarsOnSwipe = false
         
         headerView.nameLabel.text = gym.name
@@ -29,7 +27,8 @@ class GYMDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         // Configure the navigation bar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = .white
+    
 
         tableView.contentInsetAdjustmentBehavior = .never
     }
@@ -54,14 +53,14 @@ class GYMDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         switch  indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GymDetailIconTextCell.self), for: indexPath) as! GymDetailIconTextCell
-            cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.black,renderingMode: .alwaysOriginal)
+            cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.white,renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = gym.phone
             cell.selectionStyle = .none
             
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GymDetailIconTextCell.self), for: indexPath) as!GymDetailIconTextCell
-            cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.black,renderingMode: .alwaysOriginal)
+            cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.white,renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = gym.location
             cell.selectionStyle = .none
             

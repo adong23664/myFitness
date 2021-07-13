@@ -21,6 +21,10 @@ class ChestDetailVC: UIViewController {
         cheststepLabel.text = cheststep
         chestMainImage.image = UIImage(named:chestMainImageName )
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        
     }
     
     func getVideo(videoCode: String) {

@@ -16,6 +16,9 @@ class MapVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = .white
         
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(gym.location, completionHandler: { placemarks, error in

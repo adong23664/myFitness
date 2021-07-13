@@ -21,6 +21,10 @@ class LegDetailVC: UIViewController {
         getVideo(videoCode:"\(legVideoCode)" )
         legstepLabel.text = legstep
         legMainImage.image = UIImage(named:legMainImageName )
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
 
         
     }

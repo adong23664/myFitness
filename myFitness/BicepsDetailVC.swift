@@ -23,6 +23,10 @@ class BicepsDetailVC: UIViewController {
         getVideo(videoCode:"\(bicepsVideoCode)" )
         bicepsstepLabel.text = bicepsstep
         bicepsMainImage.image = UIImage(named:bicepsMainImageName )
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
     }
     func getVideo(videoCode: String) {
         let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
