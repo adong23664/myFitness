@@ -56,6 +56,10 @@
 		2C43FC96269AFE5A009C9438 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC95269AFE5A009C9438 /* RoundedTextField.swift */; };
 		2C43FC98269B01F8009C9438 /* NewDiaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FC97269B01F8009C9438 /* NewDiaryController.swift */; };
 		2C43FCAB269C7157009C9438 /* myFitness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCA9269C7157009C9438 /* myFitness.xcdatamodeld */; };
+		2C43FCAE269D7ECA009C9438 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FCAD269D7ECA009C9438 /* Onboarding.storyboard */; };
+		2C43FCB0269D8B5C009C9438 /* WalkthroughContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCAF269D8B5B009C9438 /* WalkthroughContentVC.swift */; };
+		2C43FCB2269D8F0C009C9438 /* WalkthroughPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCB1269D8F0C009C9438 /* WalkthroughPageVC.swift */; };
+		2C43FCB4269D9303009C9438 /* WalkthroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCB3269D9303009C9438 /* WalkthroughVC.swift */; };
 		2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61016D267F85F4004657DD /* TimerViewController.swift */; };
 		2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */; };
 		2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */; };
@@ -121,6 +125,10 @@
 		2C43FC95269AFE5A009C9438 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		2C43FC97269B01F8009C9438 /* NewDiaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiaryController.swift; sourceTree = "<group>"; };
 		2C43FCAA269C7157009C9438 /* myFitness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myFitness.xcdatamodel; sourceTree = "<group>"; };
+		2C43FCAD269D7ECA009C9438 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		2C43FCAF269D8B5B009C9438 /* WalkthroughContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentVC.swift; sourceTree = "<group>"; };
+		2C43FCB1269D8F0C009C9438 /* WalkthroughPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageVC.swift; sourceTree = "<group>"; };
+		2C43FCB3269D9303009C9438 /* WalkthroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughVC.swift; sourceTree = "<group>"; };
 		2C61016D267F85F4004657DD /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		2C69C973264EDDFD00EF7D1A /* myFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +234,9 @@
 				2C43FC792699E88F009C9438 /* DiaryDetailVC.swift */,
 				2C43FC93269AD08F009C9438 /* MoodVC.swift */,
 				2C43FC97269B01F8009C9438 /* NewDiaryController.swift */,
+				2C43FCAF269D8B5B009C9438 /* WalkthroughContentVC.swift */,
+				2C43FCB1269D8F0C009C9438 /* WalkthroughPageVC.swift */,
+				2C43FCB3269D9303009C9438 /* WalkthroughVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +260,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2C43FCAC269D7E7A009C9438 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2C69C97C264EDDFD00EF7D1A /* Main.storyboard */,
+				2C69C981264EDE0100EF7D1A /* LaunchScreen.storyboard */,
+				2C43FCAD269D7ECA009C9438 /* Onboarding.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		2C69C96A264EDDFD00EF7D1A = {
 			isa = PBXGroup;
 			children = (
@@ -269,12 +290,11 @@
 		2C69C975264EDDFD00EF7D1A /* myFitness */ = {
 			isa = PBXGroup;
 			children = (
+				2C43FCAC269D7E7A009C9438 /* Storyboard */,
 				2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */,
 				2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */,
 				2C816F2C268B5E8E00AA1EEB /* Caculate */,
 				2C69C97F264EDE0100EF7D1A /* Assets.xcassets */,
-				2C69C97C264EDDFD00EF7D1A /* Main.storyboard */,
-				2C69C981264EDE0100EF7D1A /* LaunchScreen.storyboard */,
 				2C69C984264EDE0100EF7D1A /* Info.plist */,
 				2C61016D267F85F4004657DD /* TimerViewController.swift */,
 				2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */,
@@ -392,6 +412,7 @@
 				2C43FC822699F187009C9438 /* Rubik-Regular.ttf in Resources */,
 				2C43FC8A2699F187009C9438 /* Rubik-MediumItalic.ttf in Resources */,
 				2C43FC852699F187009C9438 /* Rubik-Bold.ttf in Resources */,
+				2C43FCAE269D7ECA009C9438 /* Onboarding.storyboard in Resources */,
 				2C43FC842699F187009C9438 /* Rubik-BoldItalic.ttf in Resources */,
 				2C69C97E264EDDFD00EF7D1A /* Main.storyboard in Resources */,
 			);
@@ -406,6 +427,7 @@
 			files = (
 				2C2DCD24269549C800D55229 /* BicepsVC.swift in Sources */,
 				2C43FC76269973E0009C9438 /* DiaryVC.swift in Sources */,
+				2C43FCB2269D8F0C009C9438 /* WalkthroughPageVC.swift in Sources */,
 				2CA527EE269753CB002E76D4 /* GYMTableViewCell.swift in Sources */,
 				2C43FC4326981DDE009C9438 /* GYMDetailHeaderView.swift in Sources */,
 				2C43FC292697F60A009C9438 /* GYMDetailVC.swift in Sources */,
@@ -443,7 +465,9 @@
 				2CA527EC26974BA4002E76D4 /* GYMTableVC.swift in Sources */,
 				2C43FC94269AD08F009C9438 /* MoodVC.swift in Sources */,
 				2C2DCD362695D4DC00D55229 /* BicepsDetailVC.swift in Sources */,
+				2C43FCB0269D8B5C009C9438 /* WalkthroughContentVC.swift in Sources */,
 				2C43FC7A2699E88F009C9438 /* DiaryDetailVC.swift in Sources */,
+				2C43FCB4269D9303009C9438 /* WalkthroughVC.swift in Sources */,
 				2C43FC7C2699EB9A009C9438 /* Diary.swift in Sources */,
 				2C2DCD302695783500D55229 /* ChestVC.swift in Sources */,
 				2C2DCD1E2695458400D55229 /* LegVC.swift in Sources */,

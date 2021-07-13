@@ -63,6 +63,19 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
         self.navigationItem.searchController = searchController
         
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughVC = storyboard.instantiateViewController(withIdentifier: "WalkthroughVC") as? WalkthroughVC {
+            
+            present(walkthroughVC, animated: true, completion: nil)
+        }
+    }
 
     // MARK: - Table view data source
 
