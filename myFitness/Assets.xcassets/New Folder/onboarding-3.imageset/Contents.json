@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "onboarding-3.pdf",
+      "filename" : "截圖 2021-07-15 下午5.24.02_resized.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

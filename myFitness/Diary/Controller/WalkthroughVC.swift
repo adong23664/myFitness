@@ -53,10 +53,10 @@ class WalkthroughVC: UIViewController ,WalkthroughPageVCDelegate{
         if let index = walkthroughPageVC?.currentIndex {
             switch index {
             case 0...1:
-                nextButton.setTitle("NEXT", for: .normal)
+                nextButton.setTitle("下一步", for: .normal)
                 skipButton.isHidden = false
             case 2:
-                nextButton.setTitle("GET STARTED", for: .normal)
+                nextButton.setTitle("開始", for: .normal)
                 skipButton.isHidden = true
             default: break
             }

@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6K-JB-mFd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="441.5"/>
                                 <connections>
                                     <segue destination="veg-sF-pio" kind="embed" id="em6-zV-eWC"/>
                                 </connections>
@@ -48,18 +48,18 @@
                                                 <rect key="frame" x="34.5" y="0.0" width="121.5" height="27.5"/>
                                                 <color key="tintColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                 <color key="pageIndicatorTintColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
-                                                <color key="currentPageIndicatorTintColor" red="1" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
                                             </pageControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-Vk-bYD">
                                                 <rect key="frame" x="0.0" y="47.5" width="190" height="50"/>
-                                                <color key="backgroundColor" red="1" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="8fQ-tZ-8qc"/>
                                                     <constraint firstAttribute="width" constant="190" id="pCf-Vr-Tod"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="NEXT"/>
+                                                <state key="normal" title="下一步"/>
                                                 <connections>
                                                     <action selector="nextButtonTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Use-B6-kL9"/>
                                                 </connections>
@@ -68,7 +68,7 @@
                                                 <rect key="frame" x="80" y="117.5" width="30" height="29"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Skip"/>
+                                                <state key="normal" title="略過"/>
                                                 <connections>
                                                     <action selector="skipBtnTappedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="drU-Qt-Ejh"/>
                                                 </connections>
@@ -142,6 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="MOp-Pe-tDQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="slf-q0-YXn" secondAttribute="trailing" id="0fU-NI-m7U"/>
@@ -170,6 +171,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
