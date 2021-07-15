@@ -44,13 +44,13 @@ class BMIViewController: UIViewController, UITextFieldDelegate {
                 
                 if bmi! > 25 {
                     advice.text = "過重"
-                    advice2.text = "123"
+                    advice2.text = "世界衛生組織(WHO)指出，肥胖相較健康體重者罹患糖尿病、代謝症候群及血脂異常之相對危險性高達3倍以上，而癌症(例如：大腸癌、乳癌、子宮內膜癌)、高血壓也有2倍的風險。\n資料來源: 衛生福利部"
                 } else if bmi! < 20 {
                     advice.text = "過輕"
-                    advice2.text = "456"
+                    advice2.text = "消瘦會帶來很多健康問題，嚴重的當然是面對各類重大疾病的病死率增加，輕一些的也有比如常感到無精打采、乏力、皮膚屏障功能下降、更容易生病，還有頭髮脫落枯黃、皮膚壞死開裂等等也都是消瘦的症狀。\n資料來源: 生活百寶箱"
                 } else {
                     advice.text = "體重適中"
-                    advice2.text = "789"
+                    advice2.text = "「健康體重」，要繼續保持喔！"
                 }
             }
         }
@@ -79,13 +79,13 @@ class BMIViewController: UIViewController, UITextFieldDelegate {
                 
                 if bmi! > 25 {
                     advice.text = "過重"
-                    advice2.text = "123"
+                    advice2.text = "世界衛生組織(WHO)指出，肥胖相較健康體重者罹患糖尿病、代謝症候群及血脂異常之相對危險性高達3倍以上，而癌症(例如：大腸癌、乳癌、子宮內膜癌)、高血壓也有2倍的風險。\n資料來源: 衛生福利部"
                 } else if bmi! < 20 {
                     advice.text = "過輕"
-                    advice2.text = "456"
+                    advice2.text = "消瘦會帶來很多健康問題，嚴重的當然是面對各類重大疾病的病死率增加，輕一些的也有比如常感到無精打采、乏力、皮膚屏障功能下降、更容易生病，還有頭髮脫落枯黃、皮膚壞死開裂等等也都是消瘦的症狀。\n資料來源: 生活百寶箱"
                 } else {
                     advice.text = "體重適中"
-                    advice2.text = "789"
+                    advice2.text = "「健康體重」，要繼續保持喔！"
                 }
             }
           case 1:   //女
@@ -99,13 +99,13 @@ class BMIViewController: UIViewController, UITextFieldDelegate {
                         }
                     if bmi! > 22 {
                         advice.text = "過重"
-                        advice2.text = "123"
+                        advice2.text = "世界衛生組織(WHO)指出，肥胖相較健康體重者罹患糖尿病、代謝症候群及血脂異常之相對危險性高達3倍以上，而癌症(例如：大腸癌、乳癌、子宮內膜癌)、高血壓也有2倍的風險。\n資料來源: 衛生福利部"
                     } else if bmi! < 18 {
                         advice.text = "過輕"
-                        advice2.text = "456"
+                        advice2.text = "消瘦會帶來很多健康問題，嚴重的當然是面對各類重大疾病的病死率增加，輕一些的也有比如常感到無精打采、乏力、皮膚屏障功能下降、更容易生病，還有頭髮脫落枯黃、皮膚壞死開裂等等也都是消瘦的症狀。\n資料來源: 生活百寶箱"
                     } else {
                         advice.text = "體重適中"
-                        advice2.text = "789"
+                        advice2.text = "「健康體重」，要繼續保持喔！"
                     }
                 }
         default:
