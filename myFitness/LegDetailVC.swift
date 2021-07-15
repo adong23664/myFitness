@@ -8,7 +8,8 @@
 import UIKit
 import WebKit
 
-class LegDetailVC: UIViewController {
+class LegDetailVC: UIViewController, WKNavigationDelegate {
+    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet weak var legWebView: WKWebView!
     @IBOutlet weak var legstepLabel: UILabel!
     @IBOutlet weak var legMainImage: UIImageView!
@@ -29,8 +30,24 @@ class LegDetailVC: UIViewController {
         
     }
     func getVideo(videoCode: String) {
-        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-        legWebView.load(URLRequest(url: url!))
+        DispatchQueue.global().async {
+            let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+            DispatchQueue.main.async {
+                self.legWebView.load(URLRequest(url: url!))
+                self.legWebView.addSubview(self.spinner)
+                self.spinner.startAnimating()
+                self.legWebView.navigationDelegate = self
+                self.spinner.hidesWhenStopped = true
+            }
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        spinner.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        spinner.stopAnimating()
     }
 
  

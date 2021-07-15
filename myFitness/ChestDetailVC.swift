@@ -8,7 +8,9 @@
 import UIKit
 import WebKit
 
-class ChestDetailVC: UIViewController {
+class ChestDetailVC: UIViewController, WKNavigationDelegate {
+    
+    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet weak var chestWebView: WKWebView!
     @IBOutlet weak var cheststepLabel: UILabel!
     @IBOutlet weak var chestMainImage: UIImageView!
@@ -20,16 +22,31 @@ class ChestDetailVC: UIViewController {
         getVideo(videoCode:"\(chestVideoCode)" )
         cheststepLabel.text = cheststep
         chestMainImage.image = UIImage(named:chestMainImageName )
-        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
-        
     }
     
     func getVideo(videoCode: String) {
-        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-        chestWebView.load(URLRequest(url: url!))
+        DispatchQueue.global().async {
+            let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+            DispatchQueue.main.async {
+                self.chestWebView.load(URLRequest(url: url!))
+                self.chestWebView.addSubview(self.spinner)
+                self.spinner.startAnimating()
+                self.chestWebView.navigationDelegate = self
+                self.spinner.hidesWhenStopped = true
+                
+            }
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        spinner.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        spinner.stopAnimating()
     }
     
 

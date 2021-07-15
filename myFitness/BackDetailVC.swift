@@ -8,7 +8,8 @@
 import UIKit
 import WebKit
 
-class BackDetailVC: UIViewController {
+class BackDetailVC: UIViewController , WKNavigationDelegate{
+    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet weak var backWebView: WKWebView!
     @IBOutlet weak var backstepLabel: UILabel!
     @IBOutlet weak var backMainImage: UIImageView!
@@ -29,8 +30,25 @@ class BackDetailVC: UIViewController {
     }
     
     func getVideo(videoCode: String) {
-        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-        backWebView.load(URLRequest(url: url!))
+        DispatchQueue.global().async {
+            let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+            DispatchQueue.main.async {
+                self.backWebView.load(URLRequest(url: url!))
+                self.backWebView.addSubview(self.spinner)
+                self.spinner.startAnimating()
+                self.backWebView.navigationDelegate = self
+                self.spinner.hidesWhenStopped = true
+                
+            }
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        spinner.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        spinner.stopAnimating()
     }
 
 

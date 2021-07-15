@@ -888,6 +888,11 @@
                     </mapView>
                     <navigationItem key="navigationItem" id="Mt1-QM-OQj">
                         <barButtonItem key="backBarButtonItem" title="  " id="Yxe-hG-3o4"/>
+                        <barButtonItem key="rightBarButtonItem" title="導航" id="P9a-5j-9Gb">
+                            <connections>
+                                <action selector="showMeWhere:" destination="D0V-9Q-Xi9" id="eM6-SI-G51"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Nd7-Y6-nIA" id="g4a-Ts-Yk5"/>
@@ -2255,7 +2260,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-BM-ges">
                                 <rect key="frame" x="0.0" y="44" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Rtu-or-j2u"/>
                                 </constraints>
@@ -2289,6 +2294,10 @@
                                     <constraint firstAttribute="height" constant="120" id="ugh-yS-9qo"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6f1-vx-4IX">
+                                <rect key="frame" x="169" y="126" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mrg-QB-ihg"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2303,7 +2312,9 @@
                             <constraint firstItem="lAI-OS-Yc5" firstAttribute="leading" secondItem="mrg-QB-ihg" secondAttribute="leading" constant="5" id="cwR-gR-Bk4"/>
                             <constraint firstItem="6Eg-gE-7f1" firstAttribute="top" secondItem="lAI-OS-Yc5" secondAttribute="bottom" constant="5" id="dud-m9-2Qt"/>
                             <constraint firstItem="jJL-BM-ges" firstAttribute="leading" secondItem="mrg-QB-ihg" secondAttribute="leading" id="hol-jV-tvf"/>
+                            <constraint firstItem="6f1-vx-4IX" firstAttribute="centerX" secondItem="EPS-s0-Opl" secondAttribute="centerX" id="jh4-xw-8b6"/>
                             <constraint firstItem="mrg-QB-ihg" firstAttribute="trailing" secondItem="6Eg-gE-7f1" secondAttribute="trailing" constant="5" id="si8-J8-E6K"/>
+                            <constraint firstItem="6f1-vx-4IX" firstAttribute="centerY" secondItem="EPS-s0-Opl" secondAttribute="centerY" constant="-189" id="wq3-vc-toH"/>
                             <constraint firstItem="jJL-BM-ges" firstAttribute="top" secondItem="mrg-QB-ihg" secondAttribute="top" id="xzy-PV-iaK"/>
                         </constraints>
                     </view>
@@ -2312,6 +2323,7 @@
                         <outlet property="chestMainImage" destination="7bn-XY-B6Z" id="r8S-US-3Oc"/>
                         <outlet property="chestWebView" destination="jJL-BM-ges" id="fqL-tf-ELE"/>
                         <outlet property="cheststepLabel" destination="6Eg-gE-7f1" id="FcT-95-5Ke"/>
+                        <outlet property="spinner" destination="6f1-vx-4IX" id="gRq-kW-gvj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uc3-Fw-M0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2328,7 +2340,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXd-vs-PNl">
                                 <rect key="frame" x="0.0" y="44" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="bHC-e7-dze"/>
                                 </constraints>
@@ -2361,6 +2373,10 @@
                                     <constraint firstAttribute="width" constant="240" id="NiC-5x-vtK"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-dy-Yod">
+                                <rect key="frame" x="173.5" y="132.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L9H-BC-hLp"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2377,6 +2393,8 @@
                             <constraint firstItem="mhP-nc-qkM" firstAttribute="top" secondItem="y6j-ie-gej" secondAttribute="bottom" constant="5" id="oEG-G7-eWH"/>
                             <constraint firstItem="Don-Oe-HEB" firstAttribute="leading" secondItem="L9H-BC-hLp" secondAttribute="leading" constant="5" id="oa1-Qu-xIf"/>
                             <constraint firstItem="mhP-nc-qkM" firstAttribute="leading" secondItem="L9H-BC-hLp" secondAttribute="leading" constant="5" id="pIU-5b-fiO"/>
+                            <constraint firstItem="2aY-dy-Yod" firstAttribute="centerX" secondItem="uPc-pv-XBp" secondAttribute="centerX" constant="4.5" id="rFT-LW-uOu"/>
+                            <constraint firstItem="2aY-dy-Yod" firstAttribute="centerY" secondItem="uPc-pv-XBp" secondAttribute="centerY" constant="-182.5" id="x7C-uS-JAM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="biZ-cZ-FKz"/>
@@ -2384,6 +2402,7 @@
                         <outlet property="backMainImage" destination="Don-Oe-HEB" id="Dsg-31-icU"/>
                         <outlet property="backWebView" destination="zXd-vs-PNl" id="R9H-5a-neP"/>
                         <outlet property="backstepLabel" destination="mhP-nc-qkM" id="cP2-vg-hax"/>
+                        <outlet property="spinner" destination="2aY-dy-Yod" id="c0f-VY-BuJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1M-S1-qb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2400,7 +2419,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-Jm-brd">
                                 <rect key="frame" x="0.0" y="44" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="HjO-jw-vo9"/>
                                 </constraints>
@@ -2433,10 +2452,15 @@
                                     <constraint firstAttribute="height" constant="120" id="gYo-d4-zUl"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="loo-6u-RjI">
+                                <rect key="frame" x="169" y="132.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4it-1c-3Pd"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="loo-6u-RjI" firstAttribute="centerX" secondItem="ezw-uG-Id8" secondAttribute="centerX" id="2MM-X0-Lsf"/>
                             <constraint firstItem="F6E-Jm-brd" firstAttribute="trailing" secondItem="4it-1c-3Pd" secondAttribute="trailing" id="4eF-BJ-ydZ"/>
                             <constraint firstItem="4it-1c-3Pd" firstAttribute="trailing" secondItem="8sl-4g-oCE" secondAttribute="trailing" constant="130" id="4uq-YH-lqx"/>
                             <constraint firstItem="sFb-y5-N7m" firstAttribute="top" secondItem="F6E-Jm-brd" secondAttribute="bottom" constant="5" id="5gn-CY-C6J"/>
@@ -2445,6 +2469,7 @@
                             <constraint firstItem="qpE-DE-m7B" firstAttribute="leading" secondItem="4it-1c-3Pd" secondAttribute="leading" constant="5" id="DD2-Jw-nqU"/>
                             <constraint firstItem="sFb-y5-N7m" firstAttribute="trailing" secondItem="4it-1c-3Pd" secondAttribute="trailing" constant="5" id="VTi-E3-lrb"/>
                             <constraint firstItem="sFb-y5-N7m" firstAttribute="leading" secondItem="4it-1c-3Pd" secondAttribute="leading" constant="5" id="X4Z-gL-f26"/>
+                            <constraint firstItem="loo-6u-RjI" firstAttribute="centerY" secondItem="ezw-uG-Id8" secondAttribute="centerY" constant="-182.5" id="a2q-ae-SR1"/>
                             <constraint firstItem="4it-1c-3Pd" firstAttribute="bottom" secondItem="8sl-4g-oCE" secondAttribute="bottom" constant="10" id="haK-vb-lmK"/>
                             <constraint firstItem="8sl-4g-oCE" firstAttribute="leading" secondItem="4it-1c-3Pd" secondAttribute="leading" constant="5" id="hqV-cB-8bg"/>
                             <constraint firstItem="qpE-DE-m7B" firstAttribute="top" secondItem="sFb-y5-N7m" secondAttribute="bottom" constant="5" id="pTe-oV-nhw"/>
@@ -2456,6 +2481,7 @@
                         <outlet property="legMainImage" destination="8sl-4g-oCE" id="0Vm-uU-eZ3"/>
                         <outlet property="legWebView" destination="F6E-Jm-brd" id="wmr-FV-0F3"/>
                         <outlet property="legstepLabel" destination="qpE-DE-m7B" id="hI4-e7-2bb"/>
+                        <outlet property="spinner" destination="loo-6u-RjI" id="u5C-db-OQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrM-Qv-irc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2472,9 +2498,10 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yX-PW-GJX">
                                 <rect key="frame" x="0.0" y="44" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Lcb-ec-QAw"/>
+                                    <constraint firstAttribute="height" constant="200" id="8wu-Us-mjz"/>
+                                    <constraint firstAttribute="width" constant="375" id="Ktq-gM-4xR"/>
                                 </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -2482,7 +2509,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="步驟:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM8-7Q-a4g">
-                                <rect key="frame" x="5" y="249" width="375" height="21"/>
+                                <rect key="frame" x="5" y="249" width="365" height="21"/>
                                 <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2492,7 +2519,8 @@
                                 <rect key="frame" x="5" y="275" width="365" height="180"/>
                                 <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="uyQ-0q-vaH"/>
+                                    <constraint firstAttribute="height" constant="180" id="k3m-G3-HV4"/>
+                                    <constraint firstAttribute="width" constant="365" id="n4A-zF-HRP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2505,22 +2533,35 @@
                                     <constraint firstAttribute="height" constant="120" id="VGN-At-Z9l"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4DA-ur-Nrh">
+                                <rect key="frame" x="162" y="119" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="R5O-NG-wbc"/>
+                                    <constraint firstAttribute="height" constant="50" id="ebg-sq-fXm"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Ry-4g-6qa"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0yX-PW-GJX" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" id="8vq-rq-bWj"/>
+                            <constraint firstItem="3Pe-PW-u9U" firstAttribute="top" secondItem="eM8-7Q-a4g" secondAttribute="bottom" constant="5" id="70s-Gg-yT2"/>
+                            <constraint firstItem="3Ry-4g-6qa" firstAttribute="trailing" secondItem="4DA-ur-Nrh" secondAttribute="trailing" constant="163" id="7JV-SL-BQS"/>
                             <constraint firstItem="3Ry-4g-6qa" firstAttribute="bottom" secondItem="nJT-X0-Dry" secondAttribute="bottom" constant="10" id="APf-42-9Sf"/>
-                            <constraint firstItem="0yX-PW-GJX" firstAttribute="top" secondItem="3Ry-4g-6qa" secondAttribute="top" id="Azb-gz-T0P"/>
-                            <constraint firstItem="0yX-PW-GJX" firstAttribute="trailing" secondItem="3Ry-4g-6qa" secondAttribute="trailing" id="C2J-Eu-fux"/>
+                            <constraint firstItem="4DA-ur-Nrh" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" constant="162" id="C2T-22-czN"/>
                             <constraint firstItem="nJT-X0-Dry" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" constant="5" id="CaN-aP-nZK"/>
-                            <constraint firstItem="eM8-7Q-a4g" firstAttribute="top" secondItem="0yX-PW-GJX" secondAttribute="bottom" constant="5" id="DdG-1O-436"/>
-                            <constraint firstItem="eM8-7Q-a4g" firstAttribute="trailing" secondItem="3Ry-4g-6qa" secondAttribute="trailing" constant="5" id="HUm-oe-gNH"/>
+                            <constraint firstItem="0yX-PW-GJX" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" id="I6A-aJ-oFr"/>
+                            <constraint firstItem="3Pe-PW-u9U" firstAttribute="top" secondItem="eM8-7Q-a4g" secondAttribute="bottom" constant="5" id="I97-Ud-AXi"/>
+                            <constraint firstItem="0yX-PW-GJX" firstAttribute="top" secondItem="3Ry-4g-6qa" secondAttribute="top" id="IdY-VV-GYq"/>
+                            <constraint firstItem="0yX-PW-GJX" firstAttribute="trailing" secondItem="3Ry-4g-6qa" secondAttribute="trailing" id="J4u-Iy-Y60"/>
                             <constraint firstItem="3Ry-4g-6qa" firstAttribute="trailing" secondItem="nJT-X0-Dry" secondAttribute="trailing" constant="130" id="KxQ-AM-gw7"/>
-                            <constraint firstItem="3Pe-PW-u9U" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" constant="5" id="LV1-hc-BQb"/>
-                            <constraint firstItem="3Pe-PW-u9U" firstAttribute="top" secondItem="eM8-7Q-a4g" secondAttribute="bottom" constant="5" id="Z4K-sL-dC6"/>
-                            <constraint firstItem="3Ry-4g-6qa" firstAttribute="trailing" secondItem="3Pe-PW-u9U" secondAttribute="trailing" constant="5" id="ajr-Rv-gKn"/>
-                            <constraint firstItem="eM8-7Q-a4g" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" constant="5" id="yd0-xP-k42"/>
+                            <constraint firstItem="3Pe-PW-u9U" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" constant="5" id="acG-UM-bMP"/>
+                            <constraint firstItem="eM8-7Q-a4g" firstAttribute="top" secondItem="4DA-ur-Nrh" secondAttribute="bottom" constant="80" id="gJh-0V-Xne"/>
+                            <constraint firstItem="3Ry-4g-6qa" firstAttribute="trailing" secondItem="3Pe-PW-u9U" secondAttribute="trailing" constant="5" id="hSy-uK-fj2"/>
+                            <constraint firstItem="eM8-7Q-a4g" firstAttribute="leading" secondItem="3Ry-4g-6qa" secondAttribute="leading" constant="5" id="i3i-iU-PdZ"/>
+                            <constraint firstItem="eM8-7Q-a4g" firstAttribute="top" secondItem="0yX-PW-GJX" secondAttribute="bottom" constant="5" id="mwL-GY-xoz"/>
+                            <constraint firstItem="4DA-ur-Nrh" firstAttribute="top" secondItem="3Ry-4g-6qa" secondAttribute="top" constant="75" id="pU5-Hh-4I0"/>
+                            <constraint firstItem="3Ry-4g-6qa" firstAttribute="trailing" secondItem="eM8-7Q-a4g" secondAttribute="trailing" constant="5" id="qFu-ks-4sJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bDw-KH-kwv"/>
@@ -2528,11 +2569,12 @@
                         <outlet property="bicepsMainImage" destination="nJT-X0-Dry" id="Kye-40-1QR"/>
                         <outlet property="bicepsWebView" destination="0yX-PW-GJX" id="gFb-Ix-GSJ"/>
                         <outlet property="bicepsstepLabel" destination="3Pe-PW-u9U" id="i2d-oI-d3W"/>
+                        <outlet property="spinner" destination="4DA-ur-Nrh" id="qWl-2R-7gJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAD-u7-Vl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3449" y="-1302"/>
+            <point key="canvasLocation" x="3448.8000000000002" y="-1302.0989505247378"/>
         </scene>
         <!--Triceps DetailVC-->
         <scene sceneID="5rR-D3-yE7">
@@ -2544,7 +2586,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-Be-9P3">
                                 <rect key="frame" x="0.0" y="44" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="6SN-3d-Ysp"/>
                                 </constraints>
@@ -2577,6 +2619,10 @@
                                     <constraint firstAttribute="width" constant="240" id="FJ6-21-Stp"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-iL-1mX">
+                                <rect key="frame" x="173.5" y="132.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vU3-9Y-U5L"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2587,8 +2633,10 @@
                             <constraint firstItem="oW8-mh-twq" firstAttribute="leading" secondItem="vU3-9Y-U5L" secondAttribute="leading" constant="5" id="CmY-hN-sBx"/>
                             <constraint firstItem="z3n-oG-nu6" firstAttribute="leading" secondItem="vU3-9Y-U5L" secondAttribute="leading" constant="5" id="Jr2-0a-wXG"/>
                             <constraint firstItem="eVk-Be-9P3" firstAttribute="trailing" secondItem="vU3-9Y-U5L" secondAttribute="trailing" id="NYH-Td-BMe"/>
+                            <constraint firstItem="tF0-iL-1mX" firstAttribute="centerX" secondItem="SVd-fl-pj6" secondAttribute="centerX" constant="4.5" id="NYf-6p-mR8"/>
                             <constraint firstItem="ZPw-Bu-GpW" firstAttribute="leading" secondItem="vU3-9Y-U5L" secondAttribute="leading" constant="5" id="XSC-Oq-5yL"/>
                             <constraint firstItem="vU3-9Y-U5L" firstAttribute="trailing" secondItem="oW8-mh-twq" secondAttribute="trailing" constant="5" id="Y15-f8-HJm"/>
+                            <constraint firstItem="tF0-iL-1mX" firstAttribute="centerY" secondItem="SVd-fl-pj6" secondAttribute="centerY" constant="-182.5" id="fev-5L-lGD"/>
                             <constraint firstItem="vU3-9Y-U5L" firstAttribute="trailing" secondItem="z3n-oG-nu6" secondAttribute="trailing" constant="130" id="g2X-6Y-xNt"/>
                             <constraint firstItem="vU3-9Y-U5L" firstAttribute="bottom" secondItem="z3n-oG-nu6" secondAttribute="bottom" constant="10" id="otT-HS-AKV"/>
                             <constraint firstItem="eVk-Be-9P3" firstAttribute="top" secondItem="vU3-9Y-U5L" secondAttribute="top" id="tVx-t9-PjD"/>
@@ -2597,6 +2645,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7hJ-l0-vJR"/>
                     <connections>
+                        <outlet property="spinner" destination="tF0-iL-1mX" id="LwA-xm-htp"/>
                         <outlet property="tricepsMainImage" destination="z3n-oG-nu6" id="Loq-6C-Pob"/>
                         <outlet property="tricepsWebView" destination="eVk-Be-9P3" id="5O4-aW-A7K"/>
                         <outlet property="tricepsstepLabel" destination="oW8-mh-twq" id="4d6-P1-0Qz"/>
@@ -2616,7 +2665,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvO-H1-x8e">
                                 <rect key="frame" x="0.0" y="44" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Dih-Z9-5Lb"/>
                                 </constraints>
@@ -2649,18 +2698,24 @@
                                     <constraint firstAttribute="height" constant="120" id="kxB-WB-7Ey"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="y3I-NG-lly">
+                                <rect key="frame" x="169" y="132.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EVX-eM-zcT"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EVX-eM-zcT" firstAttribute="trailing" secondItem="Ujd-As-uhK" secondAttribute="trailing" constant="5" id="5Lg-Hh-q8J"/>
                             <constraint firstItem="EVX-eM-zcT" firstAttribute="trailing" secondItem="Cpy-IE-rmh" secondAttribute="trailing" constant="130" id="6Ss-xA-Ojh"/>
+                            <constraint firstItem="y3I-NG-lly" firstAttribute="centerX" secondItem="Aqk-hB-Svn" secondAttribute="centerX" id="90F-ym-myR"/>
                             <constraint firstItem="TvO-H1-x8e" firstAttribute="trailing" secondItem="EVX-eM-zcT" secondAttribute="trailing" id="9sT-il-4Ds"/>
                             <constraint firstItem="fBU-30-fGm" firstAttribute="trailing" secondItem="EVX-eM-zcT" secondAttribute="trailing" constant="5" id="Dlc-fD-iJg"/>
                             <constraint firstItem="Ujd-As-uhK" firstAttribute="top" secondItem="fBU-30-fGm" secondAttribute="bottom" constant="5" id="FnE-WE-plg"/>
                             <constraint firstItem="Cpy-IE-rmh" firstAttribute="leading" secondItem="EVX-eM-zcT" secondAttribute="leading" constant="5" id="Fq2-hJ-QgO"/>
                             <constraint firstItem="TvO-H1-x8e" firstAttribute="top" secondItem="EVX-eM-zcT" secondAttribute="top" id="KbQ-GT-4F2"/>
                             <constraint firstItem="fBU-30-fGm" firstAttribute="leading" secondItem="EVX-eM-zcT" secondAttribute="leading" constant="5" id="LbX-3a-5K9"/>
+                            <constraint firstItem="y3I-NG-lly" firstAttribute="centerY" secondItem="Aqk-hB-Svn" secondAttribute="centerY" constant="-182.5" id="LrK-tA-i0E"/>
                             <constraint firstItem="Ujd-As-uhK" firstAttribute="leading" secondItem="EVX-eM-zcT" secondAttribute="leading" constant="5" id="M6c-WC-tky"/>
                             <constraint firstItem="fBU-30-fGm" firstAttribute="top" secondItem="TvO-H1-x8e" secondAttribute="bottom" constant="5" id="joQ-5Q-OUU"/>
                             <constraint firstItem="EVX-eM-zcT" firstAttribute="bottom" secondItem="Cpy-IE-rmh" secondAttribute="bottom" constant="10" id="wKv-6A-0Zn"/>
@@ -2672,6 +2727,7 @@
                         <outlet property="shoulderMainImage" destination="Cpy-IE-rmh" id="5Io-fA-FB6"/>
                         <outlet property="shoulderWebView" destination="TvO-H1-x8e" id="OXE-Ii-506"/>
                         <outlet property="shoulderstepLabel" destination="Ujd-As-uhK" id="sM2-G3-Vec"/>
+                        <outlet property="spinner" destination="y3I-NG-lly" id="2QK-ML-6nD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ClV-CK-DSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

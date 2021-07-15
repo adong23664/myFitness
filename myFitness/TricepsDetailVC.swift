@@ -8,7 +8,8 @@
 import UIKit
 import WebKit
 
-class TricepsDetailVC: UIViewController {
+class TricepsDetailVC: UIViewController, WKNavigationDelegate {
+    @IBOutlet var spinner: UIActivityIndicatorView!
     
     @IBOutlet weak var tricepsWebView: WKWebView!
     @IBOutlet weak var tricepsstepLabel: UILabel!
@@ -30,8 +31,24 @@ class TricepsDetailVC: UIViewController {
         
     }
     func getVideo(videoCode: String) {
-        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-        tricepsWebView.load(URLRequest(url: url!))
+        DispatchQueue.global().async {
+            let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+            DispatchQueue.main.async {
+                self.tricepsWebView.load(URLRequest(url: url!))
+                self.tricepsWebView.addSubview(self.spinner)
+                self.spinner.startAnimating()
+                self.tricepsWebView.navigationDelegate = self
+                self.spinner.hidesWhenStopped = true
+            }
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        spinner.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        spinner.stopAnimating()
     }
 
 }

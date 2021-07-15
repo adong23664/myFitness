@@ -16,9 +16,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.tintColor = .systemBlue
         
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(gym.location, completionHandler: { placemarks, error in
@@ -33,7 +31,6 @@ class MapVC: UIViewController, MKMapViewDelegate {
                 
                 if let location = placemark.location {
                     annotation.coordinate = location.coordinate
-                    
                     self.mapView.showAnnotations([annotation], animated: true)
                     self.mapView.selectAnnotation(annotation, animated: true)
                 }
@@ -58,6 +55,34 @@ class MapVC: UIViewController, MKMapViewDelegate {
         annotationView?.glyphText = "💪"
         annotationView?.markerTintColor = UIColor.orange
         return annotationView
+    }
+    
+    @IBAction func showMeWhere(_ sender: Any) {
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(gym.location, completionHandler: {(placemarks:[CLPlacemark]!,error:Error!) in
+            if error != nil{
+                print(error!)
+                return
+            }
+            if placemarks != nil && placemarks.count > 0{
+                let placemark = placemarks[0] as CLPlacemark
+                print("\(placemark.location?.coordinate.latitude ?? 0.0),\(placemark.location?.coordinate.longitude ?? 0.0)")
+                let latitude: CLLocationDegrees = placemark.location?.coordinate.latitude ?? 0.0
+                let longitude: CLLocationDegrees = placemark.location?.coordinate.longitude ?? 0.0
+                let regionDistance: CLLocationDistance = 1000;
+                let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+                let regionSpan = MKCoordinateRegion.init(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+                let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+                
+                let placemark123 = MKPlacemark(coordinate: coordinates)
+                let mapItem = MKMapItem(placemark: placemark123)
+                mapItem.name = self.gym.name
+                mapItem.openInMaps(launchOptions: options)
+            }
+        })
+        
+
+        
     }
     
 
