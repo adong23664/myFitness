@@ -60,6 +60,12 @@
 		2C43FCB7269DCFCE009C9438 /* Ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C43FCB6269DCFCE009C9438 /* Ding.mp3 */; };
 		2C43FCB9269DF665009C9438 /* MuscleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCB8269DF664009C9438 /* MuscleVC.swift */; };
 		2C43FCBB269E20E8009C9438 /* CaculateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCBA269E20E8009C9438 /* CaculateVC.swift */; };
+		2C43FCC426A166A0009C9438 /* GetWeightTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCC326A166A0009C9438 /* GetWeightTableVC.swift */; };
+		2C43FCC626A16E1A009C9438 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCC526A16E19009C9438 /* ArticleTableViewCell.swift */; };
+		2C43FCC826A175CB009C9438 /* ArticleAddDetialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCC726A175CA009C9438 /* ArticleAddDetialVC.swift */; };
+		2C43FCCA26A17C1E009C9438 /* LossWeightTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCC926A17C1E009C9438 /* LossWeightTableVC.swift */; };
+		2C43FCCC26A17C74009C9438 /* ArticleLossTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCCB26A17C74009C9438 /* ArticleLossTableViewCell.swift */; };
+		2C43FCCE26A183CC009C9438 /* ArticleLossDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43FCCD26A183CC009C9438 /* ArticleLossDetailVC.swift */; };
 		2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61016D267F85F4004657DD /* TimerViewController.swift */; };
 		2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */; };
 		2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */; };
@@ -127,6 +133,12 @@
 		2C43FCB6269DCFCE009C9438 /* Ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ding.mp3; path = ../Ding.mp3; sourceTree = "<group>"; };
 		2C43FCB8269DF664009C9438 /* MuscleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleVC.swift; sourceTree = "<group>"; };
 		2C43FCBA269E20E8009C9438 /* CaculateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculateVC.swift; sourceTree = "<group>"; };
+		2C43FCC326A166A0009C9438 /* GetWeightTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeightTableVC.swift; sourceTree = "<group>"; };
+		2C43FCC526A16E19009C9438 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		2C43FCC726A175CA009C9438 /* ArticleAddDetialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAddDetialVC.swift; sourceTree = "<group>"; };
+		2C43FCC926A17C1E009C9438 /* LossWeightTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossWeightTableVC.swift; sourceTree = "<group>"; };
+		2C43FCCB26A17C74009C9438 /* ArticleLossTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleLossTableViewCell.swift; sourceTree = "<group>"; };
+		2C43FCCD26A183CC009C9438 /* ArticleLossDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleLossDetailVC.swift; sourceTree = "<group>"; };
 		2C61016D267F85F4004657DD /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		2C69C973264EDDFD00EF7D1A /* myFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +329,12 @@
 				2C7F990D266780EC00999581 /* BMIViewController.swift */,
 				2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */,
 				2C43FCBA269E20E8009C9438 /* CaculateVC.swift */,
+				2C43FCC326A166A0009C9438 /* GetWeightTableVC.swift */,
+				2C43FCC926A17C1E009C9438 /* LossWeightTableVC.swift */,
+				2C43FCC526A16E19009C9438 /* ArticleTableViewCell.swift */,
+				2C43FCCB26A17C74009C9438 /* ArticleLossTableViewCell.swift */,
+				2C43FCC726A175CA009C9438 /* ArticleAddDetialVC.swift */,
+				2C43FCCD26A183CC009C9438 /* ArticleLossDetailVC.swift */,
 			);
 			name = Caculate;
 			sourceTree = "<group>";
@@ -424,12 +442,15 @@
 				2C43FC76269973E0009C9438 /* DiaryVC.swift in Sources */,
 				2C43FCB2269D8F0C009C9438 /* WalkthroughPageVC.swift in Sources */,
 				2CA527EE269753CB002E76D4 /* GYMTableViewCell.swift in Sources */,
+				2C43FCC826A175CB009C9438 /* ArticleAddDetialVC.swift in Sources */,
 				2C43FC4326981DDE009C9438 /* GYMDetailHeaderView.swift in Sources */,
 				2C43FC292697F60A009C9438 /* GYMDetailVC.swift in Sources */,
 				2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */,
+				2C43FCCC26A17C74009C9438 /* ArticleLossTableViewCell.swift in Sources */,
 				2C43FC8E2699FBA1009C9438 /* DiaryDetailIconTextCell.swift in Sources */,
 				2C2DCD322695998800D55229 /* BackDetailVC.swift in Sources */,
 				2C7F990E266780EC00999581 /* BMIViewController.swift in Sources */,
+				2C43FCC626A16E1A009C9438 /* ArticleTableViewCell.swift in Sources */,
 				2C2DCD2A2695530400D55229 /* ShoulderTableViewCell.swift in Sources */,
 				2C43FC8C2699F508009C9438 /* DiaryDetailHeaderView.swift in Sources */,
 				2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */,
@@ -442,12 +463,15 @@
 				2C2DCD342695A21800D55229 /* LegDetailVC.swift in Sources */,
 				2C43FC2B2697FB0E009C9438 /* GYM.swift in Sources */,
 				2C43FC48269829FD009C9438 /* GymDetailTextCell.swift in Sources */,
+				2C43FCCA26A17C1E009C9438 /* LossWeightTableVC.swift in Sources */,
 				2C2DCD2626954FEB00D55229 /* TricepsTableViewCell.swift in Sources */,
 				2C43FC46269828C2009C9438 /* GymDetailIconTextCell.swift in Sources */,
 				2C2DCD222695498000D55229 /* BicepsTableViewCell.swift in Sources */,
 				2C43FC4F2698501A009C9438 /* GymDetailMapCell.swift in Sources */,
 				2C69C979264EDDFD00EF7D1A /* SceneDelegate.swift in Sources */,
+				2C43FCCE26A183CC009C9438 /* ArticleLossDetailVC.swift in Sources */,
 				2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */,
+				2C43FCC426A166A0009C9438 /* GetWeightTableVC.swift in Sources */,
 				2C2DCD382695DF4000D55229 /* TricepsDetailVC.swift in Sources */,
 				2C43FCAB269C7157009C9438 /* myFitness.xcdatamodeld in Sources */,
 				2C2DCD2C2695531700D55229 /* ShoulderVC.swift in Sources */,
