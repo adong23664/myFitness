@@ -14,14 +14,12 @@ class ChestDetailVC: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var chestWebView: WKWebView!
     @IBOutlet weak var cheststepLabel: UILabel!
     @IBOutlet weak var chestMainImage: UIImageView!
-    var chestVideoCode = ""
-    var cheststep = ""
-    var chestMainImageName = ""
+    var chest = PartMuscle()
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode:"\(chestVideoCode)" )
-        cheststepLabel.text = cheststep
-        chestMainImage.image = UIImage(named:chestMainImageName )
+        getVideo(videoCode:"\(chest.video)" )
+        cheststepLabel.text = chest.step
+        chestMainImage.image = UIImage(named:chest.mainImage )
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white

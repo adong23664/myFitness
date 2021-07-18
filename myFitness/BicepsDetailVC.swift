@@ -14,16 +14,14 @@ class BicepsDetailVC: UIViewController , WKNavigationDelegate{
     @IBOutlet weak var bicepsWebView: WKWebView!
     @IBOutlet weak var bicepsstepLabel: UILabel!
     @IBOutlet weak var bicepsMainImage: UIImageView!
-    var bicepsVideoCode = ""
-    var bicepsstep = ""
-    var bicepsMainImageName = ""
+    var biceps = PartMuscle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getVideo(videoCode:"\(bicepsVideoCode)" )
-        bicepsstepLabel.text = bicepsstep
-        bicepsMainImage.image = UIImage(named:bicepsMainImageName )
+        getVideo(videoCode:"\(biceps.video)" )
+        bicepsstepLabel.text = biceps.step
+        bicepsMainImage.image = UIImage(named:biceps.mainImage )
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

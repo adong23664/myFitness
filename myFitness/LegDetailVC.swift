@@ -13,15 +13,13 @@ class LegDetailVC: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var legWebView: WKWebView!
     @IBOutlet weak var legstepLabel: UILabel!
     @IBOutlet weak var legMainImage: UIImageView!
-    var legVideoCode = ""
-    var legstep = ""
-    var legMainImageName = ""
+    var leg = PartMuscle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode:"\(legVideoCode)" )
-        legstepLabel.text = legstep
-        legMainImage.image = UIImage(named:legMainImageName )
+        getVideo(videoCode:"\(leg.video)" )
+        legstepLabel.text = leg.step
+        legMainImage.image = UIImage(named:leg.mainImage )
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

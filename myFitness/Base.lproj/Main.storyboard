@@ -698,7 +698,7 @@
             <objects>
                 <viewController id="mMh-am-n1S" customClass="GYMDetailVC" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FrH-gc-Nva">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="e9X-Nj-sqm" userLabel="Header View" customClass="GYMDetailHeaderView" customModule="myFitness" customModuleProvider="target">
@@ -2859,6 +2859,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="Wii-KJ-Exj" firstAttribute="leading" secondItem="nGH-Zq-7ts" secondAttribute="trailing" constant="6" id="4QN-Gr-mqj"/>
                                         <constraint firstItem="xau-nC-jXM" firstAttribute="top" secondItem="pTY-BA-x84" secondAttribute="bottom" constant="5" id="CEU-pe-oOu"/>
@@ -2874,7 +2875,6 @@
                                         <constraint firstItem="xau-nC-jXM" firstAttribute="trailing" secondItem="9eS-EU-KwQ" secondAttribute="trailingMargin" constant="5" id="shb-Mi-goC"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="xau-nC-jXM" id="e3x-Bt-QZ7"/>
                                     <outlet property="sourceLabel" destination="Wii-KJ-Exj" id="nYm-TJ-p40"/>
@@ -2894,7 +2894,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEs-t4-tXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="1637"/>
+            <point key="canvasLocation" x="1738" y="1637"/>
         </scene>
         <!--減重計畫-->
         <scene sceneID="a6B-r7-9Wt">
@@ -2986,7 +2986,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Atw-OE-9af" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.5999999999999" y="2422.9385307346329"/>
+            <point key="canvasLocation" x="1702" y="2423"/>
         </scene>
         <!--Article Loss DetailVC-->
         <scene sceneID="TqH-zb-5n1">
@@ -3021,7 +3021,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clk-1P-cs2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2418.4000000000001" y="2422.9385307346329"/>
+            <point key="canvasLocation" x="2574" y="2423"/>
         </scene>
         <!--Article Add DetialVC-->
         <scene sceneID="L0a-jh-Jpd">
@@ -3075,7 +3075,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdw-7c-bdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="2423"/>
+            <point key="canvasLocation" x="953" y="2423"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

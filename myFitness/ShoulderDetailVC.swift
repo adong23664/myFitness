@@ -14,15 +14,13 @@ class ShoulderDetailVC: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var shoulderWebView: WKWebView!
     @IBOutlet weak var shoulderstepLabel: UILabel!
     @IBOutlet weak var shoulderMainImage: UIImageView!
-    var shoulderVideoCode = ""
-    var shoulderstep = ""
-    var shoulderMainImageName = ""
+    var shoulder = PartMuscle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode:"\(shoulderVideoCode)" )
-        shoulderstepLabel.text = shoulderstep
-        shoulderMainImage.image = UIImage(named:shoulderMainImageName )
+        getVideo(videoCode:"\(shoulder.video)" )
+        shoulderstepLabel.text = shoulder.step
+        shoulderMainImage.image = UIImage(named:shoulder.mainImage )
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

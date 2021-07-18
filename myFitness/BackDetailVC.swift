@@ -13,15 +13,13 @@ class BackDetailVC: UIViewController , WKNavigationDelegate{
     @IBOutlet weak var backWebView: WKWebView!
     @IBOutlet weak var backstepLabel: UILabel!
     @IBOutlet weak var backMainImage: UIImageView!
-    var backVideoCode = ""
-    var backstep = ""
-    var backMainImageName = ""
+    var back = PartMuscle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode:"\(backVideoCode)" )
-        backstepLabel.text = backstep
-        backMainImage.image = UIImage(named:backMainImageName )
+        getVideo(videoCode:"\(back.video)" )
+        backstepLabel.text = back.step
+        backMainImage.image = UIImage(named:back.mainImage )
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

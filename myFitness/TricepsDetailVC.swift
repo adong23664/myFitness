@@ -14,15 +14,13 @@ class TricepsDetailVC: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var tricepsWebView: WKWebView!
     @IBOutlet weak var tricepsstepLabel: UILabel!
     @IBOutlet weak var tricepsMainImage: UIImageView!
-    var tricepsVideoCode = ""
-    var tricepsstep = ""
-    var tricepsMainImageName = ""
+    var triceps = PartMuscle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode:"\(tricepsVideoCode)" )
-        tricepsstepLabel.text = tricepsstep
-        tricepsMainImage.image = UIImage(named:tricepsMainImageName )
+        getVideo(videoCode:"\(triceps.video)" )
+        tricepsstepLabel.text = triceps.step
+        tricepsMainImage.image = UIImage(named:triceps.mainImage )
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

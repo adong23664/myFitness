@@ -77,6 +77,8 @@
 		2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */; };
 		2CA527EC26974BA4002E76D4 /* GYMTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */; };
 		2CA527EE269753CB002E76D4 /* GYMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */; };
+		2CE1E69226A1B76500B01E6F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1E69126A1B76500B01E6F /* CloudKit.framework */; };
+		2CE1E69E26A3F4C100B01E6F /* PartMuscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +154,9 @@
 		2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculatorViewController.swift; sourceTree = "<group>"; };
 		2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableVC.swift; sourceTree = "<group>"; };
 		2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableViewCell.swift; sourceTree = "<group>"; };
+		2CE1E69026A1B75400B01E6F /* myFitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myFitness.entitlements; sourceTree = "<group>"; };
+		2CE1E69126A1B76500B01E6F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartMuscle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C43FC4B26984C43009C9438 /* MapKit.framework in Frameworks */,
+				2CE1E69226A1B76500B01E6F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +188,7 @@
 				2C2DCD1D2695458400D55229 /* LegVC.swift */,
 				2C2DCD1A26949FCE00D55229 /* BackVC.swift */,
 				2C2DCD2F2695783500D55229 /* ChestVC.swift */,
+				2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */,
 				2C2DCD292695530400D55229 /* ShoulderTableViewCell.swift */,
 				2C2DCD2526954FEB00D55229 /* TricepsTableViewCell.swift */,
 				2C2DCD212695498000D55229 /* BicepsTableViewCell.swift */,
@@ -220,6 +227,7 @@
 		2C43FC4926984C43009C9438 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CE1E69126A1B76500B01E6F /* CloudKit.framework */,
 				2C43FC4A26984C43009C9438 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -308,6 +316,7 @@
 		2C69C975264EDDFD00EF7D1A /* myFitness */ = {
 			isa = PBXGroup;
 			children = (
+				2CE1E69026A1B75400B01E6F /* myFitness.entitlements */,
 				2C43FCAC269D7E7A009C9438 /* Storyboard */,
 				2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */,
 				2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */,
@@ -445,6 +454,7 @@
 				2C43FCC826A175CB009C9438 /* ArticleAddDetialVC.swift in Sources */,
 				2C43FC4326981DDE009C9438 /* GYMDetailHeaderView.swift in Sources */,
 				2C43FC292697F60A009C9438 /* GYMDetailVC.swift in Sources */,
+				2CE1E69E26A3F4C100B01E6F /* PartMuscle.swift in Sources */,
 				2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */,
 				2C43FCCC26A17C74009C9438 /* ArticleLossTableViewCell.swift in Sources */,
 				2C43FC8E2699FBA1009C9438 /* DiaryDetailIconTextCell.swift in Sources */,
@@ -638,6 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = myFitness/myFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6A46M22U77;
 				INFOPLIST_FILE = myFitness/Info.plist;
@@ -657,6 +668,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = myFitness/myFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6A46M22U77;
 				INFOPLIST_FILE = myFitness/Info.plist;
