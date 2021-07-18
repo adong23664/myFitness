@@ -8,5 +8,6 @@ target 'myFitness' do
   # Pods for myFitness
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
 
 end

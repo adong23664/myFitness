@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseUI
 
 class GYMDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -18,7 +19,11 @@ class GYMDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         navigationController?.hidesBarsOnSwipe = false
         
         headerView.nameLabel.text = gym.name
-        headerView.headerImageView.image = UIImage(named: gym.image)
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let ref = storageRef.child("GYM/\(gym.image).jpeg")
+        headerView.headerImageView.sd_setImage(with: ref)
         
         tableView.delegate = self
         tableView.dataSource = self
