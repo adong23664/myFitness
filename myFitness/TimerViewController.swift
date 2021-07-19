@@ -36,6 +36,8 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerView.setValue(UIColor.white, forKey: "textColor")

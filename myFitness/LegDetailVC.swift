@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseUI
 
 class LegDetailVC: UIViewController, WKNavigationDelegate {
     @IBOutlet var spinner: UIActivityIndicatorView!
@@ -18,8 +19,14 @@ class LegDetailVC: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideo(videoCode:"\(leg.video)" )
-        legstepLabel.text = leg.step
-        legMainImage.image = UIImage(named:leg.mainImage )
+        let str = leg.step
+        let newStr = str.replace(target:"_b",withString: "\n")
+        legstepLabel.text = newStr
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let ref = storageRef.child("leg/\(leg.image).jpeg")
+        legMainImage.sd_setImage(with: ref)
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

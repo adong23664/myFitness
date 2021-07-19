@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseUI
 
 class ChestDetailVC: UIViewController, WKNavigationDelegate {
     
@@ -18,8 +19,16 @@ class ChestDetailVC: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideo(videoCode:"\(chest.video)" )
-        cheststepLabel.text = chest.step
-        chestMainImage.image = UIImage(named:chest.mainImage )
+        let str = chest.step
+        let newStr = str.replace(target:"_b",withString: "\n")
+        cheststepLabel.text = newStr
+
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let ref = storageRef.child("chest/\(chest.image).jpeg")
+        chestMainImage.sd_setImage(with: ref)
+        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white

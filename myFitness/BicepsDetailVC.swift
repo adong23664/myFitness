@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseUI
 
 class BicepsDetailVC: UIViewController , WKNavigationDelegate{
     @IBOutlet var spinner: UIActivityIndicatorView!
@@ -20,8 +21,14 @@ class BicepsDetailVC: UIViewController , WKNavigationDelegate{
         super.viewDidLoad()
 
         getVideo(videoCode:"\(biceps.video)" )
-        bicepsstepLabel.text = biceps.step
-        bicepsMainImage.image = UIImage(named:biceps.mainImage )
+        let str = biceps.step
+        let newStr = str.replace(target:"_b",withString: "\n")
+        bicepsstepLabel.text = newStr
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let ref = storageRef.child("biceps/\(biceps.image).jpeg")
+        bicepsMainImage.sd_setImage(with: ref)
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -48,4 +55,11 @@ class BicepsDetailVC: UIViewController , WKNavigationDelegate{
         spinner.stopAnimating()
     }
 
+}
+
+extension String{
+func replace(target: String, withString: String) -> String
+{
+return self.replacingOccurrences(of: target, with: withString, options: NSString.CompareOptions.literal, range: nil)
+}
 }

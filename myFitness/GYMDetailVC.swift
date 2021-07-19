@@ -72,7 +72,9 @@ class GYMDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GymDetailTextCell.self),for: indexPath) as! GymDetailTextCell
-            cell.descriptionLabel.text = gym.description
+            let str = gym.description
+            let newStr = str.replace(target:"_b",withString: "\n")
+            cell.descriptionLabel.text = newStr
             cell.selectionStyle = .none
             
             return cell

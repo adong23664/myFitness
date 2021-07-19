@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseUI
 
 class ShoulderDetailVC: UIViewController, WKNavigationDelegate {
     @IBOutlet var spinner: UIActivityIndicatorView!
@@ -19,8 +20,15 @@ class ShoulderDetailVC: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideo(videoCode:"\(shoulder.video)" )
-        shoulderstepLabel.text = shoulder.step
-        shoulderMainImage.image = UIImage(named:shoulder.mainImage )
+        let str = shoulder.step
+        let newStr = str.replace(target:"_b",withString: "\n")
+        shoulderstepLabel.text = newStr
+        
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let ref = storageRef.child("shoulder/\(shoulder.image).jpeg")
+        shoulderMainImage.sd_setImage(with: ref)
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

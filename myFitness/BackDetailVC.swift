@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseUI
 
 class BackDetailVC: UIViewController , WKNavigationDelegate{
     @IBOutlet var spinner: UIActivityIndicatorView!
@@ -18,8 +19,14 @@ class BackDetailVC: UIViewController , WKNavigationDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideo(videoCode:"\(back.video)" )
-        backstepLabel.text = back.step
-        backMainImage.image = UIImage(named:back.mainImage )
+        let str = back.step
+        let newStr = str.replace(target:"_b",withString: "\n")
+        backstepLabel.text = newStr
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let ref = storageRef.child("back/\(back.image).jpeg")
+        backMainImage.sd_setImage(with: ref)
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

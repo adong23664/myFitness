@@ -25,7 +25,4 @@ class Gym {
         self.init (name: "", location: "", image: "", phone: "", description: "")
     }
     
-    func toData() -> [String: Any] {
-        return["name": self.name, "location": self.location, "image": self.image, "phone": self.phone, "description": self.description]
-    }
 }

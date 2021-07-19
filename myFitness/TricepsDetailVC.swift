@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseUI
 
 class TricepsDetailVC: UIViewController, WKNavigationDelegate {
     @IBOutlet var spinner: UIActivityIndicatorView!
@@ -19,8 +20,14 @@ class TricepsDetailVC: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideo(videoCode:"\(triceps.video)" )
-        tricepsstepLabel.text = triceps.step
-        tricepsMainImage.image = UIImage(named:triceps.mainImage )
+        let str = triceps.step
+        let newStr = str.replace(target:"_b",withString: "\n")
+        tricepsstepLabel.text = newStr
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let ref = storageRef.child("triceps/\(triceps.image).jpeg")
+        tricepsMainImage.sd_setImage(with: ref)
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

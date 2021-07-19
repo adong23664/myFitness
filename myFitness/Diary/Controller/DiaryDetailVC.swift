@@ -25,8 +25,7 @@ class DiaryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if let diaryImage = diary.image {
             headerView.headerImageView.image = UIImage(data: diaryImage as Data)
         }
-        headerView.heartImageView.isHidden = (diary.isLike) ? false : true
-        //
+
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white

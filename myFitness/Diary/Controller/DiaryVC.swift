@@ -108,7 +108,7 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
         if let diaryImage = diary.image {
             cell.thumbnailImageVew.image = UIImage(data: diaryImage as Data)
         }
-        cell.heartImageView.isHidden = diary.isLike ? false: true
+    
         
         return cell
     }
@@ -155,28 +155,7 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
         return swipeConfiguration
     }
     
-    
-    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let likeAction = UIContextualAction(style: .normal, title: "Like") { (action, sourceView, completionHandler) in
-            
-            let cell = tableView.cellForRow(at: indexPath) as! DiaryTableViewCell
-            self.diarys[indexPath.row].isLike = (self.diarys[indexPath.row].isLike) ? false : true
-            cell.heartImageView.isHidden = self.diarys[indexPath.row].isLike ? false : true
-            
-            completionHandler(true)
-        }
-        
-        let likeIcon = diarys[indexPath.row].isLike ? "arrow.uturn.left" : "heart.circle"
-        likeAction.backgroundColor = UIColor(red: 38.0/255.0, green: 162.0/255.0, blue: 78.0/255.0, alpha: 1.0)
-        likeAction.image = UIImage(systemName: likeIcon)
-        let swipeConfiguration = UISwipeActionsConfiguration(actions: [likeAction])
-        
-//        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
-//            appDelegate.saveContext()
-//        }
-        
-        return swipeConfiguration
-    }
+
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if searchController.isActive {

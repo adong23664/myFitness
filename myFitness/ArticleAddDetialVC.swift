@@ -7,29 +7,32 @@
 
 import UIKit
 import WebKit
+import FirebaseUI
 
-class ArticleAddDetialVC: UIViewController {
-    
+class ArticleAddDetialVC: UIViewController, WKNavigationDelegate {
+    var article = Article()
+    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet weak var webView: WKWebView!
-    
-    var articleWebURL = ""
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = URL(string: articleWebURL)!
+        let url = URL(string: article.address)!
         self.webView.load(URLRequest(url: url))
+        self.webView.addSubview(self.spinner)
+        self.spinner.startAnimating()
+        self.webView.navigationDelegate = self
+        self.spinner.hidesWhenStopped = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        spinner.stopAnimating()
     }
-    */
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        spinner.stopAnimating()
+    }
+    
 
 }

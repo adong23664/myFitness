@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -80,6 +80,7 @@
 		2CE1E69226A1B76500B01E6F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1E69126A1B76500B01E6F /* CloudKit.framework */; };
 		2CE1E69E26A3F4C100B01E6F /* PartMuscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */; };
 		2CE1E6A026A40F8500B01E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE1E69F26A40F8500B01E6F /* GoogleService-Info.plist */; };
+		2CE1E6A226A500BB00B01E6F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1E6A126A500BB00B01E6F /* Article.swift */; };
 		C176DE8985D8447163BEF9DC /* Pods_myFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8AAB1241BD924ADA481DA9 /* Pods_myFitness.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,7 @@
 		2CE1E69126A1B76500B01E6F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartMuscle.swift; sourceTree = "<group>"; };
 		2CE1E69F26A40F8500B01E6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CE1E6A126A500BB00B01E6F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		90190B2F55DB4467CF3D19D8 /* Pods-myFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFitness.release.xcconfig"; path = "Target Support Files/Pods-myFitness/Pods-myFitness.release.xcconfig"; sourceTree = "<group>"; };
 		FD8AAB1241BD924ADA481DA9 /* Pods_myFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,7 +187,6 @@
 				15D4DCE0423568823A8AAFF6 /* Pods-myFitness.debug.xcconfig */,
 				90190B2F55DB4467CF3D19D8 /* Pods-myFitness.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -364,6 +365,7 @@
 				2C43FCCB26A17C74009C9438 /* ArticleLossTableViewCell.swift */,
 				2C43FCC726A175CA009C9438 /* ArticleAddDetialVC.swift */,
 				2C43FCCD26A183CC009C9438 /* ArticleLossDetailVC.swift */,
+				2CE1E6A126A500BB00B01E6F /* Article.swift */,
 			);
 			name = Caculate;
 			sourceTree = "<group>";
@@ -540,6 +542,7 @@
 				2C43FC48269829FD009C9438 /* GymDetailTextCell.swift in Sources */,
 				2C43FCCA26A17C1E009C9438 /* LossWeightTableVC.swift in Sources */,
 				2C2DCD2626954FEB00D55229 /* TricepsTableViewCell.swift in Sources */,
+				2CE1E6A226A500BB00B01E6F /* Article.swift in Sources */,
 				2C43FC46269828C2009C9438 /* GymDetailIconTextCell.swift in Sources */,
 				2C2DCD222695498000D55229 /* BicepsTableViewCell.swift in Sources */,
 				2C43FC4F2698501A009C9438 /* GymDetailMapCell.swift in Sources */,
