@@ -37,7 +37,7 @@ class MoodVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        for index in 0...4 {
+        for index in 0...14 {
             UIView.animate(withDuration: 0.4, delay: (0.1 + 0.05 * Double(index)), options: [], animations: {
                 self.moodButtons[index].alpha = 1.0
                 self.moodButtons[index].transform = .identity

@@ -9,10 +9,16 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseUI
+import CoreData
 
-class GYMTableVC: UITableViewController {
+
+class GYMTableVC: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+
+    
     var db: Firestore!
     var gyms:[Gym] = []
+    var searchResults: [Gym] = []
+    var searchController: UISearchController!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -23,6 +29,31 @@ class GYMTableVC: UITableViewController {
         navigationController?.hidesBarsOnSwipe = true
         self.db = Firestore.firestore()
         self.loadData()
+        
+        searchController = UISearchController(searchResultsController: nil)
+        self.navigationItem.searchController = searchController
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+        searchController.searchBar.placeholder = "Search Gym"
+        searchController.searchBar.barTintColor = .white
+        searchController.searchBar.backgroundImage = UIImage()
+    }
+    
+    func filterContent(for searchText: String) {
+        searchResults = gyms.filter({ (gym)-> Bool in
+            let name =  gym.name, location = gym.location
+            let isMatch = name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
+                return isMatch
+        })
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContent(for: searchText)
+            tableView.reloadData()
+        }
     }
     
     
@@ -61,19 +92,25 @@ class GYMTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return gyms.count
+        if searchController.isActive {
+            return searchResults.count
+        } else {
+            return gyms.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gymcell", for: indexPath) as! GYMTableViewCell
-        cell.nameLabel.text = gyms[indexPath.row].name
+        
+        let gym = (searchController.isActive) ? searchResults[indexPath.row] : gyms[indexPath.row]
+        cell.nameLabel.text = gym.name
         
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        let ref = storageRef.child("GYM/\(gyms[indexPath.row].image).jpeg")
+        let ref = storageRef.child("GYM/\(gym.image).jpeg")
         cell.thumbnailImageView.sd_setImage(with: ref)
         
-        cell.locationLabel.text = gyms[indexPath.row].location
+        cell.locationLabel.text = gym.location
         return cell
     }
     //MARK: UITableViewDataSource
@@ -87,7 +124,7 @@ class GYMTableVC: UITableViewController {
         if segue.identifier == "showGymDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! GYMDetailVC
-                destinationController.gym = gyms[indexPath.row]
+                destinationController.gym = (searchController.isActive) ? searchResults[indexPath.row]: gyms[indexPath.row]
             }
         }
     }

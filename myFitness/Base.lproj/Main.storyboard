@@ -164,7 +164,22 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="健康管理" image="flame" catalog="system" id="lFN-yc-nAo"/>
-                    <navigationItem key="navigationItem" title="   " id="zoR-hT-ZFd"/>
+                    <navigationItem key="navigationItem" title="   " id="zoR-hT-ZFd">
+                        <barButtonItem key="leftBarButtonItem" title="登出" id="Gtq-gL-pXO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="意見" id="KeY-vq-QoA">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="support" destination="Amu-LA-RG9" id="zyp-Ok-b5f"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="bell" catalog="system" id="pqB-p7-1UG">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgc-jU-FSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -588,10 +603,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="s7j-bh-haJ" kind="relationship" relationship="viewControllers" id="suG-iW-tqE"/>
-                        <segue destination="u8T-KA-HJy" kind="relationship" relationship="viewControllers" id="6w0-Wq-Uxk"/>
-                        <segue destination="xCf-Jv-qJs" kind="relationship" relationship="viewControllers" id="uMf-WG-MCt"/>
-                        <segue destination="9Pk-Ob-odU" kind="relationship" relationship="viewControllers" id="Ofw-lh-9Bk"/>
-                        <segue destination="gnA-zj-uJt" kind="relationship" relationship="viewControllers" id="6un-xE-69u"/>
+                        <segue destination="gnA-zj-uJt" kind="relationship" relationship="viewControllers" id="BNG-C8-aeX"/>
+                        <segue destination="xCf-Jv-qJs" kind="relationship" relationship="viewControllers" id="ItT-4w-5EB"/>
+                        <segue destination="9Pk-Ob-odU" kind="relationship" relationship="viewControllers" id="bvQ-T5-7Bo"/>
+                        <segue destination="u8T-KA-HJy" kind="relationship" relationship="viewControllers" id="Gjg-Lb-sp5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnp-ee-7B3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -957,7 +972,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvz-1W-dSr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-927" y="49"/>
+            <point key="canvasLocation" x="12" y="48.125937031484263"/>
         </scene>
         <!--間歇時間計時器-->
         <scene sceneID="Rxm-Kb-BXN">
@@ -1298,7 +1313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2M-sn-Web" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440.8" y="56.221889055472268"/>
+            <point key="canvasLocation" x="2380" y="56.221889055472268"/>
         </scene>
         <!--胸部-->
         <scene sceneID="ebP-DC-uDw">
@@ -1369,7 +1384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Up-ZN-eMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093.5999999999999" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="2032.8" y="-638.2308845577212"/>
         </scene>
         <!--背部-->
         <scene sceneID="lGd-AL-VZp">
@@ -1442,7 +1457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdu-Tg-oee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892" y="-638"/>
+            <point key="canvasLocation" x="2831.1999999999998" y="-638.2308845577212"/>
         </scene>
         <!--腿部-->
         <scene sceneID="H6v-HT-lOV">
@@ -1513,7 +1528,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYp-QB-lPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="3559.1999999999998" y="-638.2308845577212"/>
         </scene>
         <!--二頭肌-->
         <scene sceneID="pbJ-kt-lak">
@@ -1584,7 +1599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbR-0v-jmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3449" y="-638"/>
+            <point key="canvasLocation" x="4388" y="-638.2308845577212"/>
         </scene>
         <!--三頭肌-->
         <scene sceneID="5LY-co-pCF">
@@ -1655,7 +1670,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzH-MD-oi7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4196" y="-638"/>
+            <point key="canvasLocation" x="5135.1999999999998" y="-638.2308845577212"/>
         </scene>
         <!--肩膀-->
         <scene sceneID="9MV-Hf-suP">
@@ -1726,7 +1741,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exw-zR-2m5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4921" y="-642"/>
+            <point key="canvasLocation" x="5860" y="-642.72863568215894"/>
         </scene>
         <!--New Diary-->
         <scene sceneID="Aph-c3-z8c">
@@ -2170,49 +2185,204 @@
                                     <segue destination="W3D-XE-hfk" kind="unwind" unwindAction="closeWithSegue:" id="Tc8-C6-JMS"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V9q-bz-6yn">
-                                <rect key="frame" x="74" y="108.5" width="227" height="430"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="dtg-cg-t90">
+                                <rect key="frame" x="46.5" y="88.5" width="282" height="470"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-cT-hmI">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="78"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
-                                        <state key="normal" title="Love" image="love"/>
-                                        <connections>
-                                            <segue destination="W3D-XE-hfk" kind="unwind" identifier="love" unwindAction="moodDiaryWithSegue:" id="94d-el-eJB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-fq-ilF">
-                                        <rect key="frame" x="0.0" y="88" width="181" height="78"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
-                                        <state key="normal" title="Cool" image="cool"/>
-                                        <connections>
-                                            <segue destination="W3D-XE-hfk" kind="unwind" identifier="cool" unwindAction="moodDiaryWithSegue:" id="drw-Gc-4JK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiD-lj-4se">
-                                        <rect key="frame" x="0.0" y="176" width="227" height="78"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
-                                        <state key="normal" title="Happy" image="happy"/>
-                                        <connections>
-                                            <segue destination="W3D-XE-hfk" kind="unwind" identifier="happy" unwindAction="moodDiaryWithSegue:" id="dGh-bj-3Bx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gV-hu-8bu">
-                                        <rect key="frame" x="0.0" y="264" width="167" height="78"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
-                                        <state key="normal" title="Sad" image="sad"/>
-                                        <connections>
-                                            <segue destination="W3D-XE-hfk" kind="unwind" identifier="sad" unwindAction="moodDiaryWithSegue:" id="llP-ty-ZGq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-Dd-kC9">
-                                        <rect key="frame" x="0.0" y="352" width="218" height="78"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
-                                        <state key="normal" title="Angry" image="angry"/>
-                                        <connections>
-                                            <segue destination="W3D-XE-hfk" kind="unwind" identifier="angry" unwindAction="moodDiaryWithSegue:" id="PX8-IQ-bjT"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Efe-uG-LgL">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="470"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYr-zd-WvR">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="4aG-de-jlK"/>
+                                                    <constraint firstAttribute="height" constant="78" id="F0z-iL-9EL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="love"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="love" unwindAction="moodDiaryWithSegue:" id="qSf-I2-kjN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-fq-ilF">
+                                                <rect key="frame" x="0.0" y="98" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="78" id="6wD-BI-sEe"/>
+                                                    <constraint firstAttribute="width" constant="78" id="VCi-Bf-Gfz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="cool"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="cool" unwindAction="moodDiaryWithSegue:" id="NXc-74-NON"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiD-lj-4se">
+                                                <rect key="frame" x="0.0" y="196" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="VXz-Qr-NXy"/>
+                                                    <constraint firstAttribute="height" constant="78" id="gth-Qo-hHz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="happy"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="happy" unwindAction="moodDiaryWithSegue:" id="vKb-Hu-qbA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gV-hu-8bu">
+                                                <rect key="frame" x="0.0" y="294" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="CmU-0d-H8n"/>
+                                                    <constraint firstAttribute="height" constant="78" id="FRN-Y1-lKq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="sad"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="sad" unwindAction="moodDiaryWithSegue:" id="qo9-rm-pXT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-Dd-kC9">
+                                                <rect key="frame" x="0.0" y="392" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="78" id="VEP-mZ-zTh"/>
+                                                    <constraint firstAttribute="width" constant="78" id="fZo-aI-I7A"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="angry"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="angry" unwindAction="moodDiaryWithSegue:" id="ulJ-u0-FbV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wS3-JT-eTs">
+                                        <rect key="frame" x="102" y="0.0" width="78" height="470"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5U-QA-yGO">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="11v-Ph-NKs"/>
+                                                    <constraint firstAttribute="height" constant="78" id="chx-t8-KQp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Happy1"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Happy1" unwindAction="moodDiaryWithSegue:" id="APV-PD-et9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kC-cQ-fAe">
+                                                <rect key="frame" x="0.0" y="98" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="Bai-zD-qlq"/>
+                                                    <constraint firstAttribute="height" constant="78" id="UTj-iX-8AH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Love1"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Love1" unwindAction="moodDiaryWithSegue:" id="1Eo-5Z-6W2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gF4-Jd-gqx">
+                                                <rect key="frame" x="0.0" y="196" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="78" id="KbC-Q2-jbV"/>
+                                                    <constraint firstAttribute="width" constant="78" id="Sr1-C5-AK0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Angry1"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Angry1" unwindAction="moodDiaryWithSegue:" id="Yxv-ds-K1K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-CR-Txr">
+                                                <rect key="frame" x="0.0" y="294" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="2W7-Z6-kQM"/>
+                                                    <constraint firstAttribute="height" constant="78" id="5sn-zQ-TNE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Happy2"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Happy2" unwindAction="moodDiaryWithSegue:" id="ou8-KX-UDM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-cT-hmI">
+                                                <rect key="frame" x="0.0" y="392" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="78" id="1ss-TK-R2i"/>
+                                                    <constraint firstAttribute="width" constant="78" id="ReU-gs-bnv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Happy4"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Happy4" unwindAction="moodDiaryWithSegue:" id="p8d-hg-8TG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oXQ-M9-CAR">
+                                        <rect key="frame" x="204" y="0.0" width="78" height="470"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MM3-60-idg">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="h6e-bj-W4x"/>
+                                                    <constraint firstAttribute="height" constant="78" id="sFT-f1-7rO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Happy3"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Happy3" unwindAction="moodDiaryWithSegue:" id="cpL-Xv-Dqj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uo-qp-Qy2">
+                                                <rect key="frame" x="0.0" y="98" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="78" id="4lG-e5-ghM"/>
+                                                    <constraint firstAttribute="width" constant="78" id="ZFg-hN-zhT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Sad2"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Sad2" unwindAction="moodDiaryWithSegue:" id="GiU-Pj-TOB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgc-nB-waq">
+                                                <rect key="frame" x="0.0" y="196" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="TjX-HB-6ah"/>
+                                                    <constraint firstAttribute="height" constant="78" id="hh2-vc-NNP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Sad1"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Sad1" unwindAction="moodDiaryWithSegue:" id="hPd-Kj-II4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyB-eh-giv">
+                                                <rect key="frame" x="0.0" y="294" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="78" id="B3d-Ob-Pjk"/>
+                                                    <constraint firstAttribute="width" constant="78" id="bQB-i1-n2v"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Happy5"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Happy5" unwindAction="moodDiaryWithSegue:" id="ktL-IF-jgB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scp-sC-C64">
+                                                <rect key="frame" x="0.0" y="392" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="78" id="0jE-DW-vCK"/>
+                                                    <constraint firstAttribute="height" constant="78" id="mYW-Ib-er6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
+                                                <state key="normal" image="Sad3"/>
+                                                <connections>
+                                                    <segue destination="W3D-XE-hfk" kind="unwind" identifier="Sad3" unwindAction="moodDiaryWithSegue:" id="kXC-jG-GX0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -2220,24 +2390,34 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aeT-ak-1UY" firstAttribute="leading" secondItem="v8V-Wu-YF5" secondAttribute="leading" id="2KX-RD-eTL"/>
-                            <constraint firstItem="V9q-bz-6yn" firstAttribute="centerX" secondItem="TqE-GT-gtx" secondAttribute="centerX" id="7Ye-yY-cyO"/>
                             <constraint firstItem="v8V-Wu-YF5" firstAttribute="trailing" secondItem="aeT-ak-1UY" secondAttribute="trailing" id="EhG-rM-o1j"/>
                             <constraint firstItem="aeT-ak-1UY" firstAttribute="top" secondItem="v8V-Wu-YF5" secondAttribute="top" id="JPH-0N-wT9"/>
                             <constraint firstItem="v8V-Wu-YF5" firstAttribute="bottom" secondItem="aeT-ak-1UY" secondAttribute="bottom" id="Nu7-aC-FN1"/>
                             <constraint firstItem="v8V-Wu-YF5" firstAttribute="trailing" secondItem="5LS-gB-SLs" secondAttribute="trailing" constant="20" id="PkD-h8-8kK"/>
-                            <constraint firstItem="V9q-bz-6yn" firstAttribute="centerY" secondItem="TqE-GT-gtx" secondAttribute="centerY" id="Y2H-of-v5B"/>
                             <constraint firstItem="5LS-gB-SLs" firstAttribute="top" secondItem="v8V-Wu-YF5" secondAttribute="top" id="jPO-Ws-LsE"/>
+                            <constraint firstItem="dtg-cg-t90" firstAttribute="centerX" secondItem="TqE-GT-gtx" secondAttribute="centerX" id="tCG-yj-rXn"/>
+                            <constraint firstItem="dtg-cg-t90" firstAttribute="centerY" secondItem="TqE-GT-gtx" secondAttribute="centerY" id="vQg-lB-qbi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AAs-rb-qvh"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="aeT-ak-1UY" id="NGH-lj-YWs"/>
                         <outlet property="closeBtn" destination="5LS-gB-SLs" id="fzo-h6-xkt"/>
-                        <outletCollection property="moodButtons" destination="uL7-cT-hmI" collectionClass="NSMutableArray" id="6bs-4t-HGx"/>
-                        <outletCollection property="moodButtons" destination="ar8-fq-ilF" collectionClass="NSMutableArray" id="0Vj-Ea-x1B"/>
-                        <outletCollection property="moodButtons" destination="qiD-lj-4se" collectionClass="NSMutableArray" id="FQn-Vm-ZcZ"/>
-                        <outletCollection property="moodButtons" destination="7gV-hu-8bu" collectionClass="NSMutableArray" id="mMl-8E-obS"/>
-                        <outletCollection property="moodButtons" destination="Ceb-Dd-kC9" collectionClass="NSMutableArray" id="7GY-CA-67C"/>
+                        <outletCollection property="moodButtons" destination="AYr-zd-WvR" collectionClass="NSMutableArray" id="Jca-S2-OCv"/>
+                        <outletCollection property="moodButtons" destination="ar8-fq-ilF" collectionClass="NSMutableArray" id="CMJ-eI-mqd"/>
+                        <outletCollection property="moodButtons" destination="qiD-lj-4se" collectionClass="NSMutableArray" id="ZjY-Hm-hIB"/>
+                        <outletCollection property="moodButtons" destination="7gV-hu-8bu" collectionClass="NSMutableArray" id="mIB-P0-75F"/>
+                        <outletCollection property="moodButtons" destination="Ceb-Dd-kC9" collectionClass="NSMutableArray" id="gxj-cT-KWw"/>
+                        <outletCollection property="moodButtons" destination="w5U-QA-yGO" collectionClass="NSMutableArray" id="0Pt-sM-2X5"/>
+                        <outletCollection property="moodButtons" destination="4kC-cQ-fAe" collectionClass="NSMutableArray" id="4Nr-OE-pFp"/>
+                        <outletCollection property="moodButtons" destination="gF4-Jd-gqx" collectionClass="NSMutableArray" id="2dP-d7-IIA"/>
+                        <outletCollection property="moodButtons" destination="EJz-CR-Txr" collectionClass="NSMutableArray" id="9Dc-OW-lfa"/>
+                        <outletCollection property="moodButtons" destination="uL7-cT-hmI" collectionClass="NSMutableArray" id="etR-vf-phZ"/>
+                        <outletCollection property="moodButtons" destination="MM3-60-idg" collectionClass="NSMutableArray" id="CW2-GO-ykj"/>
+                        <outletCollection property="moodButtons" destination="6uo-qp-Qy2" collectionClass="NSMutableArray" id="RN7-pm-9qi"/>
+                        <outletCollection property="moodButtons" destination="Kgc-nB-waq" collectionClass="NSMutableArray" id="xj8-xx-vT0"/>
+                        <outletCollection property="moodButtons" destination="tyB-eh-giv" collectionClass="NSMutableArray" id="cf3-kX-7g4"/>
+                        <outletCollection property="moodButtons" destination="Scp-sC-C64" collectionClass="NSMutableArray" id="8eh-Ch-H8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxk-ge-mKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2982,7 +3162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-9s-1cv">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -3100,12 +3280,23 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ahw-b7-2mJ"/>
+        <segue reference="1zP-Vc-8Go"/>
         <segue reference="6ix-Cz-5KO"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Angry1" width="146" height="150"/>
+        <image name="Happy1" width="148" height="152"/>
+        <image name="Happy2" width="146" height="158"/>
+        <image name="Happy3" width="158" height="156"/>
+        <image name="Happy4" width="164" height="160"/>
+        <image name="Happy5" width="146" height="160"/>
+        <image name="Love1" width="156" height="156"/>
+        <image name="Sad1" width="154" height="160"/>
+        <image name="Sad2" width="216" height="212"/>
+        <image name="Sad3" width="152" height="148"/>
         <image name="angry" width="78" height="78"/>
         <image name="back" width="2000" height="704"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="biceps" width="2008" height="850"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="chest" width="1192" height="332"/>
