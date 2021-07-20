@@ -145,6 +145,19 @@
                                     <constraint firstAttribute="height" constant="120" id="pqW-I4-vVE"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wk2-em-fmy" customClass="FBSDKProfilePictureView">
+                                <rect key="frame" x="16" y="44" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="t6R-0w-FIl"/>
+                                    <constraint firstAttribute="height" constant="40" id="xFU-nu-uI5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q28-OD-TGU"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -155,6 +168,8 @@
                             <constraint firstItem="pVR-6y-1Y0" firstAttribute="top" secondItem="q28-OD-TGU" secondAttribute="top" constant="39" id="VyI-IP-27l"/>
                             <constraint firstItem="LoE-Iu-pKW" firstAttribute="top" secondItem="Eop-3w-LHA" secondAttribute="bottom" constant="21" id="cHe-bY-aW1"/>
                             <constraint firstItem="Eop-3w-LHA" firstAttribute="leading" secondItem="q28-OD-TGU" secondAttribute="leading" constant="16" id="cLo-aJ-Cgg"/>
+                            <constraint firstItem="Wk2-em-fmy" firstAttribute="leading" secondItem="q28-OD-TGU" secondAttribute="leading" constant="16" id="cyF-wz-DK1"/>
+                            <constraint firstItem="Wk2-em-fmy" firstAttribute="top" secondItem="q28-OD-TGU" secondAttribute="top" id="fBx-3r-LoV"/>
                             <constraint firstItem="q28-OD-TGU" firstAttribute="trailing" secondItem="LoE-Iu-pKW" secondAttribute="trailing" constant="19" id="jyt-NJ-GWt"/>
                             <constraint firstItem="R2Z-Ob-lKm" firstAttribute="leading" secondItem="q28-OD-TGU" secondAttribute="leading" constant="16" id="mJn-tw-z7k"/>
                             <constraint firstItem="R2Z-Ob-lKm" firstAttribute="top" secondItem="pVR-6y-1Y0" secondAttribute="bottom" constant="21" id="uuo-Y4-jpx"/>
@@ -183,6 +198,9 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pictureView" destination="Wk2-em-fmy" id="MPF-81-WaF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgc-jU-FSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3461,12 +3479,33 @@
                                     <constraint firstItem="qtd-em-qQY" firstAttribute="height" secondItem="O5z-Ti-4SG" secondAttribute="height" id="Pyo-cc-lQj"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRQ-JD-nJc">
+                                <rect key="frame" x="40" y="313.5" width="295" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="q6d-2Q-GFk"/>
+                                    <constraint firstAttribute="height" constant="40" id="srQ-Xn-A7D"/>
+                                </constraints>
+                                <state key="normal" title="Facebook 登入">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fbAction:" destination="4H2-uX-TSC" eventType="touchUpInside" id="90t-cQ-INd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bjT-V1-gqw"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hRQ-JD-nJc" firstAttribute="centerX" secondItem="vQH-p6-5j5" secondAttribute="centerX" id="2n6-su-4rg"/>
                             <constraint firstItem="ujo-NM-BbV" firstAttribute="top" secondItem="bjT-V1-gqw" secondAttribute="top" constant="40" id="IAj-w5-USN"/>
                             <constraint firstItem="bjT-V1-gqw" firstAttribute="trailing" secondItem="ujo-NM-BbV" secondAttribute="trailing" constant="40" id="J68-uE-Rs1"/>
+                            <constraint firstItem="hRQ-JD-nJc" firstAttribute="centerY" secondItem="vQH-p6-5j5" secondAttribute="centerY" id="fbS-VR-Dau"/>
                             <constraint firstItem="ujo-NM-BbV" firstAttribute="leading" secondItem="bjT-V1-gqw" secondAttribute="leading" constant="40" id="t5k-ow-sl6"/>
                         </constraints>
                     </view>

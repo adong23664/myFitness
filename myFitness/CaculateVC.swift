@@ -8,16 +8,34 @@
 import UIKit
 import MessageUI
 import StoreKit
+import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
-
+    
+    @IBOutlet weak var pictureView: FBProfilePictureView!
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.tintColor = .white
+        pictureView.layer.cornerRadius = pictureView.frame.size.width/2
+        pictureView.clipsToBounds = true
+
+        Profile.enableUpdatesOnAccessTokenChange(true)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChange, object: nil)
+        updateProfile()
     }
     
+    
+    @objc func updateProfile() {
+        if let profile = Profile.current {
+            self.pictureView.profileID = profile.userID
+        }
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let scene = self.view.window?.windowScene{
@@ -26,6 +44,15 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func logout(_ sender: Any) {
+        self.pictureView.profileID = ""
+        AccessToken.current = nil
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out: \(signOutError)")
+        }
+        
         UserDefaults.standard.removeObject(forKey: "email")
         UserDefaults.standard.synchronize()
         if let window = self.view.window {
