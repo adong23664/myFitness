@@ -167,6 +167,9 @@
                     <navigationItem key="navigationItem" title="   " id="zoR-hT-ZFd">
                         <barButtonItem key="leftBarButtonItem" title="登出" id="Gtq-gL-pXO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logout:" destination="Amu-LA-RG9" id="cyl-LF-S3O"/>
+                            </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="意見" id="KeY-vq-QoA">
@@ -591,10 +594,161 @@
             </objects>
             <point key="canvasLocation" x="1620" y="893.70314842578716"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--   -->
+        <scene sceneID="bCZ-2r-nDI">
+            <objects>
+                <viewController id="EDH-gC-ujz" customClass="StartVC" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Xb-qb-abM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-pR-5Ew">
+                                <rect key="frame" x="40" y="527" width="295" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-MS-crC">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nDB-5a-3bf"/>
+                                        </constraints>
+                                        <state key="normal" title="登入">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="4H2-uX-TSC" kind="show" id="cVu-G4-TJZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilv-iX-BA3">
+                                        <rect key="frame" x="0.0" y="60" width="295" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9vf-gf-nJL"/>
+                                        </constraints>
+                                        <state key="normal" title="註冊">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="MCR-GN-FMV" kind="show" id="yar-ov-GYq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wrd-Bn-h2Y"/>
+                        <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wrd-Bn-h2Y" firstAttribute="trailing" secondItem="HXR-pR-5Ew" secondAttribute="trailing" constant="40" id="6d5-Vf-sYB"/>
+                            <constraint firstItem="HXR-pR-5Ew" firstAttribute="leading" secondItem="wrd-Bn-h2Y" secondAttribute="leading" constant="40" id="ce9-Ew-ewy"/>
+                            <constraint firstItem="wrd-Bn-h2Y" firstAttribute="bottom" secondItem="HXR-pR-5Ew" secondAttribute="bottom" constant="40" id="r8S-dh-z4t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="   " id="qbH-o6-XYw">
+                        <barButtonItem key="backBarButtonItem" title="   " id="utc-tf-JGR"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginButton" destination="M8w-MS-crC" id="yb7-lu-RZh"/>
+                        <outlet property="setupButton" destination="ilv-iX-BA3" id="HcH-zE-LwO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxr-FK-Y18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1919" y="-465"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="fuR-Ed-hxK">
+            <objects>
+                <viewController id="MCR-GN-FMV" customClass="SignUpVC" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ELw-jH-nb1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mcb-5D-yEc">
+                                <rect key="frame" x="40" y="84" width="295" height="260.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="設定電子郵件" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Pm-tw-1zi">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="設定密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbc-zp-nnu">
+                                        <rect key="frame" x="0.0" y="60" width="295" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名稱或暱稱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEi-IL-xCf">
+                                        <rect key="frame" x="0.0" y="120" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rKy-Ug-4kF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgb-Kz-Ekd">
+                                        <rect key="frame" x="0.0" y="180" width="295" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ptz-zt-klx"/>
+                                        </constraints>
+                                        <state key="normal" title="完成註冊">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="MCR-GN-FMV" eventType="touchUpInside" id="5NH-K7-1aA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM9-bm-Fmg">
+                                        <rect key="frame" x="0.0" y="240" width="295" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.25882352939999997" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vbc-zp-nnu" firstAttribute="height" secondItem="8Pm-tw-1zi" secondAttribute="height" id="QPt-4T-Eej"/>
+                                    <constraint firstItem="Pgb-Kz-Ekd" firstAttribute="height" secondItem="8Pm-tw-1zi" secondAttribute="height" id="t1E-c2-OTi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oKJ-iq-PfU"/>
+                        <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mcb-5D-yEc" firstAttribute="top" secondItem="oKJ-iq-PfU" secondAttribute="top" constant="40" id="K6s-kB-aKm"/>
+                            <constraint firstItem="mcb-5D-yEc" firstAttribute="leading" secondItem="oKJ-iq-PfU" secondAttribute="leading" constant="40" id="L7u-lx-ZCD"/>
+                            <constraint firstItem="oKJ-iq-PfU" firstAttribute="trailing" secondItem="mcb-5D-yEc" secondAttribute="trailing" constant="40" id="Rqd-Nc-wRd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jXa-4s-YUL"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="8Pm-tw-1zi" id="851-iT-ZWh"/>
+                        <outlet property="errorLabel" destination="wM9-bm-Fmg" id="XtY-q4-Lzz"/>
+                        <outlet property="nameTextField" destination="DEi-IL-xCf" id="UMf-lb-nax"/>
+                        <outlet property="passwordTextField" destination="vbc-zp-nnu" id="QmD-6D-aiz"/>
+                        <outlet property="signUpButton" destination="Pgb-Kz-Ekd" id="oyZ-P2-Xno"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pu8-bz-SdW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1084" y="-64"/>
+        </scene>
+        <!--HomeVC-->
         <scene sceneID="ao8-qC-czv">
             <objects>
-                <tabBarController id="Mcx-h6-7zJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeVC" id="Mcx-h6-7zJ" customClass="HomeVC" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m5v-9R-PHA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -972,7 +1126,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvz-1W-dSr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="48.125937031484263"/>
+            <point key="canvasLocation" x="732" y="-139.880059970015"/>
         </scene>
         <!--間歇時間計時器-->
         <scene sceneID="Rxm-Kb-BXN">
@@ -1313,7 +1467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2M-sn-Web" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2380" y="56.221889055472268"/>
+            <point key="canvasLocation" x="3319.1999999999998" y="56.221889055472268"/>
         </scene>
         <!--胸部-->
         <scene sceneID="ebP-DC-uDw">
@@ -1384,7 +1538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Up-ZN-eMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032.8" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="2972" y="-638.2308845577212"/>
         </scene>
         <!--背部-->
         <scene sceneID="lGd-AL-VZp">
@@ -1457,7 +1611,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdu-Tg-oee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2831.1999999999998" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="3770.4000000000001" y="-638.2308845577212"/>
         </scene>
         <!--腿部-->
         <scene sceneID="H6v-HT-lOV">
@@ -1528,7 +1682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYp-QB-lPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3559.1999999999998" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="4498.3999999999996" y="-638.2308845577212"/>
         </scene>
         <!--二頭肌-->
         <scene sceneID="pbJ-kt-lak">
@@ -1599,7 +1753,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbR-0v-jmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4388" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="5327.1999999999998" y="-638.2308845577212"/>
         </scene>
         <!--三頭肌-->
         <scene sceneID="5LY-co-pCF">
@@ -1670,7 +1824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzH-MD-oi7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5135.1999999999998" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="6074.3999999999996" y="-638.2308845577212"/>
         </scene>
         <!--肩膀-->
         <scene sceneID="9MV-Hf-suP">
@@ -1741,7 +1895,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exw-zR-2m5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5860" y="-642.72863568215894"/>
+            <point key="canvasLocation" x="6799.1999999999998" y="-642.72863568215894"/>
         </scene>
         <!--New Diary-->
         <scene sceneID="Aph-c3-z8c">
@@ -3256,6 +3410,78 @@
             </objects>
             <point key="canvasLocation" x="953" y="2423"/>
         </scene>
+        <!--LoginVC-->
+        <scene sceneID="nfC-bl-Z6A">
+            <objects>
+                <viewController id="4H2-uX-TSC" customClass="LoginVC" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vQH-p6-5j5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ujo-NM-BbV">
+                                <rect key="frame" x="40" y="84" width="295" height="200.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入電子郵件" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5z-Ti-4SG">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRw-7f-hgk">
+                                        <rect key="frame" x="0.0" y="60" width="295" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtd-em-qQY">
+                                        <rect key="frame" x="0.0" y="120" width="295" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qog-dt-1pc"/>
+                                        </constraints>
+                                        <state key="normal" title="登入">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="4H2-uX-TSC" eventType="touchUpInside" id="quo-J3-QPh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qON-qH-IDu">
+                                        <rect key="frame" x="0.0" y="180" width="295" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.25882352939999997" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oRw-7f-hgk" firstAttribute="height" secondItem="O5z-Ti-4SG" secondAttribute="height" id="7qw-ES-Vwy"/>
+                                    <constraint firstItem="qtd-em-qQY" firstAttribute="height" secondItem="O5z-Ti-4SG" secondAttribute="height" id="Pyo-cc-lQj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bjT-V1-gqw"/>
+                        <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ujo-NM-BbV" firstAttribute="top" secondItem="bjT-V1-gqw" secondAttribute="top" constant="40" id="IAj-w5-USN"/>
+                            <constraint firstItem="bjT-V1-gqw" firstAttribute="trailing" secondItem="ujo-NM-BbV" secondAttribute="trailing" constant="40" id="J68-uE-Rs1"/>
+                            <constraint firstItem="ujo-NM-BbV" firstAttribute="leading" secondItem="bjT-V1-gqw" secondAttribute="leading" constant="40" id="t5k-ow-sl6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="N5L-ZD-UIl"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="O5z-Ti-4SG" id="hGR-QY-95o"/>
+                        <outlet property="errorLabel" destination="qON-qH-IDu" id="0u3-fb-6ng"/>
+                        <outlet property="loginButton" destination="qtd-em-qQY" id="153-dQ-SNB"/>
+                        <outlet property="passwordTextField" destination="oRw-7f-hgk" id="bNX-sU-GJc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tC-eh-hT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1084" y="-782"/>
+        </scene>
         <!--計時器-->
         <scene sceneID="vWK-MR-cUb">
             <objects>
@@ -3277,6 +3503,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jok-oi-RfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-207.19999999999999" y="509.59520239880067"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e7o-OG-TFZ">
+            <objects>
+                <navigationController storyboardIdentifier="loginVC" automaticallyAdjustsScrollViewInsets="NO" id="z8i-a2-AJM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9D-Qs-a9E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EDH-gC-ujz" kind="relationship" relationship="rootViewController" id="w9d-An-HKC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cO-lK-CUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2850" y="-465"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -3330,6 +3574,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

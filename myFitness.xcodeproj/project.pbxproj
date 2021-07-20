@@ -77,6 +77,12 @@
 		2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */; };
 		2CA527EC26974BA4002E76D4 /* GYMTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */; };
 		2CA527EE269753CB002E76D4 /* GYMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */; };
+		2CD4D66226A69A5600E4A1C3 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66126A69A5600E4A1C3 /* SignUpVC.swift */; };
+		2CD4D66426A69A7400E4A1C3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66326A69A7400E4A1C3 /* LoginVC.swift */; };
+		2CD4D66626A6ABB200E4A1C3 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66526A6ABB200E4A1C3 /* StartVC.swift */; };
+		2CD4D66826A6B5FF00E4A1C3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66726A6B5FF00E4A1C3 /* Utilities.swift */; };
+		2CD4D66A26A6C76200E4A1C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66926A6C76200E4A1C3 /* Constants.swift */; };
+		2CD4D66C26A6CE2D00E4A1C3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66B26A6CE2C00E4A1C3 /* HomeVC.swift */; };
 		2CE1E69226A1B76500B01E6F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1E69126A1B76500B01E6F /* CloudKit.framework */; };
 		2CE1E69E26A3F4C100B01E6F /* PartMuscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */; };
 		2CE1E6A026A40F8500B01E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE1E69F26A40F8500B01E6F /* GoogleService-Info.plist */; };
@@ -158,6 +164,12 @@
 		2C816F2D268B69DC00AA1EEB /* CaculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculatorViewController.swift; sourceTree = "<group>"; };
 		2CA527EB26974BA4002E76D4 /* GYMTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableVC.swift; sourceTree = "<group>"; };
 		2CA527ED269753CB002E76D4 /* GYMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTableViewCell.swift; sourceTree = "<group>"; };
+		2CD4D66126A69A5600E4A1C3 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		2CD4D66326A69A7400E4A1C3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2CD4D66526A6ABB200E4A1C3 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		2CD4D66726A6B5FF00E4A1C3 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2CD4D66926A6C76200E4A1C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2CD4D66B26A6CE2C00E4A1C3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2CE1E69026A1B75400B01E6F /* myFitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myFitness.entitlements; sourceTree = "<group>"; };
 		2CE1E69126A1B76500B01E6F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartMuscle.swift; sourceTree = "<group>"; };
@@ -336,9 +348,11 @@
 		2C69C975264EDDFD00EF7D1A /* myFitness */ = {
 			isa = PBXGroup;
 			children = (
+				2CD4D66D26A6EEB500E4A1C3 /* SetUp+Login */,
 				2CE1E69F26A40F8500B01E6F /* GoogleService-Info.plist */,
 				2CE1E69026A1B75400B01E6F /* myFitness.entitlements */,
 				2C43FCAC269D7E7A009C9438 /* Storyboard */,
+				2CD4D66B26A6CE2C00E4A1C3 /* HomeVC.swift */,
 				2C69C978264EDDFD00EF7D1A /* SceneDelegate.swift */,
 				2C69C976264EDDFD00EF7D1A /* AppDelegate.swift */,
 				2C816F2C268B5E8E00AA1EEB /* Caculate */,
@@ -385,6 +399,18 @@
 				2C43FC4E2698501A009C9438 /* GymDetailMapCell.swift */,
 			);
 			name = GYM;
+			sourceTree = "<group>";
+		};
+		2CD4D66D26A6EEB500E4A1C3 /* SetUp+Login */ = {
+			isa = PBXGroup;
+			children = (
+				2CD4D66526A6ABB200E4A1C3 /* StartVC.swift */,
+				2CD4D66126A69A5600E4A1C3 /* SignUpVC.swift */,
+				2CD4D66326A69A7400E4A1C3 /* LoginVC.swift */,
+				2CD4D66926A6C76200E4A1C3 /* Constants.swift */,
+				2CD4D66726A6B5FF00E4A1C3 /* Utilities.swift */,
+			);
+			name = "SetUp+Login";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,14 +547,19 @@
 				2C43FCC826A175CB009C9438 /* ArticleAddDetialVC.swift in Sources */,
 				2C43FC4326981DDE009C9438 /* GYMDetailHeaderView.swift in Sources */,
 				2C43FC292697F60A009C9438 /* GYMDetailVC.swift in Sources */,
+				2CD4D66226A69A5600E4A1C3 /* SignUpVC.swift in Sources */,
 				2CE1E69E26A3F4C100B01E6F /* PartMuscle.swift in Sources */,
+				2CD4D66626A6ABB200E4A1C3 /* StartVC.swift in Sources */,
 				2C61016E267F85F4004657DD /* TimerViewController.swift in Sources */,
 				2C43FCCC26A17C74009C9438 /* ArticleLossTableViewCell.swift in Sources */,
 				2C43FC8E2699FBA1009C9438 /* DiaryDetailIconTextCell.swift in Sources */,
 				2C2DCD322695998800D55229 /* BackDetailVC.swift in Sources */,
 				2C7F990E266780EC00999581 /* BMIViewController.swift in Sources */,
+				2CD4D66C26A6CE2D00E4A1C3 /* HomeVC.swift in Sources */,
 				2C43FCC626A16E1A009C9438 /* ArticleTableViewCell.swift in Sources */,
 				2C2DCD2A2695530400D55229 /* ShoulderTableViewCell.swift in Sources */,
+				2CD4D66426A69A7400E4A1C3 /* LoginVC.swift in Sources */,
+				2CD4D66826A6B5FF00E4A1C3 /* Utilities.swift in Sources */,
 				2C43FC8C2699F508009C9438 /* DiaryDetailHeaderView.swift in Sources */,
 				2C69C977264EDDFD00EF7D1A /* AppDelegate.swift in Sources */,
 				2C2DCD1926949F5700D55229 /* BackTableViewCell.swift in Sources */,
@@ -552,6 +583,7 @@
 				2C43FCC426A166A0009C9438 /* GetWeightTableVC.swift in Sources */,
 				2C2DCD382695DF4000D55229 /* TricepsDetailVC.swift in Sources */,
 				2C43FCAB269C7157009C9438 /* myFitness.xcdatamodeld in Sources */,
+				2CD4D66A26A6C76200E4A1C3 /* Constants.swift in Sources */,
 				2C2DCD2C2695531700D55229 /* ShoulderVC.swift in Sources */,
 				2C43FC96269AFE5A009C9438 /* RoundedTextField.swift in Sources */,
 				2C43FC782699A66D009C9438 /* DiaryTableViewCell.swift in Sources */,

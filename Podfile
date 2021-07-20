@@ -9,5 +9,10 @@ target 'myFitness' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
+  pod 'Firebase/Auth'
+  pod 'FirebaseAnalytics'
+  pod 'FBSDKLoginKit'
+  
+  
 
 end

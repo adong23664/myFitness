@@ -8,9 +8,12 @@
 import UIKit
 import CoreData
 import Firebase
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
 
 
@@ -25,8 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = UIColor.black
         
         FirebaseApp.configure()
+        
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
+    //IOS13以前
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        if let window = self.window {
+            Constants.checkLogin(window: window)
+        }
+    }
+    
+
 
     // MARK: UISceneSession Lifecycle
 

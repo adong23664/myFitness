@@ -25,6 +25,14 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
+    @IBAction func logout(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.synchronize()
+        if let window = self.view.window {
+            Constants.checkLogin(window: window)
+        }
+        
+    }
     @IBAction func support() {
         if( MFMailComposeViewController.canSendMail())  {
             let alert = UIAlertController(title: "", message: "感謝您使用MyFitness,若您有任何意見,歡迎與我聯繫", preferredStyle: .alert)
