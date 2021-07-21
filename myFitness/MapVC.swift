@@ -47,13 +47,14 @@ class MapVC: UIViewController, MKMapViewDelegate {
         if annotation.isKind(of: MKUserLocation.self) {
             return nil
         }
-        var annotationView: MKMarkerAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         if annotationView == nil {
-            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
         }
         
-        annotationView?.glyphText = "💪"
-        annotationView?.markerTintColor = UIColor.orange
+        annotationView?.image = UIImage(named: "mylogo")
+//        annotationView?.markerTintColor = UIColor.black
         return annotationView
     }
     

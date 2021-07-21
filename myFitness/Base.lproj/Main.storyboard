@@ -1933,14 +1933,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-X2-Kp0">
-                                                    <rect key="frame" x="175.5" y="91" width="24" height="17.5"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-X2-Kp0">
+                                                    <rect key="frame" x="162.5" y="75.5" width="50" height="48"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="2Hd-an-CsY"/>
+                                                        <constraint firstAttribute="height" constant="50" id="FMQ-zv-nxa"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="zgR-X2-Kp0" firstAttribute="centerY" secondItem="gdu-36-j19" secondAttribute="centerY" id="Ywu-Kt-DO3"/>
-                                                <constraint firstItem="zgR-X2-Kp0" firstAttribute="centerX" secondItem="gdu-36-j19" secondAttribute="centerX" id="wG9-cf-Lpg"/>
+                                                <constraint firstItem="zgR-X2-Kp0" firstAttribute="centerX" secondItem="gdu-36-j19" secondAttribute="centerX" id="6Nk-0w-L8m"/>
+                                                <constraint firstItem="zgR-X2-Kp0" firstAttribute="centerY" secondItem="gdu-36-j19" secondAttribute="centerY" id="XF7-Zc-jwO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2339,7 +2344,7 @@
             <objects>
                 <viewController id="DqX-rB-OPn" customClass="MoodVC" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TqE-GT-gtx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aeT-ak-1UY">
@@ -3416,7 +3421,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Kl6-Uc-2w7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ytf-LR-pCF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3581,6 +3585,7 @@
         <image name="back" width="2000" height="704"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="biceps" width="2008" height="850"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="chest" width="1192" height="332"/>
         <image name="cool" width="78" height="78"/>
@@ -3592,7 +3597,6 @@
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="love" width="78" height="78"/>
         <image name="note.text" catalog="system" width="128" height="106"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sad" width="78" height="78"/>
         <image name="shoulder" width="1198" height="652"/>
