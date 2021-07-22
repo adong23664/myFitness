@@ -24,6 +24,6 @@ class Diary {
     }
     
     convenience init() {
-        self.init(name: "", image: "", date: "", description: "")
+        self.init(name: "", image: "", date: "", description: "", mood: "")
     }
 }

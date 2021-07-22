@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     
@@ -14,6 +15,7 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
     @IBOutlet var emptyDiaryView: UIView!
     var diarys:[DiaryMO] = []
     var searchResults: [DiaryMO] = []
+    var db: Firestore!
     var searchController: UISearchController!
 
     override func viewDidLoad() {
@@ -61,7 +63,7 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
         searchController.searchBar.tintColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0,alpha: 1.0)
 //        tableView.tableHeaderView = searchController.searchBar
         self.navigationItem.searchController = searchController
-        
+        self.db = Firestore.firestore()
     }
     
     
@@ -226,6 +228,11 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
             filterContent(for: searchText)
             tableView.reloadData()
         }
+    }
+    
+    //當點擊view任何喔一處鍵盤收起
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 

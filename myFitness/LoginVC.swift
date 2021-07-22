@@ -10,17 +10,23 @@ import FirebaseAuth
 import FBSDKLoginKit
 import FBSDKCoreKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController,UITextFieldDelegate {
 
 //    @IBOutlet weak var fbLoginButton: FBLoginButton!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField! {
+        didSet {
+            emailTextField.attributedPlaceholder = NSAttributedString(string: "請輸入電子郵件",
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        }
+    }
     
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    
+    @IBOutlet weak var passwordTextField: UITextField!{
+        didSet {
+            passwordTextField.attributedPlaceholder = NSAttributedString(string: "請輸入密碼",
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        }
+    }
     @IBOutlet weak var loginButton: UIButton!
-    
-    
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +97,9 @@ class LoginVC: UIViewController {
     
     func setUpElements() {
         errorLabel.alpha = 0
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(loginButton)
     }
     @IBAction func loginTapped(_ sender: Any) {
         //Validate Text Fields
@@ -116,5 +125,16 @@ class LoginVC: UIViewController {
             }
         }
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
+        return true
+    }
+    //當點擊view任何喔一處鍵盤收起
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
 
 }

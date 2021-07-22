@@ -9,11 +9,21 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController,UITextFieldDelegate {
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField! {
+        didSet {
+            emailTextField.attributedPlaceholder = NSAttributedString(string: "請設定電子郵件",
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        }
+    }
+    
+    @IBOutlet weak var passwordTextField: UITextField!{
+        didSet {
+            passwordTextField.attributedPlaceholder = NSAttributedString(string: "請設定密碼",
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        }
+    }
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
 
@@ -23,17 +33,21 @@ class SignUpVC: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
+        
 
         
     }
     
     func setUpElements() {
         errorLabel.alpha = 0
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(signUpButton)
     }
     // Check the Fields and validate that the data is correct. if everything is correct, this method retuen nil, otherwise, return error message
     func validateFields()-> String? {
         // check all field are filled in
-        if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in:  .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+        if  emailTextField.text?.trimmingCharacters(in:  .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             return "所有欄位都需要填寫！"
         }
         
@@ -60,8 +74,7 @@ class SignUpVC: UIViewController {
             let user = User()
             user.email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             user.password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            user.name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let data = ["name": user.name ?? "", "email": user.email ?? "","password": user.password ?? "" ]
+            let data = ["email": user.email ?? "","password": user.password ?? "" ]
             //Creat user
             Auth.auth().createUser(withEmail: user.email ?? "", password: user.password ?? "") { (result, error)  in
                 if  error != nil {
@@ -93,7 +106,17 @@ class SignUpVC: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+    //當點擊view任何喔一處鍵盤收起
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
 
 
 }
