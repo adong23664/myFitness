@@ -57,38 +57,38 @@ class SignUpVC: UIViewController {
             showError(error!)
         } else {
             //creat cleaned versions of data
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let user = User()
+            user.email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            user.password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            user.name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let data = ["name": user.name ?? "", "email": user.email ?? "","password": user.password ?? "" ]
             //Creat user
-            Auth.auth().createUser(withEmail: email, password: password) { (result, error)  in
+            Auth.auth().createUser(withEmail: user.email ?? "", password: user.password ?? "") { (result, error)  in
                 if  error != nil {
                     self.showError("Error creating user")
                 } else {
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["name": name, "email":email, "password":password, "uid" : result!.user.uid  ]) { (error) in
-                        if error != nil {
-                            self.showError("Error saving user data")
+                    let user = User()
+                    db.collection("users").document(user.userID).setData(data) { error in
+                        if let e = error {
+                            print("error while adding data to firebase \(e)")
+                            return
                         }
+                        UserDefaults.standard.set(user.email, forKey: "email")
+                        UserDefaults.standard.synchronize()
+                        self.transitionToHome()
                     }
-                    UserDefaults.standard.set(name, forKey: "email")
-                    UserDefaults.standard.synchronize()
-                    self.transitionToHome()
                 }
             }
         }
-
-        
     }
     
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    
     func transitionToHome() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeVC
-        
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }

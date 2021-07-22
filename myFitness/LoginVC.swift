@@ -112,6 +112,7 @@ class LoginVC: UIViewController {
                 let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeVC
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
+                print(email)
             }
         }
     }

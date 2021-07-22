@@ -11,12 +11,13 @@ import StoreKit
 import FirebaseAuth
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 
 class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
     
+    var db: Firestore!
     @IBOutlet weak var pictureView: FBProfilePictureView!
-    
- 
+    @IBOutlet weak var nameLabel: UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -24,16 +25,39 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
         self.navigationController?.navigationBar.tintColor = .white
         pictureView.layer.cornerRadius = pictureView.frame.size.width/2
         pictureView.clipsToBounds = true
-
-        Profile.enableUpdatesOnAccessTokenChange(true)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChange, object: nil)
-        updateProfile()
+        self.db = Firestore.firestore()
+        if Profile.current != nil {
+            Profile.enableUpdatesOnAccessTokenChange(true)
+            NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChange, object: nil)
+            updateProfile()
+        } else {
+            loadData()
+        }
+    }
+    
+    func loadData() {
+        self.db.collection("users").getDocuments() { snapshot, error  in
+            if let e = error {
+                print("error \(e)")
+            }
+            guard let data = snapshot else {return}
+            for document in data.documents {
+                let user = User()
+                user.userID = document.documentID
+                user.name = document.data()["name"] as? String
+                print(user.userID, user.name)
+            }
+            
+        }
     }
     
     
     @objc func updateProfile() {
         if let profile = Profile.current {
             self.pictureView.profileID = profile.userID
+            if let name = nameLabel {
+                name.text = profile.firstName
+            }
         }
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -44,11 +68,15 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func logout(_ sender: Any) {
-        self.pictureView.profileID = ""
+        let logout = LoginManager()
+        logout.logOut()
+        nameLabel?.text = nil
+        print("已登出")
         AccessToken.current = nil
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            print("fb logOut")
         } catch let signOutError as NSError {
             print("Error signing out: \(signOutError)")
         }

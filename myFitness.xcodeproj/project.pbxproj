@@ -83,6 +83,7 @@
 		2CD4D66826A6B5FF00E4A1C3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66726A6B5FF00E4A1C3 /* Utilities.swift */; };
 		2CD4D66A26A6C76200E4A1C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66926A6C76200E4A1C3 /* Constants.swift */; };
 		2CD4D66C26A6CE2D00E4A1C3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66B26A6CE2C00E4A1C3 /* HomeVC.swift */; };
+		2CD4D66F26A91C7200E4A1C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66E26A91C7200E4A1C3 /* User.swift */; };
 		2CE1E69226A1B76500B01E6F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1E69126A1B76500B01E6F /* CloudKit.framework */; };
 		2CE1E69E26A3F4C100B01E6F /* PartMuscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */; };
 		2CE1E6A026A40F8500B01E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE1E69F26A40F8500B01E6F /* GoogleService-Info.plist */; };
@@ -170,6 +171,7 @@
 		2CD4D66726A6B5FF00E4A1C3 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2CD4D66926A6C76200E4A1C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2CD4D66B26A6CE2C00E4A1C3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2CD4D66E26A91C7200E4A1C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2CE1E69026A1B75400B01E6F /* myFitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myFitness.entitlements; sourceTree = "<group>"; };
 		2CE1E69126A1B76500B01E6F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartMuscle.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				2CD4D66326A69A7400E4A1C3 /* LoginVC.swift */,
 				2CD4D66926A6C76200E4A1C3 /* Constants.swift */,
 				2CD4D66726A6B5FF00E4A1C3 /* Utilities.swift */,
+				2CD4D66E26A91C7200E4A1C3 /* User.swift */,
 			);
 			name = "SetUp+Login";
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				2C43FCCE26A183CC009C9438 /* ArticleLossDetailVC.swift in Sources */,
 				2C816F2E268B69DC00AA1EEB /* CaculatorViewController.swift in Sources */,
 				2C43FCC426A166A0009C9438 /* GetWeightTableVC.swift in Sources */,
+				2CD4D66F26A91C7200E4A1C3 /* User.swift in Sources */,
 				2C2DCD382695DF4000D55229 /* TricepsDetailVC.swift in Sources */,
 				2C43FCAB269C7157009C9438 /* myFitness.xcdatamodeld in Sources */,
 				2CD4D66A26A6C76200E4A1C3 /* Constants.swift in Sources */,

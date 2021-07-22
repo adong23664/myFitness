@@ -55,7 +55,7 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search diary..."
+        searchController.searchBar.placeholder = "Search diary"
         searchController.searchBar.barTintColor = .white
         searchController.searchBar.backgroundImage = UIImage()
         searchController.searchBar.tintColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0,alpha: 1.0)
@@ -147,9 +147,9 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
             self.present(activityController, animated: true, completion: nil)
             completionHandler(true)
         }
-        deleteAction.backgroundColor = UIColor.red
+        deleteAction.backgroundColor = UIColor.systemRed
         deleteAction.image = UIImage(systemName: "trash")
-        shareAction.backgroundColor = UIColor.orange
+        shareAction.backgroundColor = UIColor.systemOrange
         shareAction.image = UIImage(systemName: "square.and.arrow.up")
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction,shareAction])
         return swipeConfiguration
