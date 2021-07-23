@@ -71,7 +71,7 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             
-            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            let cameraAction = UIAlertAction(title: "拍照", style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.allowsEditing = true
@@ -81,7 +81,7 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
                 }
             })
             
-            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
+            let photoLibraryAction = UIAlertAction(title: "相簿", style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.allowsEditing = true

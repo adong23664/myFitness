@@ -1970,7 +1970,7 @@
             <objects>
                 <tableViewController id="Euk-82-qek" customClass="NewDiaryController" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="18V-vb-VMr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -1998,7 +1998,7 @@
                                                 <constraint firstItem="zgR-X2-Kp0" firstAttribute="centerY" secondItem="gdu-36-j19" secondAttribute="centerY" id="XF7-Zc-jwO"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="88" id="wCF-UB-E5M">
                                         <rect key="frame" x="0.0" y="224.5" width="375" height="88"/>
@@ -2035,6 +2035,7 @@
                                                 <constraint firstItem="fqS-he-3k2" firstAttribute="leading" secondItem="SFm-rD-nO2" secondAttribute="leadingMargin" constant="2" id="yjd-zi-CcP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="88" id="rh6-8H-SAf">
                                         <rect key="frame" x="0.0" y="312.5" width="375" height="88"/>
@@ -2071,6 +2072,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Bj9-J4-QTC" secondAttribute="trailing" constant="2" id="S9O-lO-fOe"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="125" id="V4l-BA-Z3R">
                                         <rect key="frame" x="0.0" y="400.5" width="375" height="125"/>
@@ -2105,6 +2107,7 @@
                                                 <constraint firstItem="BF0-Ze-Gqc" firstAttribute="top" secondItem="Yon-vE-BOd" secondAttribute="topMargin" constant="5" id="pys-CX-RaX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -2138,7 +2141,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgO-WO-6HP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0n3-qa-8Lx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3807" y="2231"/>
+            <point key="canvasLocation" x="-3807.1999999999998" y="2230.434782608696"/>
         </scene>
         <!--Training Diary-->
         <scene sceneID="Qk5-ce-wme">
@@ -2220,7 +2223,7 @@
                         <barButtonItem key="rightBarButtonItem" title=" " image="plus" catalog="system" id="gBO-0w-kYl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="hzG-9O-Yev" kind="presentation" identifier="addDiary" id="pFf-cR-K57"/>
+                                <segue destination="hzG-9O-Yev" kind="show" identifier="addDiary" id="pFf-cR-K57"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -3170,8 +3173,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzG-9O-Yev" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="m46-c2-FL2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zbk-RO-mnF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
