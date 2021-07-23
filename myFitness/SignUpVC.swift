@@ -11,17 +11,18 @@ import Firebase
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
     
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
-            emailTextField.attributedPlaceholder = NSAttributedString(string: "請設定電子郵件",
-                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+            emailTextField.attributedPlaceholder = NSAttributedString(string: "請設定電子郵件",attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
         }
     }
     
     @IBOutlet weak var passwordTextField: UITextField!{
         didSet {
-            passwordTextField.attributedPlaceholder = NSAttributedString(string: "請設定密碼",
-                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+            passwordTextField.attributedPlaceholder = NSAttributedString(string: "請設定密碼",attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
         }
     }
     @IBOutlet weak var signUpButton: UIButton!
@@ -34,8 +35,11 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
         
-
-        
+        backgroundImageView.image = UIImage(named: "first")
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        backgroundImageView.addSubview(blurEffectView)
     }
     
     func setUpElements() {
@@ -115,8 +119,4 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
-
-
 }

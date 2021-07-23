@@ -12,18 +12,16 @@ import FBSDKCoreKit
 
 class LoginVC: UIViewController,UITextFieldDelegate {
 
-//    @IBOutlet weak var fbLoginButton: FBLoginButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
-            emailTextField.attributedPlaceholder = NSAttributedString(string: "請輸入電子郵件",
-                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+            emailTextField.attributedPlaceholder = NSAttributedString(string: "請輸入電子郵件",attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
         }
     }
-    
     @IBOutlet weak var passwordTextField: UITextField!{
         didSet {
-            passwordTextField.attributedPlaceholder = NSAttributedString(string: "請輸入密碼",
-                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+            passwordTextField.attributedPlaceholder = NSAttributedString(string: "請輸入密碼",attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
         }
     }
     @IBOutlet weak var loginButton: UIButton!
@@ -33,8 +31,13 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
+        
+        backgroundImageView.image = UIImage(named: "first")
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        backgroundImageView.addSubview(blurEffectView)
         setUpElements()
-
     }
     @IBAction func fbAction(_ sender: Any) {
         let loginManager = LoginManager()

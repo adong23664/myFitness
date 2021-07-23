@@ -58,7 +58,7 @@ class GYMTableVC: UITableViewController, NSFetchedResultsControllerDelegate, UIS
     
     
     func loadData() {
-        self.db.collection("Gym").getDocuments { snapshot, error in
+        self.db.collection("Gym").order(by: "name").getDocuments { snapshot, error in
             if let e = error {
                 print("error \(e)")
             }
