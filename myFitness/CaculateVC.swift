@@ -90,7 +90,7 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     @IBAction func support() {
         if( MFMailComposeViewController.canSendMail())  {
-            let alert = UIAlertController(title: "", message: "感謝您使用MyFitness,若您有任何意見,歡迎與我聯繫", preferredStyle: .alert)
+            let alert = UIAlertController(title: "", message: "感謝您使用全民健身,若您有任何意見,歡迎與我聯繫", preferredStyle: .alert)
             let email = UIAlertAction(title: "email", style: .default, handler: { (action) -> Void in
                 let mailController = MFMailComposeViewController()
                 mailController.mailComposeDelegate = self
@@ -103,7 +103,10 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
                 mailController.setToRecipients(["adong23664@gmail.com"])
                 self.present(mailController, animated: true, completion: nil)
             })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
             alert.addAction(email)
+            alert.addAction(cancelAction)
             self.present(alert, animated: true, completion: nil)
         } else {
             //..

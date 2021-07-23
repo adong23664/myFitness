@@ -27,6 +27,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var done: UIButton!
+    
     var timer = Timer()
     var setNB = 0
     var count : Int = 0
@@ -56,9 +57,11 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         setNumber.layer.borderWidth = 3
         setNumber.layer.borderColor = UIColor.white.cgColor
-        setNumber.layer.shadowOffset = CGSize(width: 10, height: 10)
-        setNumber.layer.shadowColor = UIColor.darkGray.cgColor
-        setNumber.layer.shadowOpacity = 0.5
+        
+        done.layer.borderWidth = 3
+        done.tintColor = UIColor.white
+        done.layer.borderColor = UIColor.white.cgColor
+        done.layer.cornerRadius = 10
         
         
     }
