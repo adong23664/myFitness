@@ -6,10 +6,9 @@
 //
 
 import UIKit
+import AVKit
 
 class StartVC: UIViewController {
-
-
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -18,20 +17,17 @@ class StartVC: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        backgroundImageView.image = UIImage(named: "first")
-        let blurEffect = UIBlurEffect(style: .dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        backgroundImageView.addSubview(blurEffectView)
-        
-
         setUpElements()
+        
+        backgroundImageView.image = UIImage(named: "first")
+                let blurEffect = UIBlurEffect(style: .dark)
+                let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                blurEffectView.frame = view.bounds
+                backgroundImageView.addSubview(blurEffectView)
     }
     func setUpElements() {
         Utilities.styleHelloButton(loginButton)
         Utilities.styleFilledButton(setupButton)
     }
-    
-
-
 }
+    

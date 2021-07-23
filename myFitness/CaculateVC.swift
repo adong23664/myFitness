@@ -125,4 +125,12 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
               }
               self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func claimBtn(_ sender: Any) {
+            let alert = UIAlertController(title: "聲明！", message: "本應用程式為教育目的,資料來源均來自網路,若有侵權請告知,必會立刻修改或下架", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alert.addAction(cancelAction)
+            present(alert, animated: true, completion: nil)
+        }
 }

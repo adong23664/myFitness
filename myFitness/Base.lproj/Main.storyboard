@@ -207,6 +207,9 @@
                             </barButtonItem>
                             <barButtonItem image="bell" catalog="system" id="pqB-p7-1UG">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="claimBtn:" destination="Amu-LA-RG9" id="aPo-Mj-oCl"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -633,7 +636,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="y0I-6V-19j">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y0I-6V-19j">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-pR-5Ew">
@@ -3654,7 +3657,6 @@
         <image name="cool" width="78" height="78"/>
         <image name="empty" width="310" height="372"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
-        <image name="first" width="1488" height="2000"/>
         <image name="flame" catalog="system" width="108" height="128"/>
         <image name="happy" width="78" height="78"/>
         <image name="leg" width="1494" height="618"/>
