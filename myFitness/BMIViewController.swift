@@ -34,11 +34,14 @@ class BMIViewController: UIViewController, UITextFieldDelegate {
              bmi = weight / ((height/100) * (height/100))
             BMINumber.text = String(format: "你的BMI是: %.2f",bmi!)
             if heightField.text == "0" || weightField.text == "0" {
-                BMINumber.text = "身高體重需大於0"}
+                BMINumber.text = "身高體重需大於0"
+                BMINumber.tintColor = UIColor.red
+            }
             else {
                 guard let height = Double(heightField.text!), let weight = Double(weightField.text!)
                 else {
                     BMINumber.text = "身高體重需大於0"
+                    BMINumber.tintColor = UIColor.red
                     return
                     }
                 
