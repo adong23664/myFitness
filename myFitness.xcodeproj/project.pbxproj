@@ -84,7 +84,6 @@
 		2CD4D66A26A6C76200E4A1C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66926A6C76200E4A1C3 /* Constants.swift */; };
 		2CD4D66C26A6CE2D00E4A1C3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66B26A6CE2C00E4A1C3 /* HomeVC.swift */; };
 		2CD4D66F26A91C7200E4A1C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4D66E26A91C7200E4A1C3 /* User.swift */; };
-		2CE1E69226A1B76500B01E6F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1E69126A1B76500B01E6F /* CloudKit.framework */; };
 		2CE1E69E26A3F4C100B01E6F /* PartMuscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1E69D26A3F4C100B01E6F /* PartMuscle.swift */; };
 		2CE1E6A026A40F8500B01E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE1E69F26A40F8500B01E6F /* GoogleService-Info.plist */; };
 		2CE1E6A226A500BB00B01E6F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1E6A126A500BB00B01E6F /* Article.swift */; };
@@ -187,7 +186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C43FC4B26984C43009C9438 /* MapKit.framework in Frameworks */,
-				2CE1E69226A1B76500B01E6F /* CloudKit.framework in Frameworks */,
 				C176DE8985D8447163BEF9DC /* Pods_myFitness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,16 +753,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myFitness/myFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 6A46M22U77;
 				INFOPLIST_FILE = myFitness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = www.com.adong23664.myFitness;
+				PRODUCT_BUNDLE_IDENTIFIER = www.com.adong23664.myFitnessMAPD35;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -776,16 +776,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myFitness/myFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 6A46M22U77;
 				INFOPLIST_FILE = myFitness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = www.com.adong23664.myFitness;
+				PRODUCT_BUNDLE_IDENTIFIER = www.com.adong23664.myFitnessMAPD35;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
