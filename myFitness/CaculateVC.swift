@@ -23,7 +23,7 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBAction func support() {
         if( MFMailComposeViewController.canSendMail())  {
-            let alert = UIAlertController(title: "", message: "感謝您使用全民健身,若您有任何意見,歡迎與我聯繫", preferredStyle: .alert)
+            let alert = UIAlertController(title: "", message: "感謝您使用瘋健身,若您有任何意見,歡迎與我聯繫", preferredStyle: .alert)
             let email = UIAlertAction(title: "email", style: .default, handler: { (action) -> Void in
                 let mailController = MFMailComposeViewController()
                 mailController.mailComposeDelegate = self
@@ -42,7 +42,10 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
             alert.addAction(cancelAction)
             self.present(alert, animated: true, completion: nil)
         } else {
-            //..
+            let alert = UIAlertController(title: "", message: "請至設定,綁定您的郵件才能使用此功能", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
