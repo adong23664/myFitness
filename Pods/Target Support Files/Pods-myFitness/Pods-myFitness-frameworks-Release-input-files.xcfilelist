@@ -1,9 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-myFitness/Pods-myFitness-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
-${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
-${BUILT_PRODUCTS_DIR}/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics.framework
-${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
-${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseFirestore/FirebaseFirestore.framework

@@ -8,7 +8,6 @@
 import UIKit
 import CoreData
 import Firebase
-import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,17 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //自訂標籤
         UITabBar.appearance().tintColor = UIColor.orange
         UITabBar.appearance().barTintColor = UIColor.black
-        
         FirebaseApp.configure()
-        //FB
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
-    }
-    //IOS13以前
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        if let window = self.window {
-            Constants.checkLogin(window: window)
-        }
     }
     
 
@@ -96,10 +86,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return ApplicationDelegate.shared.application(app, open: url ,options: options)
     }
 
 

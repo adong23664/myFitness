@@ -1,25 +1,73 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--My View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" customClass="MyViewController" customModule="myFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-RS-Nnr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-N5-H6T">
+                                <rect key="frame" x="-43" y="173" width="500" height="550"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="瘋健身-removebg" translatesAutoresizingMaskIntoConstraints="NO" id="u6y-lc-DUO">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="瘋健身" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egq-PX-tN9">
+                                        <rect key="frame" x="0.0" y="490" width="500" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="500" id="gNH-lj-MV9"/>
+                                            <constraint firstAttribute="height" constant="60" id="zSo-Vj-Ni9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fVH-RS-Nnr" secondAttribute="bottom" id="9qn-U5-HPV"/>
+                            <constraint firstItem="fVH-RS-Nnr" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="E2s-9A-k7k"/>
+                            <constraint firstItem="GFs-N5-H6T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="G6p-W9-dul"/>
+                            <constraint firstItem="fVH-RS-Nnr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KgS-lY-Iql"/>
+                            <constraint firstItem="fVH-RS-Nnr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O5M-We-MJJ"/>
+                            <constraint firstItem="GFs-N5-H6T" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ltb-6I-e3Q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="fVH-RS-Nnr" id="h9x-af-UN6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="1488" height="2000"/>
+        <image name="瘋健身-removebg" width="500" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
