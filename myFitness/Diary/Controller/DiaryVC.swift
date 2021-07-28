@@ -34,7 +34,7 @@ class DiaryVC: UITableViewController,NSFetchedResultsControllerDelegate, UISearc
         
         // Fetch data from data store
         let fetchRequest: NSFetchRequest<DiaryMO> = DiaryMO.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "date", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
 
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {

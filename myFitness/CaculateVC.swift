@@ -20,6 +20,12 @@ class CaculateVC: UIViewController, MFMailComposeViewControllerDelegate {
         self.navigationController?.navigationBar.tintColor = .white
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let scene = self.view.window?.windowScene{
+            SKStoreReviewController.requestReview(in: scene)
+        }
+    }
     
     @IBAction func support() {
         if( MFMailComposeViewController.canSendMail())  {

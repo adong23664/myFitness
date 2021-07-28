@@ -7,8 +7,9 @@
         <attribute name="mood" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Diary" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Diary" positionX="-63" positionY="-18" width="128" height="134"/>
     </elements>
 </model>

@@ -137,6 +137,8 @@ class NewDiaryController: UITableViewController, UITextFieldDelegate, UIImagePic
             diary.name = nameTextField.text
             diary.date = dateTextField.text
             diary.summary = descriptionTextView.text
+            diary.timestamp = "\(Date())"
+    
             
             if let diaryImage = photoImageView.image {
                 diary.image = diaryImage.pngData()
